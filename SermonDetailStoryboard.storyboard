@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sermon-->
+        <scene sceneID="Tts-x4-aac">
+            <objects>
+                <viewController storyboardIdentifier="SermonDetailStoryboard" title="Sermon" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jMR-vj-1xe" customClass="SermonDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYt-xe-9NQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uxn-Q4-5vn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c2I-nc-XcL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icd-vw-6hK">
+                                <rect key="frame" x="46" y="250" width="283" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Verse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-jU-E71">
+                                <rect key="frame" x="165" y="281" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PastorPIcture" translatesAutoresizingMaskIntoConstraints="NO" id="upt-q3-A7l">
+                                <rect key="frame" x="87" y="70" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Qmv-BC-gOc"/>
+                                    <constraint firstAttribute="height" constant="150" id="m5s-89-oya"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3n-Z1-GCk">
+                                <rect key="frame" x="172" y="350" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playSermon:" destination="jMR-vj-1xe" eventType="touchUpInside" id="SJh-Ka-fmV"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-Kg-FWR">
+                                <rect key="frame" x="178" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="icd-vw-6hK" firstAttribute="centerX" secondItem="c2I-nc-XcL" secondAttribute="centerX" id="2Fk-Bv-3K4"/>
+                            <constraint firstItem="icd-vw-6hK" firstAttribute="top" secondItem="upt-q3-A7l" secondAttribute="bottom" constant="30" id="9OD-la-pfU"/>
+                            <constraint firstItem="R3n-Z1-GCk" firstAttribute="top" secondItem="oEb-jU-E71" secondAttribute="bottom" constant="50" id="JxG-0J-aBV"/>
+                            <constraint firstItem="oEb-jU-E71" firstAttribute="centerX" secondItem="c2I-nc-XcL" secondAttribute="centerX" id="MXd-hn-GRb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="icd-vw-6hK" secondAttribute="trailing" constant="30" id="Vd6-Sz-CyS"/>
+                            <constraint firstItem="tvR-Kg-FWR" firstAttribute="centerX" secondItem="c2I-nc-XcL" secondAttribute="centerX" id="YEZ-ad-d3E"/>
+                            <constraint firstItem="tvR-Kg-FWR" firstAttribute="centerY" secondItem="c2I-nc-XcL" secondAttribute="centerY" id="ffS-eu-olA"/>
+                            <constraint firstItem="oEb-jU-E71" firstAttribute="top" secondItem="icd-vw-6hK" secondAttribute="bottom" constant="10" id="hGM-bk-jpw"/>
+                            <constraint firstItem="R3n-Z1-GCk" firstAttribute="centerX" secondItem="c2I-nc-XcL" secondAttribute="centerX" id="rxT-Fi-4Zg"/>
+                            <constraint firstItem="icd-vw-6hK" firstAttribute="leading" secondItem="c2I-nc-XcL" secondAttribute="leadingMargin" constant="30" id="vJQ-fM-ryw"/>
+                            <constraint firstItem="upt-q3-A7l" firstAttribute="top" secondItem="cYt-xe-9NQ" secondAttribute="bottom" constant="50" id="xkt-RT-sLQ"/>
+                            <constraint firstItem="upt-q3-A7l" firstAttribute="centerX" secondItem="c2I-nc-XcL" secondAttribute="centerX" id="ymr-Ac-3Zt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="tvR-Kg-FWR" id="7qe-gV-BFy"/>
+                        <outlet property="playButton" destination="R3n-Z1-GCk" id="ddq-jL-LTy"/>
+                        <outlet property="sermonTitle" destination="icd-vw-6hK" id="eKj-h5-SmJ"/>
+                        <outlet property="sermonVerse" destination="oEb-jU-E71" id="qxr-Za-bbL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19Z-bj-eBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512.79999999999995" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PastorPIcture" width="200" height="150"/>
+    </resources>
+</document>

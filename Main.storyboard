@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kc0-ab-d1E">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="J1X-aU-prn">
+            <objects>
+                <tabBarController storyboardIdentifier="Main" id="Kc0-ab-d1E" customClass="MainTabBarViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="wjw-hf-NUG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X0s-8P-nmS" kind="relationship" relationship="viewControllers" id="xWL-PJ-bNx"/>
+                        <segue destination="nPv-HD-Uib" kind="relationship" relationship="viewControllers" id="0KT-92-Qdr"/>
+                        <segue destination="jGu-3O-qMA" kind="relationship" relationship="viewControllers" id="EQP-3W-6Ky"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwG-u2-l4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1138" y="54"/>
+        </scene>
+        <!--Announcement Table View Controller-->
+        <scene sceneID="slq-6D-1G8">
+            <objects>
+                <tableViewController id="s4F-7V-HkR" customClass="AnnouncementTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Yh-an-Tie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="s35-KA-NFW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s35-KA-NFW" id="qud-bX-o56">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="s4F-7V-HkR" id="zRW-pS-2A0"/>
+                            <outlet property="delegate" destination="s4F-7V-HkR" id="bZf-za-CjT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pxK-LZ-Iak">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MLy-ro-8E9">
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Announcement"/>
+                            <connections>
+                                <action selector="chooseAnnouncements:" destination="s4F-7V-HkR" eventType="touchUpInside" id="zvY-1Z-LVN"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="456-ZO-GqG">
+                            <connections>
+                                <action selector="addAnnouncementPressed:" destination="s4F-7V-HkR" id="k7T-lm-M9r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addAnnouncementButton" destination="456-ZO-GqG" id="tCh-Ca-qSc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rax-Zh-MPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.20000000000005" y="-759.67016491754134"/>
+        </scene>
+        <!--Sermon-->
+        <scene sceneID="z5r-Tr-rRw">
+            <objects>
+                <tableViewController id="jJB-92-cOC" customClass="SermonTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eD6-Rd-DAX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="vkF-Th-TQ4" style="IBUITableViewCellStyleDefault" id="qsz-kh-6PP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qsz-kh-6PP" id="Jxb-vd-a97">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vkF-Th-TQ4">
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jJB-92-cOC" id="D3Z-U9-d4w"/>
+                            <outlet property="delegate" destination="jJB-92-cOC" id="Hmn-Yb-5Jy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sermon" id="JyF-RU-PDw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sIW-fW-weG">
+                            <connections>
+                                <action selector="addSermonPressed:" destination="jJB-92-cOC" id="jYo-RH-CyV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addSermonButton" destination="sIW-fW-weG" id="LuG-zY-85u"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ykn-Ag-Sm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.20000000000005" y="-15.742128935532236"/>
+        </scene>
+        <!--Announcement-->
+        <scene sceneID="aFA-sw-WhT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nPv-HD-Uib" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Announcement" id="TJp-00-4jD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tE1-qP-80T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s4F-7V-HkR" kind="relationship" relationship="rootViewController" id="18P-Vk-7OT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ne5-pH-c34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-759.67016491754134"/>
+        </scene>
+        <!--Sermon-->
+        <scene sceneID="TSa-bg-54G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X0s-8P-nmS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sermon" id="Iyd-o1-Ba6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p4X-4j-keJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jJB-92-cOC" kind="relationship" relationship="rootViewController" id="1EU-SF-TLp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQd-wk-ZIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-15.742128935532236"/>
+        </scene>
+        <!--Joyful Church-->
+        <scene sceneID="9Os-hX-Igb">
+            <objects>
+                <viewController title="Joyful Church" id="1Ks-JM-rAw" customClass="ChurchInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Xk-eP-Nd4"/>
+                        <viewControllerLayoutGuide type="bottom" id="xXe-Ta-MC2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cAB-Lz-LM9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChurchInfo" translatesAutoresizingMaskIntoConstraints="NO" id="cR3-j0-RgS">
+                                <rect key="frame" x="-4" y="64" width="383" height="554"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cR3-j0-RgS" secondAttribute="trailing" constant="-20" id="Lg2-5D-Y0j"/>
+                            <constraint firstItem="cR3-j0-RgS" firstAttribute="top" secondItem="6Xk-eP-Nd4" secondAttribute="bottom" id="Qst-SN-5FI"/>
+                            <constraint firstItem="xXe-Ta-MC2" firstAttribute="top" secondItem="cR3-j0-RgS" secondAttribute="bottom" id="Zam-94-rUP"/>
+                            <constraint firstItem="cR3-j0-RgS" firstAttribute="leading" secondItem="cAB-Lz-LM9" secondAttribute="leadingMargin" constant="-20" id="v1K-e8-I38"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Joyful Church" id="jDm-N3-Io6"/>
+                    <connections>
+                        <outlet property="infoImageView" destination="cR3-j0-RgS" id="Eep-WS-6Va"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nke-of-WK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.20000000000005" y="736.28185907046486"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="HKB-dj-TAv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jGu-3O-qMA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" id="AVA-aJ-xTa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8K5-Mx-2Zn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Ks-JM-rAw" kind="relationship" relationship="rootViewController" id="46W-zN-NPg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKE-MD-UA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="736.28185907046486"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ChurchInfo" width="1200" height="1800"/>
+    </resources>
+</document>

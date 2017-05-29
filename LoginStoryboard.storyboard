@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="X1V-fp-ZOj">
+            <objects>
+                <viewController storyboardIdentifier="LoginStoryboard" title="Login" id="7de-Px-4JK" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8td-Uh-6ed"/>
+                        <viewControllerLayoutGuide type="bottom" id="6je-Np-qCt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PBT-He-4e4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="passcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fwb-g4-gS7">
+                                <rect key="frame" x="0.0" y="318" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordChanged:" destination="7de-Px-4JK" eventType="editingChanged" id="IBz-sF-6Vf"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fwb-g4-gS7" secondAttribute="trailing" constant="-16" id="4Jy-6y-YO4"/>
+                            <constraint firstItem="Fwb-g4-gS7" firstAttribute="centerY" secondItem="PBT-He-4e4" secondAttribute="centerY" id="JJf-4T-bee"/>
+                            <constraint firstItem="Fwb-g4-gS7" firstAttribute="centerX" secondItem="PBT-He-4e4" secondAttribute="centerX" id="QCJ-C8-XvG"/>
+                            <constraint firstItem="Fwb-g4-gS7" firstAttribute="leading" secondItem="PBT-He-4e4" secondAttribute="leadingMargin" constant="-16" id="kIG-mD-0x8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="password" destination="Fwb-g4-gS7" id="g80-NQ-0P8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jo5-v6-txA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.19999999999999" y="180.35982008995504"/>
+        </scene>
+    </scenes>
+</document>
