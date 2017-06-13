@@ -6,6 +6,7 @@
 //
 //
 #import <Foundation/Foundation.h>
+#import "PushNotification.h"
 #import <UIKit/UIKit.h>
 
 @interface User : NSObject {}
@@ -18,4 +19,6 @@
 - (void)updatePermission:(NSString *)feature;
 
 - (void)updateSubscribedChannels:(NSArray *)channels;
+
+- (PushNotification *)getPushNotification;
 @end

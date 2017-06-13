@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PushNotification : NSObject {}
-- (void)updateChannels:(NSArray *)channels;
+- (void)subscribeToTopics:(NSArray *)selectedChannels;
 @end

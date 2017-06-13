@@ -16,6 +16,8 @@
 #import "AWSAPI_AD8JYGQVC1_CreateAnnouncementMobileHubClient.h"
 #import "AWSAPI_LOGQZC12CB_CreateSermonMobileHubClient.h"
 #import "AWSAPI_N11KQZNXH0_SendNotificationClient.h"
+#import "AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h"
+#import "AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.h"
 
 @interface AWSMobileClient ()
 
@@ -145,6 +147,12 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
                                                              forKey:AWSCloudLogicDefaultConfigurationKey];
     [AWSAPI_N11KQZNXH0_SendNotificationClient registerClientWithConfiguration:serviceConfiguration
                                                                        forKey:AWSCloudLogicDefaultConfigurationKey];
+    [AWSAPI_N11KQZNXH0_SendNotificationClient registerClientWithConfiguration:serviceConfiguration
+                                                                       forKey:AWSCloudLogicDefaultConfigurationKey];
+    [AWSAPI_Y4XE7A7C34_ResetBadgeCountClient registerClientWithConfiguration:serviceConfiguration
+                                                                        forKey:AWSCloudLogicDefaultConfigurationKey];
+    [AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient registerClientWithConfiguration:serviceConfiguration
+                                                                        forKey:AWSCloudLogicDefaultConfigurationKey];
 }
 
 

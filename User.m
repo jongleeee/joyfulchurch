@@ -7,7 +7,6 @@
 //
 
 #import "User.h"
-#import "PushNotification.h"
 
 @implementation User {
     NSArray *subscribedChannels;
@@ -30,6 +29,8 @@
         [self initSubscribedChannels];
         [self initPermissions];
         [self initPushNotification];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registeredPushNotification:) name:@"registeredPushNotification" object:nil];
     }
     return self;
 }
@@ -39,7 +40,8 @@
     if (channelDictionary != NULL) {
         subscribedChannels = [[NSMutableArray alloc] initWithArray:[channelDictionary objectForKey:@"channels"]];
     } else {
-        subscribedChannels = [[NSMutableArray alloc] init];
+        NSArray *defaultChannels = [[NSArray alloc] initWithObjects:@"General", @"설교", nil];
+        [self updateSubscribedChannels:defaultChannels];
     }
 }
 
@@ -54,6 +56,10 @@
 
 - (void)initPushNotification {
     pushNotification = [[PushNotification alloc] init];
+}
+
+- (PushNotification *)getPushNotification {
+    return pushNotification;
 }
 
 - (BOOL)isAuthorizedFor:(NSString *)feature {
@@ -118,5 +124,8 @@
     return NULL;
 }
 
+- (void)registeredPushNotification:(NSNotification *)notification {
+    [pushNotification subscribeToTopics:[self getSubscribedChannels]];
+}
 
 @end

@@ -55,6 +55,7 @@
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_kairos_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_general_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_karisma_MOBILEHUB_687604833</string>
+                    <string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
 				</array>
 				<key>SNSPlatformApplicationARN</key>
 				<string>arn:aws:sns:us-west-1:115981409113:app/APNS_SANDBOX/joyfulchurch_MOBILEHUB_687604833</string>
@@ -69,6 +70,7 @@
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_kairos_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_general_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_karisma_MOBILEHUB_687604833</string>
+                    <string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
 				</array>
 				<key>SNSPlatformApplicationARN</key>
 				<string>arn:aws:sns:us-west-1:115981409113:app/APNS/joyfulchurch_MOBILEHUB_687604833</string>

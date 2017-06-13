@@ -32,48 +32,29 @@
         [self.pushManager registerTopicARNs:self.pushManager.topicARNs];
     }
 
+    for (AWSPushTopic *topic in self.pushManager.topics) {
+        NSLog(@"topic : %@", topic.topicName);
+    }
     
     return self;
 }
 
-- (void)updateChannels:(NSArray *)channels completionHandler:(void (^)(NSError *error))completionHandler {
-    NSArray *selectedTopics = [self getTopics:channels];
-    
-    // delete all
-//    NotificationChannelHandler *notificationHandler = [[NotificationChannelHandler alloc] init];
-//    [notificationHandler removeAllForDevice:@"" completionHandler:^(NSError *error) {
-//        if (!error) {
-//            
-//             // add all
-//            for (NSString *topic in selectedTopics) {
-//                NotificationChannels *notificationChannel = [NotificationChannels new];
-//                notificationChannel._channel = topic;
-//                notificationChannel._deviceToken = @"";
-//                
-//                [notificationHandler save:notificationChannel completionHandler:^(NSError *error) {
-//                    if (!error) {
-//                        
-//                    }
-//                }];
-//            }
-//        }
-//    }];
-}
 
-- (NSArray *)getTopics:(NSArray *)selectedChannels {
-    NSMutableArray *topics = [[NSMutableArray alloc] initWithObjects:[self.pushManager.topics firstObject], nil];
+- (void)subscribeToTopics:(NSArray *)selectedChannels {
     selectedChannels = [self convertToNotificationChannels:selectedChannels];
     
-    for (NSString *topicName in selectedChannels) {
-        for (AWSPushTopic *awsTopic in self.pushManager.topics) {
+    for (AWSPushTopic *topic in self.pushManager.topics) {
+        [topic unsubscribe];
+    }
+    
+    for (AWSPushTopic *awsTopic in self.pushManager.topics) {
+        for (NSString *topicName in selectedChannels) {
             NSRange range = [awsTopic.topicName rangeOfString:topicName options: NSCaseInsensitiveSearch];
             if (range.location != NSNotFound) {
-                [topics addObject:awsTopic];
+                [awsTopic subscribe];
             }
         }
     }
-    
-    return topics;
 }
 
 - (NSArray *)convertToNotificationChannels:(NSArray *)channels {
@@ -84,6 +65,8 @@
             [notificationChannels addObject:@"Karisma"];
         } else if ([channel isEqualToString:@"카이로스"]) {
             [notificationChannels addObject:@"Kairos"];
+        } else if ([channel isEqualToString:@"설교"]){
+            [notificationChannels addObject:@"Sermon"];
         } else {
             [notificationChannels addObject:channel];
         }
@@ -92,20 +75,13 @@
     return notificationChannels;
 }
 
-- (NSMutableDictionary *)getTopicsInDictionary {
-    NSMutableDictionary *topicDict = [[NSMutableDictionary alloc] init];
-    for (AWSPushTopic *topic in self.pushManager.topics) {
-        [topicDict setObject:[NSNumber numberWithBool:false] forKey:topic];
-    }
-    return topicDict;
-}
-
 #pragma mark - AWSPushNotificationDelegate
 
 - (void)pushManagerDidRegister:(AWSPushManager *)pushManager {
     AWSLogInfo(@"Successfully enabled Push Notification.");
     AWSPushTopic *topic = [pushManager topicForTopicARN:[pushManager.topicARNs firstObject]];
     [topic subscribe];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"registeredPushNotification" object:nil];
 }
 
 - (void)pushManager:(AWSPushManager *)pushManager

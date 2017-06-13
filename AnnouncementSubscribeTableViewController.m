@@ -7,13 +7,13 @@
 //
 
 #import "AnnouncementSubscribeTableViewController.h"
-#import "NotificationChannelHandler.h"
-#import "NotificationChannels.h"
+#import "PushNotification.h"
 
 @interface AnnouncementSubscribeTableViewController () {
     NSArray *categories;
     NSArray *channelsForPushNotification;
     NSMutableArray *selected;
+    PushNotification *pushNotification;
 }
 
 @end
@@ -26,12 +26,14 @@
     user = [User sharedManager];
     
     self.navigationItem.title = @"Subscribe";
-    categories = [[NSArray alloc] initWithObjects:@"General", @"Mission", @"카이로스", @"카리스마", nil];
+    categories = [[NSArray alloc] initWithObjects:@"General", @"Mission", @"카이로스", @"카리스마", @"설교", nil];
     
     selected = [[NSMutableArray alloc] initWithArray:[user getSubscribedChannels]];
     
+    pushNotification =  [user getPushNotification];
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarStyleDefault target:self action:@selector(updateSubscribe:)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(updateSubscribe:)];
     self.navigationItem.rightBarButtonItem = doneButton;
 }
 
@@ -42,79 +44,14 @@
 
 - (IBAction)updateSubscribe:(id)sender {
     [user updateSubscribedChannels:selected];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"updateAnnouncements" object:nil];
     [self saveSubscribedChannels];
-    
-}
-
-- (NSString *)getChannelName:(NSString *)channel {
-    
-    if ([channel isEqualToString:@"카리스마"]) {
-        return @"Karisma";
-    }
-    
-    if ([channel isEqualToString:@"카이로스"]) {
-        return @"Kairos";
-    }
-    
-    return channel;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updateAnnouncements" object:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)saveSubscribedChannels {
-    
-    dispatch_group_t group = dispatch_group_create();
-    
-    NotificationChannelHandler *notificationHandler = [[NotificationChannelHandler alloc] init];
-    
-        NSString *deviceToken = @"aa";
-    
-    
-    
-    for (NSString *category in categories) {
-    
-        dispatch_group_enter(group);
-        
-        [notificationHandler removeForDevice:deviceToken andChannel:[self getChannelName:category] completionHandler:^(NSError *error) {
-            if (!error) {
-                if ([selected containsObject:category]) {
-                    
-                    NotificationChannels *notificationChannel = [NotificationChannels new];
-                    notificationChannel._channel = [self getChannelName:category];
-                    notificationChannel._deviceToken = deviceToken;
-                    
-                    [notificationHandler save:notificationChannel completionHandler:^(NSError *error) {
-                        
-                        dispatch_group_leave(group);
-                        
-                        if (error) {
-                            [self displayAlertWithTitle:@"Oops" andContext:@"Server Error. Please contact administrators"];
-                        } else {
-                            NSLog(@"Succesful for : %@", notificationChannel._channel);
-                        }
-                        
-                    }];
-   
-                } else {
-                
-                    dispatch_group_leave(group);
-                    
-                }
-            
-            } else {
-                dispatch_group_leave(group);
-                [self displayAlertWithTitle:@"Oops" andContext:@"Server Error. Please contact administrators"];
-            }
-        }];
-    }
-    
-    
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        [self.navigationController popViewControllerAnimated:YES];
-    });
-
+    [pushNotification subscribeToTopics:selected];
 }
-
-
 
 #pragma mark - Table view data source
 

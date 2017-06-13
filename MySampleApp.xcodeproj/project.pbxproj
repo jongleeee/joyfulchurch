@@ -54,6 +54,10 @@
 		E7A30F04DEE05AB600000000 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29E0D9326000000000 /* MediaPlayer.framework */; };
 		E7A30F04E682E93100000000 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29C2C212AF00000000 /* libz.tbd */; };
 		E7A30F04F257CD5D00000000 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29E8830EBC00000000 /* SystemConfiguration.framework */; };
+		FF1164EF1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1164EE1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.m */; };
+		FF1164F21EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1164F11EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.m */; };
+		FF1164F71EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1164F41EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.m */; };
+		FF1164F81EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1164F61EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.m */; };
 		FF40D1AD1E9605B000996A59 /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FF40D1AC1E9605B000996A59 /* PushNotification.m */; };
 		FF40D1B81E96153500996A59 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF40D1B21E96153500996A59 /* AWSAPIGateway.framework */; };
 		FF40D1B91E96153500996A59 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF40D1B31E96153500996A59 /* AWSCognitoIdentityProvider.framework */; };
@@ -219,6 +223,14 @@
 		1DD70E29FF5A433A00000000 /* UserPoolForgotPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UserPoolForgotPasswordViewController.m; path = MySampleApp/App/SignIn/UserPools/UserPoolForgotPasswordViewController.m; sourceTree = SOURCE_ROOT; };
 		518C10D8A916096489F3D398 /* Pods-MySampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E10FFEF04E23F5B21D6AA7C8 /* Pods-MySampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		FF1164ED1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_Y4XE7A7C34_Empty.h; sourceTree = "<group>"; };
+		FF1164EE1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_Y4XE7A7C34_Empty.m; sourceTree = "<group>"; };
+		FF1164F01EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h; sourceTree = "<group>"; };
+		FF1164F11EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.m; sourceTree = "<group>"; };
+		FF1164F31EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_E69N1ZSDJI_Empty.h; sourceTree = "<group>"; };
+		FF1164F41EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_E69N1ZSDJI_Empty.m; sourceTree = "<group>"; };
+		FF1164F51EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.h; sourceTree = "<group>"; };
+		FF1164F61EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.m; sourceTree = "<group>"; };
 		FF40D1AB1E96052E00996A59 /* PushNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushNotification.h; sourceTree = SOURCE_ROOT; };
 		FF40D1AC1E9605B000996A59 /* PushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotification.m; sourceTree = SOURCE_ROOT; };
 		FF40D1B21E96153500996A59 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAPIGateway.framework; sourceTree = "<group>"; };
@@ -631,6 +643,14 @@
 				FF869BF61EB028A600600FED /* AWSAPI_N11KQZNXH0_Empty.m */,
 				FF869BF71EB028A600600FED /* AWSAPI_N11KQZNXH0_SendNotificationClient.h */,
 				FF869BF81EB028A600600FED /* AWSAPI_N11KQZNXH0_SendNotificationClient.m */,
+				FF1164ED1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.h */,
+				FF1164EE1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.m */,
+				FF1164F01EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h */,
+				FF1164F11EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.m */,
+				FF1164F31EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.h */,
+				FF1164F41EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.m */,
+				FF1164F51EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.h */,
+				FF1164F61EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.m */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -668,7 +688,6 @@
 		FF50C38E1E86D652005D6135 /* Announcement Subscribe */ = {
 			isa = PBXGroup;
 			children = (
-				FF869C0A1EBD698F00600FED /* NotificationChannel */,
 				FF50C3921E86D682005D6135 /* AnnouncementSubscribeStoryboard.storyboard */,
 				FF50C3941E86D6CE005D6135 /* AnnouncementSubscribeTableViewController.h */,
 				FF50C3951E86D6CE005D6135 /* AnnouncementSubscribeTableViewController.m */,
@@ -732,13 +751,6 @@
 				FF7D3A3E1E99B5B800FC108A /* Utils.m */,
 			);
 			name = Utils;
-			sourceTree = "<group>";
-		};
-		FF869C0A1EBD698F00600FED /* NotificationChannel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NotificationChannel;
 			sourceTree = "<group>";
 		};
 		FFC959571E73092000D4944E /* Database */ = {
@@ -1022,11 +1034,13 @@
 				FFC9597B1E791DDE00D4944E /* MainTabBarViewController.m in Sources */,
 				FF40D1E81E96171200996A59 /* AWSAPI_AD8JYGQVC1_RequestSchema.m in Sources */,
 				FF73036F1E7CFE6D00B90F50 /* AnnouncementTableViewCell.m in Sources */,
+				FF1164EF1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.m in Sources */,
 				E7A30F04091C1B4B00000000 /* CloudLogicAPIInvokeViewController.m in Sources */,
 				E7A30F04D6483E5900000000 /* NoSQLQueryResultViewController.m in Sources */,
 				E7A30F043EF0FCF100000000 /* UserPoolSignUpViewController.m in Sources */,
 				FF40D1EE1E96171200996A59 /* AWSMobileClient.m in Sources */,
 				FF40D1EA1E96171200996A59 /* AWSAPI_LOGQZC12CB_CreateSermonMobileHubClient.m in Sources */,
+				FF1164F81EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.m in Sources */,
 				FF40D1F01E96171200996A59 /* Announcements.m in Sources */,
 				E7A30F045ECFBC4800000000 /* SermonsTable.m in Sources */,
 				E7A30F04B5DCD03100000000 /* UserPoolMFAViewController.m in Sources */,
@@ -1036,6 +1050,8 @@
 				E7A30F04771F74B900000000 /* CloudLogicAPIOperationsViewController.m in Sources */,
 				E7A30F042B8D72CF00000000 /* NoSQLModelHelpers.m in Sources */,
 				FF50C38D1E865108005D6135 /* ChurchInfoViewController.m in Sources */,
+				FF1164F21EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.m in Sources */,
+				FF1164F71EEE73E400CF24AE /* AWSAPI_E69N1ZSDJI_Empty.m in Sources */,
 				E7A30F047039552900000000 /* ColorThemeSettings.m in Sources */,
 				FF40D1E71E96171200996A59 /* AWSAPI_AD8JYGQVC1_CreateAnnouncementMobileHubClient.m in Sources */,
 			);

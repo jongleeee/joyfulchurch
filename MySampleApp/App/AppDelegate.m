@@ -11,7 +11,15 @@
 // Source code generated from template: aws-my-sample-app-ios-objc v0.15
 //
 #import "AppDelegate.h"
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
+#import <AWSSNS/AWSSNS.h>
+#import "CloudLogicAPI.h"
+#import "AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h"
+#import "AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient.h"
+#import "AWSConfiguration.h"
 #import "AWSMobileClient.h"
+
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
@@ -26,7 +34,7 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"application didFinishLaunchingWithOptions");
     
-    application.applicationIconBadgeNumber = 0;
+    [AWSLogger defaultLogger].logLevel = AWSLogLevelVerbose;
     
     if( SYSTEM_VERSION_LESS_THAN( @"10.0" ) )
     {
@@ -83,17 +91,127 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    if (self.deviceTokenInString) {
+        [self resetBadgeCount:self.deviceTokenInString];
+    }
+}
+
+- (void)resetBadgeCount:(NSString *)token {
+    
+    CloudLogicAPI *cloudLogicAPI = [[CloudLogicAPI alloc] initWithName:@"resetBadgeCount"
+                                                                 paths:@[
+                                                                         @"/resetBadgeCount",                                                   ]
+                                                              endPoint:@"https://y4xe7a7c34.execute-api.us-west-1.amazonaws.com/beta"
+                                                             apiClient: [AWSAPI_Y4XE7A7C34_ResetBadgeCountClient clientForKey:AWSCloudLogicDefaultConfigurationKey]
+                                                        apiDescription:@"Resets the badge count for the device"
+                                    ];
+    
+    
+    NSDictionary *headerParameters = @{
+                                       @"Content-Type": @"application/json",
+                                       @"Accept": @"application/json",
+                                       };
+    
+    NSMutableDictionary<NSString *, NSString *> *parameters = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary<NSString *, NSString *> *queryParameters = [[NSMutableDictionary alloc] init];
+    
+    
+    [parameters setValue:token forKey:@"deviceToken"];
+    
+    
+    AWSAPIGatewayRequest *apiRequest = [[AWSAPIGatewayRequest alloc] initWithHTTPMethod:@"POST"
+                                                                              URLString:@"/"
+                                                                        queryParameters:queryParameters
+                                                                       headerParameters:headerParameters
+                                                                               HTTPBody:parameters];
+    
+    [[cloudLogicAPI.apiClient invoke:apiRequest] continueWithBlock:^id(AWSTask *task) {
+        
+        if (task.error) {
+            NSLog(@"Error occurred: %@", task.error);
+            return task.error;
+        }
+        
+        AWSAPIGatewayResponse *response = (AWSAPIGatewayResponse *)task.result;
+        NSString *responseString = [[NSString alloc] initWithData:response.responseData encoding:NSUTF8StringEncoding];
+        NSString *statusCode = [NSString stringWithFormat: @"%ld", (long)response.statusCode];
+        NSLog(@"Response: %@", responseString);
+        NSLog(@"Status Code: %@", statusCode);
+        
+        return nil;
+    }];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(NSString*)deviceTokenAsString:(NSData*)deviceTokenData
+{
+    NSString *rawDeviceTring = [NSString stringWithFormat:@"%@", deviceTokenData];
+    NSString *noSpaces = [rawDeviceTring stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *tmp1 = [noSpaces stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    
+    return [tmp1 stringByReplacingOccurrencesOfString:@">" withString:@""];
+}
+
+- (void)registerDeviceToken:(NSString *)token {
+    CloudLogicAPI *cloudLogicAPI = [[CloudLogicAPI alloc] initWithName:@"registerDeviceToken"
+                                                                 paths:@[
+                                                                         @"/registerDeviceToken",                                                   ]
+                                                              endPoint:@"https://e69n1zsdji.execute-api.us-west-1.amazonaws.com/beta"
+                                                             apiClient: [AWSAPI_E69N1ZSDJI_RegisterDeviceTokenClient clientForKey:AWSCloudLogicDefaultConfigurationKey]
+                                                        apiDescription:@"Registers devices tokens and generates endpointArne"
+                                    ];
+    
+    
+    NSDictionary *headerParameters = @{
+                                       @"Content-Type": @"application/json",
+                                       @"Accept": @"application/json",
+                                       };
+    
+    NSMutableDictionary<NSString *, NSString *> *parameters = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary<NSString *, NSString *> *queryParameters = [[NSMutableDictionary alloc] init];
+    
+    
+    [parameters setValue:token forKey:@"deviceToken"];
+    [parameters setValue:@"ios" forKey:@"platform"];
+    
+    
+    AWSAPIGatewayRequest *apiRequest = [[AWSAPIGatewayRequest alloc] initWithHTTPMethod:@"POST"
+                                                                              URLString:@"/"
+                                                                        queryParameters:queryParameters
+                                                                       headerParameters:headerParameters
+                                                                               HTTPBody:parameters];
+    
+    [[cloudLogicAPI.apiClient invoke:apiRequest] continueWithBlock:^id(AWSTask *task) {
+        
+        if (task.error) {
+            NSLog(@"Error occurred: %@", task.error);
+            return task.error;
+        }
+        
+        AWSAPIGatewayResponse *response = (AWSAPIGatewayResponse *)task.result;
+        NSString *responseString = [[NSString alloc] initWithData:response.responseData encoding:NSUTF8StringEncoding];
+        NSString *statusCode = [NSString stringWithFormat: @"%ld", (long)response.statusCode];
+        NSLog(@"Response: %@", responseString);
+        NSLog(@"Status Code: %@", statusCode);
+        
+        return nil;
+    }];
+
+}
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [[AWSMobileClient sharedInstance] application:application
  didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
     
-    self.deviceTokenInString = [NSString stringWithFormat:@"%@", deviceToken];
+    self.deviceTokenInString = [self deviceTokenAsString:deviceToken];
+    NSLog(@"Device Token is : %@", self.deviceTokenInString);
+    [self resetBadgeCount:self.deviceTokenInString];
+    [self registerDeviceToken:self.deviceTokenInString];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {

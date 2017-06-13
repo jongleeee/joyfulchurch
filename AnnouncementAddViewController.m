@@ -77,6 +77,8 @@
         topicARN = @"General";
     }
     [parameters setValue:topicARN forKey:@"channel"];
+    [parameters setValue:self.announcementTitle.text forKey:@"messageTitle"];
+    [parameters setValue:self.announcementContent.text forKey:@"messageContext"];
 
     AWSAPIGatewayRequest *apiRequest = [[AWSAPIGatewayRequest alloc] initWithHTTPMethod:@"POST"
                                                                               URLString:@"/"
