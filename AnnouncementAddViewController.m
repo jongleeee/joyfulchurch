@@ -60,12 +60,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    if(!self.navigationController.navigationBar.isHidden) {
-        self.navigationController.navigationBar.hidden = YES;
-    } else {
-        self.navigationController.navigationBar.hidden = NO;
-    }
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)sendNotification:(NSString *)channel {

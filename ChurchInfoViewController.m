@@ -20,15 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self addNavigateToMapImage];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+- (void)addNavigateToMapImage {
     UITapGestureRecognizer *mapNavigationImageTap =
     [[UITapGestureRecognizer alloc] initWithTarget:self
                                             action:@selector(navigate:)];
     [self.mapNavigationImage setUserInteractionEnabled:YES];
     [self.mapNavigationImage addGestureRecognizer:mapNavigationImageTap];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (IBAction)navigate:(id)sender {
