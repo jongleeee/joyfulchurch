@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChurchInfoViewController-->
+        <scene sceneID="y24-T9-gg1">
+            <objects>
+                <viewController storyboardIdentifier="ChurchInfoStoryboard" title="ChurchInfoViewController" id="B0h-vu-svK" customClass="ChurchInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94O-4L-BXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tga-gy-Mll"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bhg-h9-aKv">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBT-g0-OWP">
+                                <rect key="frame" x="43" y="72" width="682" height="388"/>
+                                <color key="backgroundColor" red="0.76515414181766395" green="0.78232752042574782" blue="0.8338476562499999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ez-KcA">
+                                <rect key="frame" x="4" y="984" width="760" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.079933761229999997" blue="0.1437565609" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="길찾기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="Mqx-h4-PXr"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-qs-w6j">
+                                <rect key="frame" x="43" y="468" width="682" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-YC-ebP">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="교회전화:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-eU-3Z6">
+                                        <rect key="frame" x="0.0" y="34" width="65" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-aM-ESW">
+                                        <rect key="frame" x="0.0" y="70" width="54" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9875 Dublin Canyon Rd. Castro Valley CA 94552" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-nD-Gkg">
+                                        <rect key="frame" x="62" y="0.0" width="172" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="joyfulpastorlee@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-JW-6cZ">
+                                        <rect key="frame" x="62" y="62" width="185" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" (510) - 582 - 1240" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-GD-X1E">
+                                        <rect key="frame" x="75" y="36" width="146" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4755880055521795" green="0.48598650251937114" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="hx0-Jy-ahy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="8" id="E0F-0E-c4Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4g8-qs-w6j" secondAttribute="trailing" constant="23" id="Ldh-0n-Ram"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="top" secondItem="EBT-g0-OWP" secondAttribute="bottom" constant="8" id="Qm1-A9-zqi"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" constant="23" id="Wvh-Kc-yaG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o8h-ez-KcA" secondAttribute="trailing" constant="-16" id="ad8-nc-aFg"/>
+                            <constraint firstItem="o8h-ez-KcA" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" constant="-16" id="iEc-1m-qTY"/>
+                            <constraint firstItem="EBT-g0-OWP" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="8" id="kK3-js-MkB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EBT-g0-OWP" secondAttribute="trailing" constant="23" id="vix-6h-xQa"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="centerY" secondItem="bhg-h9-aKv" secondAttribute="centerY" id="xdz-vv-cwk"/>
+                            <constraint firstItem="EBT-g0-OWP" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" constant="23" id="xr5-Cc-Qnk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Joyful Church" id="ZmS-B6-aD6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QH5-nB-qIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.34782608695656" y="728.804347826087"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Cs4-Hj-3qd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wwK-ik-WhQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" id="hZ6-56-ELm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e5o-vZ-8Gj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B0h-vu-svK" kind="relationship" relationship="rootViewController" id="0VM-gM-hJ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjV-Ji-l9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="735"/>
+        </scene>
+    </scenes>
+</document>

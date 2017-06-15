@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sermon-->
+        <scene sceneID="cJo-yF-2vL">
+            <objects>
+                <tableViewController storyboardIdentifier="SermonTableStoryboard" id="oND-kK-dJl" customClass="SermonTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rk6-Xh-Lnb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PJK-eq-84S" style="IBUITableViewCellStyleDefault" id="Azp-nu-Cbi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Azp-nu-Cbi" id="cJQ-cV-1pf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PJK-eq-84S">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oND-kK-dJl" id="lzG-lp-dhb"/>
+                            <outlet property="delegate" destination="oND-kK-dJl" id="aFy-pY-rtU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sermon" id="qLR-9L-A8d">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vtQ-rS-Hkm">
+                            <connections>
+                                <action selector="addSermonPressed:" destination="oND-kK-dJl" id="dKw-4x-6Xy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addSermonButton" destination="vtQ-rS-Hkm" id="zKg-hm-GUc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9X-Xb-SfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.20000000000005" y="-15.742128935532236"/>
+        </scene>
+        <!--SermonViewController-->
+        <scene sceneID="Sgx-fB-Geo">
+            <objects>
+                <navigationController title="SermonViewController" automaticallyAdjustsScrollViewInsets="NO" id="RGC-8h-KBv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sermon" id="cT6-yo-aIL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iQg-o8-EwO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oND-kK-dJl" kind="relationship" relationship="rootViewController" id="qf6-pL-hH1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vk-cM-Q4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-15.742128935532236"/>
+        </scene>
+        <!--HomePageViewController-->
+        <scene sceneID="pyf-Ou-P4D">
+            <objects>
+                <viewController title="HomePageViewController" id="OT9-RE-vzK" customClass="HomePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="49Z-4o-2h1"/>
+                        <viewControllerLayoutGuide type="bottom" id="qLI-kz-fSu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y9a-67-woZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uML-AY-V4W">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="422"/>
+                                <color key="backgroundColor" red="0.82638984739999999" green="1" blue="0.2346794918" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMo-vH-fm1">
+                                <rect key="frame" x="0.0" y="442" width="375" height="225"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOh-bz-cE5">
+                                        <rect key="frame" x="0.0" y="17" width="303" height="56"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Church Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c5-Do-Zjl">
+                                                <rect key="frame" x="166" y="35" width="101" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.76078431369999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-fu-yvl">
+                                        <rect key="frame" x="0.0" y="157" width="303" height="68"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sermon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGj-ja-TXZ">
+                                                <rect key="frame" x="166" y="29" width="78" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeE-ws-bqm">
+                                        <rect key="frame" x="0.0" y="81" width="303" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Announcement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-FC-w5K">
+                                                <rect key="frame" x="166" y="32" width="128" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94117653369999998" green="0.90980398650000005" blue="0.231372565" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.079933761229999997" blue="0.1437565609" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pOh-bz-cE5" firstAttribute="bottom" secondItem="Xvu-fu-yvl" secondAttribute="bottom" id="DZ5-mQ-wH1"/>
+                                    <constraint firstItem="pOh-bz-cE5" firstAttribute="top" secondItem="TMo-vH-fm1" secondAttribute="top" constant="17" id="cil-A9-7HS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TMo-vH-fm1" firstAttribute="top" secondItem="49Z-4o-2h1" secondAttribute="bottom" constant="422" id="0vI-eQ-mtJ"/>
+                            <constraint firstItem="uML-AY-V4W" firstAttribute="top" secondItem="49Z-4o-2h1" secondAttribute="bottom" constant="-20" id="2GC-uE-k8b"/>
+                            <constraint firstItem="qLI-kz-fSu" firstAttribute="top" secondItem="uML-AY-V4W" secondAttribute="bottom" constant="245" id="Hci-Q1-USu"/>
+                            <constraint firstItem="uML-AY-V4W" firstAttribute="leading" secondItem="y9a-67-woZ" secondAttribute="leadingMargin" constant="-16" id="IEt-do-wj8"/>
+                            <constraint firstItem="qLI-kz-fSu" firstAttribute="top" secondItem="TMo-vH-fm1" secondAttribute="bottom" id="Ton-JV-JrD"/>
+                            <constraint firstItem="uML-AY-V4W" firstAttribute="width" secondItem="TMo-vH-fm1" secondAttribute="height" multiplier="359:225" id="URW-Rw-tX1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TMo-vH-fm1" secondAttribute="trailing" constant="-16" id="Wxw-tv-rpW"/>
+                            <constraint firstItem="TMo-vH-fm1" firstAttribute="leading" secondItem="y9a-67-woZ" secondAttribute="leadingMargin" constant="-16" id="nxm-DI-b7D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uML-AY-V4W" secondAttribute="trailing" id="s1X-bi-ZIH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="Nea-Ea-C6o"/>
+                    <connections>
+                        <outlet property="AnnouncementView" destination="CeE-ws-bqm" id="pZ6-Vw-WVt"/>
+                        <outlet property="InfoView" destination="pOh-bz-cE5" id="vbd-qw-jhY"/>
+                        <outlet property="SermonView" destination="Xvu-fu-yvl" id="xig-jB-FgH"/>
+                        <outlet property="announcementView" destination="CeE-ws-bqm" id="8up-Ly-QIK"/>
+                        <outlet property="infoView" destination="pOh-bz-cE5" id="W8D-dG-CC3"/>
+                        <outlet property="sermonView" destination="Xvu-fu-yvl" id="9Lr-K0-rfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyE-ij-ePJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677.60000000000002" y="1065.5172413793105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k0z-pl-TCD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" hidesBarsOnSwipe="YES" id="LEt-vR-UGy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nu6-3J-XrF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OT9-RE-vzK" kind="relationship" relationship="rootViewController" id="xYF-oi-dhv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t93-9E-cgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="1066"/>
+        </scene>
+    </scenes>
+</document>

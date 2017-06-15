@@ -38,6 +38,9 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+    self.navigationController.navigationBar.hidden = NO;
+    
     if (![user isAuthorizedFor:@"Sermon"]) {
         self.addSermonButton.enabled = false;
     } else {

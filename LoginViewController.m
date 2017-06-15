@@ -23,6 +23,15 @@
     user = [User sharedManager];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    if(!self.navigationController.navigationBar.isHidden) {
+        self.navigationController.navigationBar.hidden = YES;
+    } else {
+        self.navigationController.navigationBar.hidden = NO;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
