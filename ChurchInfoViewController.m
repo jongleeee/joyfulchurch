@@ -7,11 +7,11 @@
 //
 
 #import "ChurchInfoViewController.h"
-#import "LoginViewController.h"
 #import <MapKit/MapKit.h>
 
 @interface ChurchInfoViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *infoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *mapNavigationImage;
+
 
 @end
 
@@ -19,18 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    // self.view.backgroundColor = [UIColor colorWithPatternImage:[self imageWithImage:[UIImage imageNamed:@"ChurchInfo.jpg"] scaledToSize:self.view.frame.size]];
     
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
-    singleTap.numberOfTapsRequired = 7;
-    [self.infoImageView setUserInteractionEnabled:YES];
-    [self.infoImageView addGestureRecognizer:singleTap];
+    UITapGestureRecognizer *mapNavigationImageTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(navigate:)];
+    [self.mapNavigationImage setUserInteractionEnabled:YES];
+    [self.mapNavigationImage addGestureRecognizer:mapNavigationImageTap];
 }
 
--(void)tapDetected{
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = NO;
+}
 
-    /*
+- (IBAction)navigate:(id)sender {
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = 37.695993;
     coordinate.longitude = -121.972684;
@@ -40,14 +41,9 @@
     [mapItem setName:@"Joyful Church"];
     NSDictionary *options = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
     [mapItem openInMapsWithLaunchOptions:options];
-    */
-     
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
-    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginStoryboard"];
-    [self.navigationController pushViewController:loginViewController animated:YES];
-     
 }
+
 /*
 #pragma mark - Navigation
 
