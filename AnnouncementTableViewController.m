@@ -39,6 +39,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = NO;
+    
     if (![user isAuthorizedFor:@"Announcement"]) {
         self.addAnnouncementButton.enabled = false;
     } else {

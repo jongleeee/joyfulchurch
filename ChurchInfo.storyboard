@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChurchInfoViewController-->
+        <scene sceneID="y24-T9-gg1">
+            <objects>
+                <viewController storyboardIdentifier="ChurchInfoStoryboard" title="ChurchInfoViewController" id="B0h-vu-svK" customClass="ChurchInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94O-4L-BXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tga-gy-Mll"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bhg-h9-aKv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapLocationImg" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-xk-2jm">
+                                <rect key="frame" x="20" y="96" width="374" height="196"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ez-KcA">
+                                <rect key="frame" x="4" y="696" width="406" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.079933761229999997" blue="0.1437565609" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="길찾기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="Mqx-h4-PXr"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-qs-w6j" userLabel="middleView">
+                                <rect key="frame" x="20" y="324" width="374" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="hx0-Jy-ahy"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-FE-w3T" userLabel="innerView">
+                                <rect key="frame" x="94" y="329" width="226" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9875 Dublin Canyon Rd. Castro Valley CA 94552" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-nD-Gkg">
+                                        <rect key="frame" x="55" y="0.0" width="161" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-YC-ebP">
+                                        <rect key="frame" x="8" y="8" width="32" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" (510) - 582 - 1240" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-GD-X1E">
+                                        <rect key="frame" x="70" y="38" width="125" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-aM-ESW">
+                                        <rect key="frame" x="3" y="68" width="42" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="joyfulpastorlee@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-JW-6cZ">
+                                        <rect key="frame" x="51" y="63" width="177" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="교회전화:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-eU-3Z6">
+                                        <rect key="frame" x="3" y="38" width="54" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="VpO-o7-6LW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="8" id="E0F-0E-c4Q"/>
+                            <constraint firstItem="eEW-xk-2jm" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="Hdu-zp-Cjx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4g8-qs-w6j" secondAttribute="trailing" id="Ldh-0n-Ram"/>
+                            <constraint firstItem="eEW-xk-2jm" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="32" id="TEM-Iz-phE"/>
+                            <constraint firstItem="6B0-FE-w3T" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="VO2-8I-TrO"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="32" id="WBy-98-e6c"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" id="Wvh-Kc-yaG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o8h-ez-KcA" secondAttribute="trailing" constant="-16" id="ad8-nc-aFg"/>
+                            <constraint firstItem="6B0-FE-w3T" firstAttribute="centerY" secondItem="4g8-qs-w6j" secondAttribute="centerY" id="b2b-2n-N9L"/>
+                            <constraint firstItem="6B0-FE-w3T" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="37" id="f4O-zR-S24"/>
+                            <constraint firstItem="o8h-ez-KcA" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" constant="-16" id="iEc-1m-qTY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eEW-xk-2jm" secondAttribute="leading" id="oZP-gn-19L"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="centerY" secondItem="bhg-h9-aKv" secondAttribute="centerY" id="xdz-vv-cwk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Joyful Church" id="ZmS-B6-aD6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QH5-nB-qIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="734.51086956521749"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Cs4-Hj-3qd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wwK-ik-WhQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" id="hZ6-56-ELm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e5o-vZ-8Gj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B0h-vu-svK" kind="relationship" relationship="rootViewController" id="0VM-gM-hJ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjV-Ji-l9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="735"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mapLocationImg" width="1550" height="760"/>
+    </resources>
+</document>
