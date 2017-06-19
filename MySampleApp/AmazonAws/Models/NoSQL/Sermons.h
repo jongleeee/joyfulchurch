@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *_userId;
 @property (nonatomic, strong) NSNumber *_creationDate;
 @property (nonatomic, strong) NSSet<NSString *> *_keywords;
+@property (nonatomic, strong) NSString *_series;
 @property (nonatomic, strong) NSString *_sermon;
 @property (nonatomic, strong) NSString *_sermonId;
 @property (nonatomic, strong) NSString *_title;
