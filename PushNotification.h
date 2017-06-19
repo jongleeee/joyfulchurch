@@ -10,4 +10,5 @@
 
 @interface PushNotification : NSObject {}
 - (void)subscribeToTopics:(NSArray *)selectedChannels;
+- (void)sendNotificationToChannel:(NSString *)channel withMessage:(NSDictionary *)message;
 @end

@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Sermons.h"
 #import "SermonHandler.h"
+#import "User.h"
 
-@interface SermonAddViewController : UIViewController
+@interface SermonAddViewController : UIViewController {
+    User *user;
+}
 
 @end

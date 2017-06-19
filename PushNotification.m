@@ -8,6 +8,12 @@
 
 #import "PushNotification.h"
 #import <AWSMobileHubHelper/AWSMobileHubHelper.h>
+#import <AWSSNS/AWSSNS.h>
+#import "CloudLogicAPIInvokeViewController.h"
+#import "CloudLogicAPI.h"
+#import "AWSAPIGateway/AWSAPIGateway.h"
+#import <AWSLambda/AWSLambda.h>
+#import "AWSAPI_N11KQZNXH0_SendNotificationClient.h"
 #import "AWSConfiguration.h"
 #import "NotificationChannelHandler.h"
 #import "NotificationChannels.h"
@@ -16,6 +22,7 @@
 
 @property (nonatomic, strong) AWSPushManager *pushManager;
 @property (nonatomic, strong) NSArray *notificationChannels;
+@property (nonatomic, strong) CloudLogicAPI *cloudLogicAPI;
 
 @end
 
@@ -30,15 +37,21 @@
         self.pushManager.delegate = self;
         [self.pushManager registerForPushNotifications];
         [self.pushManager registerTopicARNs:self.pushManager.topicARNs];
+        [self setUpCloudLogicAPI];
     }
 
-    for (AWSPushTopic *topic in self.pushManager.topics) {
-        NSLog(@"topic : %@", topic.topicName);
-    }
-    
     return self;
 }
 
+- (void)setUpCloudLogicAPI {
+    self.cloudLogicAPI = [[CloudLogicAPI alloc] initWithName:@"sendNotification"
+                                                       paths:@[
+                                                               @"/sendnotification",                                                   ]
+                                                    endPoint:@"https://n11kqznxh0.execute-api.us-west-1.amazonaws.com/beta"
+                                                   apiClient: [AWSAPI_N11KQZNXH0_SendNotificationClient clientForKey:AWSCloudLogicDefaultConfigurationKey]
+                                              apiDescription:@"Sends notification to topic"
+                          ];
+}
 
 - (void)subscribeToTopics:(NSArray *)selectedChannels {
     selectedChannels = [self convertToNotificationChannels:selectedChannels];
@@ -73,6 +86,52 @@
     }
     
     return notificationChannels;
+}
+
+- (void)sendNotificationToChannel:(NSString *)channel withMessage:(NSDictionary *)message{
+    NSDictionary *headerParameters = @{
+                                       @"Content-Type": @"application/json",
+                                       @"Accept": @"application/json",
+                                       };
+
+    NSMutableDictionary<NSString *, NSString *> *parameters = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary<NSString *, NSString *> *queryParameters = [[NSMutableDictionary alloc] init];
+
+    NSString *topicARN;
+    if ([channel isEqualToString:@"카이로스"]) {
+        topicARN = @"Kairos";
+    } else if ([channel isEqualToString:@"카리스마"]) {
+        topicARN = @"Karisma";
+    } else if ([channel isEqualToString:@"설교"]) {
+        topicARN = @"Sermon";
+    } else {
+        topicARN = @"General";
+    }
+
+    [parameters setValue:topicARN forKey:@"channel"];
+    [parameters setValue:[message objectForKey:@"title"] forKey:@"messageTitle"];
+    [parameters setValue:[message objectForKey:@"content"] forKey:@"messageContext"];
+
+    AWSAPIGatewayRequest *apiRequest = [[AWSAPIGatewayRequest alloc] initWithHTTPMethod:@"POST"
+                                                                              URLString:@"/"
+                                                                        queryParameters:queryParameters
+                                                                       headerParameters:headerParameters
+                                                                               HTTPBody:parameters];
+
+    [[self.cloudLogicAPI.apiClient invoke:apiRequest] continueWithBlock:^id(AWSTask *task) {
+        if (task.error) {
+            NSLog(@"Error occurred: %@", task.error);
+            return task.error;
+        }
+
+        AWSAPIGatewayResponse *response = (AWSAPIGatewayResponse *)task.result;
+        NSString *responseString = [[NSString alloc] initWithData:response.responseData encoding:NSUTF8StringEncoding];
+        NSString *statusCode = [NSString stringWithFormat: @"%ld", (long)response.statusCode];
+        NSLog(@"Response: %@", responseString);
+        NSLog(@"Status Code: %@", statusCode);
+
+        return nil;
+    }];
 }
 
 #pragma mark - AWSPushNotificationDelegate

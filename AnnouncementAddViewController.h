@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Announcements.h"
 #import "AnnouncementHandler.h"
+#import "User.h"
 
-@interface AnnouncementAddViewController : UIViewController
+@interface AnnouncementAddViewController : UIViewController {
+    User *user;
+}
+
 
 @end
