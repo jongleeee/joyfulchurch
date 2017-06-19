@@ -7,6 +7,7 @@
 //
 
 #import "SermonAddViewController.h"
+#import "PushNotification.h"
 
 @interface SermonAddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *sermonTitle;
@@ -14,12 +15,16 @@
 @property (weak, nonatomic) IBOutlet UITextField *sermonURL;
 @property (weak, nonatomic) IBOutlet UIDatePicker *sermonDatePicker;
 @property (nonatomic, strong) NSDate *sermonDate;
+@property (nonatomic, strong) PushNotification *notificationHandler;
 @end
 
 @implementation SermonAddViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    user = [User sharedManager];
+    self.notificationHandler = [user getPushNotification];
     self.sermonDate = [NSDate date];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -64,6 +69,7 @@
             if (error) {
                 [self displayAlertWithTitle:@"Error" andContext:@"Could not save at this time. Please try again later"];
             } else {
+                [self.notificationHandler sendNotificationToChannel:@"설교" withMessage:nil];
                 [self.navigationController popViewControllerAnimated:YES];
             }}];
     }
