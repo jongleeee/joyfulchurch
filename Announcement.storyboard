@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AnnouncementTableViewController-->
+        <scene sceneID="i7y-TL-Q0G">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaM-ZU-nwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="AnnouncementStoryBoard" title="AnnouncementTableViewController" id="m4S-vY-MRc" customClass="AnnouncementTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YC7-sj-WHq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JKm-jv-PSN">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JKm-jv-PSN" id="Mfi-RM-1Ic">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m4S-vY-MRc" id="Vna-by-xfK"/>
+                            <outlet property="delegate" destination="m4S-vY-MRc" id="vxZ-50-lph"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Announcement" id="mfi-69-Hdh">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Pt-z6-WdT">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Announcement"/>
+                            <connections>
+                                <action selector="chooseAnnouncements:" destination="m4S-vY-MRc" eventType="touchUpInside" id="LY6-di-90I"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hzi-sn-VzP">
+                            <connections>
+                                <action selector="addAnnouncementPressed:" destination="m4S-vY-MRc" id="yBf-fz-sRZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addAnnouncementButton" destination="Hzi-sn-VzP" id="IjW-8U-HYq"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="3495" y="-760"/>
+        </scene>
+        <!--Announcement-->
+        <scene sceneID="g7g-rF-JTJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9F-z4-Wng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cpt-S5-Srf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Announcement" id="2Pz-bQ-UaI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ijg-sX-A7D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m4S-vY-MRc" kind="relationship" relationship="rootViewController" id="Dtj-BB-ZuW"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2556" y="-761"/>
+        </scene>
+    </scenes>
+</document>

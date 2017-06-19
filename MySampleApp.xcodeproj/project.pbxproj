@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101CCF6F1EECA4D900BED961 /* ChurchInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF6E1EECA4D900BED961 /* ChurchInfo.storyboard */; };
+		101CCF711EECA57700BED961 /* Sermon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF701EECA57700BED961 /* Sermon.storyboard */; };
+		101CCF731EECA5B900BED961 /* Announcement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF721EECA5B900BED961 /* Announcement.storyboard */; };
+		101CCF771EECA64D00BED961 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101CCF761EECA64D00BED961 /* HomePageViewController.m */; };
 		E7A30F04005E1E2900000000 /* UserIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29D435653200000000 /* UserIdentityViewController.m */; };
 		E7A30F040158BD6B00000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29519A4E3600000000 /* UIKit.framework */; };
 		E7A30F04048A03B600000000 /* NoSQLTableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2977FC76A200000000 /* NoSQLTableListViewController.m */; };
@@ -145,6 +149,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		101CCF6E1EECA4D900BED961 /* ChurchInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChurchInfo.storyboard; sourceTree = SOURCE_ROOT; };
+		101CCF701EECA57700BED961 /* Sermon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sermon.storyboard; sourceTree = SOURCE_ROOT; };
+		101CCF721EECA5B900BED961 /* Announcement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Announcement.storyboard; sourceTree = SOURCE_ROOT; };
+		101CCF751EECA64D00BED961 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = SOURCE_ROOT; };
+		101CCF761EECA64D00BED961 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = SOURCE_ROOT; };
 		1DD70E2905BFBE9A00000000 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		1DD70E29073FB5C000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DD70E29088143A500000000 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -353,6 +362,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		101CCF741EECA63200BED961 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				101CCF751EECA64D00BED961 /* HomePageViewController.h */,
+				101CCF761EECA64D00BED961 /* HomePageViewController.m */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		1BEC033397386F3782C547D8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +498,7 @@
 				1DD70E29A89C570C00000000 /* Launch Screen.storyboard */,
 				FFC959791E791DDE00D4944E /* MainTabBarViewController.h */,
 				FFC9597A1E791DDE00D4944E /* MainTabBarViewController.m */,
+				101CCF741EECA63200BED961 /* HomePage */,
 				FFC9595D1E77C2E200D4944E /* Announcement */,
 				FFC9595B1E77C2D200D4944E /* Sermon */,
 				FF50C38A1E8650E8005D6135 /* Church Information */,
@@ -681,6 +700,7 @@
 			children = (
 				FF50C38B1E865108005D6135 /* ChurchInfoViewController.h */,
 				FF50C38C1E865108005D6135 /* ChurchInfoViewController.m */,
+				101CCF6E1EECA4D900BED961 /* ChurchInfo.storyboard */,
 			);
 			name = "Church Information";
 			sourceTree = "<group>";
@@ -797,6 +817,7 @@
 				FFC9598C1E7B75B400D4944E /* Sermon Cell */,
 				FFC959631E77C34300D4944E /* SermonTableViewController.h */,
 				FFC959641E77C34300D4944E /* SermonTableViewController.m */,
+				101CCF701EECA57700BED961 /* Sermon.storyboard */,
 			);
 			name = "Sermon Table";
 			sourceTree = "<group>";
@@ -817,6 +838,7 @@
 				FF73036B1E7CFE5800B90F50 /* Announcement Cell */,
 				FFC9596F1E77C76500D4944E /* AnnouncementTableViewController.h */,
 				FFC959701E77C76500D4944E /* AnnouncementTableViewController.m */,
+				101CCF721EECA5B900BED961 /* Announcement.storyboard */,
 			);
 			name = "Announcement Table";
 			sourceTree = "<group>";
@@ -931,9 +953,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFC959911E7B75D100D4944E /* SermonTableViewCell.xib in Resources */,
+				101CCF711EECA57700BED961 /* Sermon.storyboard in Resources */,
 				E7A30F041CE1062100000000 /* SignIn.storyboard in Resources */,
 				E7A30F042C03891C00000000 /* UserSettings.storyboard in Resources */,
 				E7A30F04C85983F400000000 /* UserIdentity.storyboard in Resources */,
+				101CCF731EECA5B900BED961 /* Announcement.storyboard in Resources */,
+				101CCF6F1EECA4D900BED961 /* ChurchInfo.storyboard in Resources */,
 				E7A30F04D0D5179000000000 /* NoSQLDatabase.storyboard in Resources */,
 				FF7303751E7D0AA700B90F50 /* AnnouncementAddStoryboard.storyboard in Resources */,
 				E7A30F045E287F1000000000 /* ContentDelivery.storyboard in Resources */,
@@ -1021,6 +1046,7 @@
 				E7A30F047CF899D100000000 /* UserFilesViewController.m in Sources */,
 				E7A30F043CDF7E6A00000000 /* NoSQLTableFactory.m in Sources */,
 				FF869BFA1EB028A600600FED /* AWSAPI_N11KQZNXH0_SendNotificationClient.m in Sources */,
+				101CCF771EECA64D00BED961 /* HomePageViewController.m in Sources */,
 				E7A30F041A51B52100000000 /* main.m in Sources */,
 				FF7D3A3F1E99B5B800FC108A /* Utils.m in Sources */,
 				E7A30F04106DC78300000000 /* AnnouncementsTable.m in Sources */,

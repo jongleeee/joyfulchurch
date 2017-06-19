@@ -32,6 +32,7 @@
     
     [self resizePickerView];
     
+    
     self.announcementContent.text = @"Context";
     self.announcementContent.textColor = [UIColor lightGrayColor];
     self.announcementContent.delegate = self;
@@ -56,6 +57,10 @@
                                                    apiClient: [AWSAPI_N11KQZNXH0_SendNotificationClient clientForKey:AWSCloudLogicDefaultConfigurationKey]
                                               apiDescription:@"Sends notification to topic"
                           ];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)sendNotification:(NSString *)channel {
