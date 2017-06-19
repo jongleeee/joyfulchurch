@@ -40,6 +40,7 @@
                @"_userId" : @"userId",
                @"_creationDate" : @"creationDate",
                @"_keywords" : @"keywords",
+               @"_series" : @"series",
                @"_sermon" : @"sermon",
                @"_sermonId" : @"sermonId",
                @"_title" : @"title",
