@@ -18,6 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.00093314647683348485" green="0.7473486075129534" blue="0.0014477243785653185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PJK-eq-84S" style="IBUITableViewCellStyleDefault" id="Azp-nu-Cbi">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -61,13 +63,21 @@
         <scene sceneID="Sgx-fB-Geo">
             <objects>
                 <navigationController title="SermonViewController" automaticallyAdjustsScrollViewInsets="NO" id="RGC-8h-KBv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sermon" id="cT6-yo-aIL"/>
+                    <tabBarItem key="tabBarItem" title="설교 말씀" image="SermonGreenGradient.png" id="cT6-yo-aIL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iQg-o8-EwO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hzk-iX-k63">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="oND-kK-dJl" kind="relationship" relationship="rootViewController" id="qf6-pL-hH1"/>
                     </connections>
@@ -205,4 +215,7 @@
             <point key="canvasLocation" x="-244" y="1566"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SermonGreenGradient.png" width="375" height="85"/>
+    </resources>
 </document>

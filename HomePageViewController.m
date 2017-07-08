@@ -31,7 +31,6 @@
 
 @implementation HomePageViewController
 
-typedef double CGFloat;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

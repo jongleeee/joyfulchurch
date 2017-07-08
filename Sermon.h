@@ -15,5 +15,9 @@
 - (NSString *)getSermon;
 - (NSDate *)getDate;
 - (NSString *)getDateInString;
+- (NSString *)getSeries;
+- (NSString *)getMonth;
+- (NSString *)getDay;
+- (NSString *)getYear;
 
 @end

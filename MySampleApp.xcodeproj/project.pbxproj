@@ -11,6 +11,11 @@
 		101CCF711EECA57700BED961 /* Sermon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF701EECA57700BED961 /* Sermon.storyboard */; };
 		101CCF731EECA5B900BED961 /* Announcement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF721EECA5B900BED961 /* Announcement.storyboard */; };
 		101CCF771EECA64D00BED961 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101CCF761EECA64D00BED961 /* HomePageViewController.m */; };
+		43F7C1041F10A103003F305B /* THEJUNG_bold_130.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */; };
+		43F7C1051F10A103003F305B /* THEJUNG_bold_140.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */; };
+		43F7C1061F10A103003F305B /* THEJUNG_regular_120.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */; };
+		43F7C1071F10A103003F305B /* THEJUNG_thin_110.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1031F10A103003F305B /* THEJUNG_thin_110.otf */; };
+		43F7C1091F10CBB6003F305B /* SermonGreenGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1081F10CBB6003F305B /* SermonGreenGradient.png */; };
 		E7A30F04005E1E2900000000 /* UserIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29D435653200000000 /* UserIdentityViewController.m */; };
 		E7A30F040158BD6B00000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29519A4E3600000000 /* UIKit.framework */; };
 		E7A30F04048A03B600000000 /* NoSQLTableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2977FC76A200000000 /* NoSQLTableListViewController.m */; };
@@ -230,6 +235,11 @@
 		1DD70E29FCEC013600000000 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1DD70E29FEC7693400000000 /* UserPoolForgotPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserPoolForgotPasswordViewController.h; path = MySampleApp/App/SignIn/UserPools/UserPoolForgotPasswordViewController.h; sourceTree = SOURCE_ROOT; };
 		1DD70E29FF5A433A00000000 /* UserPoolForgotPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UserPoolForgotPasswordViewController.m; path = MySampleApp/App/SignIn/UserPools/UserPoolForgotPasswordViewController.m; sourceTree = SOURCE_ROOT; };
+		43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_bold_130.otf; sourceTree = "<group>"; };
+		43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_bold_140.otf; sourceTree = "<group>"; };
+		43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_regular_120.otf; sourceTree = "<group>"; };
+		43F7C1031F10A103003F305B /* THEJUNG_thin_110.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_thin_110.otf; sourceTree = "<group>"; };
+		43F7C1081F10CBB6003F305B /* SermonGreenGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SermonGreenGradient.png; sourceTree = "<group>"; };
 		518C10D8A916096489F3D398 /* Pods-MySampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E10FFEF04E23F5B21D6AA7C8 /* Pods-MySampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF1164ED1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_Y4XE7A7C34_Empty.h; sourceTree = "<group>"; };
@@ -378,6 +388,18 @@
 				E10FFEF04E23F5B21D6AA7C8 /* Pods-MySampleApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		43F7C0F71F109FEF003F305B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43F7C1081F10CBB6003F305B /* SermonGreenGradient.png */,
+				43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */,
+				43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */,
+				43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */,
+				43F7C1031F10A103003F305B /* THEJUNG_thin_110.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B401C9790E4597A100000000 /* Demo */ = {
@@ -574,6 +596,7 @@
 		B401C979A0E772CD00000000 /* MySampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				43F7C0F71F109FEF003F305B /* Resources */,
 				FF40D1CE1E96171200996A59 /* AmazonAws */,
 				B401C9798F9C4C2D00000000 /* App */,
 				B401C9790E4597A100000000 /* Demo */,
@@ -955,6 +978,7 @@
 				FFC959911E7B75D100D4944E /* SermonTableViewCell.xib in Resources */,
 				101CCF711EECA57700BED961 /* Sermon.storyboard in Resources */,
 				E7A30F041CE1062100000000 /* SignIn.storyboard in Resources */,
+				43F7C1041F10A103003F305B /* THEJUNG_bold_130.otf in Resources */,
 				E7A30F042C03891C00000000 /* UserSettings.storyboard in Resources */,
 				E7A30F04C85983F400000000 /* UserIdentity.storyboard in Resources */,
 				101CCF731EECA5B900BED961 /* Announcement.storyboard in Resources */,
@@ -964,13 +988,17 @@
 				E7A30F045E287F1000000000 /* ContentDelivery.storyboard in Resources */,
 				FFC959751E79042300D4944E /* AnnouncementDetailStoryboard.storyboard in Resources */,
 				E7A30F04BC0E332400000000 /* UserDataStorage.storyboard in Resources */,
+				43F7C1091F10CBB6003F305B /* SermonGreenGradient.png in Resources */,
 				FF73037B1E7D0BBE00B90F50 /* SermonAddStoryboard.storyboard in Resources */,
 				E7A30F041223775F00000000 /* Launch Screen.storyboard in Resources */,
 				FF50C3A31E877CBE005D6135 /* LoginStoryboard.storyboard in Resources */,
+				43F7C1061F10A103003F305B /* THEJUNG_regular_120.otf in Resources */,
 				E7A30F04CA70216700000000 /* Images.xcassets in Resources */,
 				FF50C3931E86D682005D6135 /* AnnouncementSubscribeStoryboard.storyboard in Resources */,
+				43F7C1071F10A103003F305B /* THEJUNG_thin_110.otf in Resources */,
 				E7A30F0466BD4E8800000000 /* UserFiles.storyboard in Resources */,
 				E7A30F04D22D654300000000 /* CloudLogicAPI.storyboard in Resources */,
+				43F7C1051F10A103003F305B /* THEJUNG_bold_140.otf in Resources */,
 				FF7303701E7CFE6D00B90F50 /* AnnouncementTableViewCell.xib in Resources */,
 				E7A30F041C0FE4C400000000 /* UserPools.storyboard in Resources */,
 				FFC9596B1E77C6DD00D4944E /* SermonDetailStoryboard.storyboard in Resources */,

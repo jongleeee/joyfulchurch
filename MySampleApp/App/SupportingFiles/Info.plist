@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>THEJUNG_bold_130.otf</string>
+		<string>THEJUNG_bold_140.otf</string>
+		<string>THEJUNG_regular_120.otf</string>
+		<string>THEJUNG_thin_110.otf</string>
+	</array>
 	<key>AWS</key>
 	<dict>
 		<key>Cognito</key>
@@ -55,7 +64,7 @@
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_kairos_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_general_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_karisma_MOBILEHUB_687604833</string>
-                    <string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
+					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
 				</array>
 				<key>SNSPlatformApplicationARN</key>
 				<string>arn:aws:sns:us-west-1:115981409113:app/APNS_SANDBOX/joyfulchurch_MOBILEHUB_687604833</string>
@@ -70,7 +79,7 @@
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_kairos_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_general_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_karisma_MOBILEHUB_687604833</string>
-                    <string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
+					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
 				</array>
 				<key>SNSPlatformApplicationARN</key>
 				<string>arn:aws:sns:us-west-1:115981409113:app/APNS/joyfulchurch_MOBILEHUB_687604833</string>

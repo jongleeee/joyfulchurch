@@ -34,6 +34,17 @@
                             action:@selector(getLatestSermons)
                   forControlEvents:UIControlEventValueChanged];
     [self getLatestSermons];
+    
+    self.navigationItem.title = @"설교 말씀";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self setNeedsStatusBarAppearanceUpdate];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -113,32 +124,35 @@
         cell = [nib objectAtIndex:0];
     }
     Sermon *sermon = [sermons objectAtIndex:indexPath.row];
-    
     cell.title.text = [sermon getTitle];
     cell.title.adjustsFontSizeToFitWidth = YES;
     [cell.title sizeToFit];
     
-    cell.subtitle.text = [sermon getVerse];
-    [cell.subtitle sizeToFit];
+    cell.verse.text = [sermon getVerse];
+    cell.verse.adjustsFontSizeToFitWidth = YES;
+    [cell.verse sizeToFit];
     
-    cell.date.text = [sermon getDateInString];
+    cell.series.text = [sermon getSeries];
+    cell.series.adjustsFontSizeToFitWidth = YES;
+    [cell.series sizeToFit];
+    
+    cell.month.text = [sermon getMonth];
+    cell.month.adjustsFontSizeToFitWidth = YES;
+    [cell.month sizeToFit];
+    
+    cell.date.text = [sermon getDay];
+    cell.date.adjustsFontSizeToFitWidth = YES;
     [cell.date sizeToFit];
     
-    
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:cell.date.layer.bounds byRoundingCorners:(UIRectCornerBottomLeft | UIRectCornerBottomRight) cornerRadii:CGSizeMake(6.0, 6.0)];
-    
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = cell.date.layer.bounds;
-    maskLayer.path  = maskPath.CGPath;
-    cell.date.layer.masksToBounds = YES;
-    cell.date.layer.mask = maskLayer;
-    
+    cell.year.text = [sermon getYear];
+    cell.year.adjustsFontSizeToFitWidth = YES;
+    [cell.year sizeToFit];
     
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 74.0f;
+    return 100.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
