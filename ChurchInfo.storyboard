@@ -27,9 +27,9 @@
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ez-KcA">
-                                <rect key="frame" x="4" y="984" width="760" height="32"/>
+                                <rect key="frame" x="4" y="959" width="760" height="35"/>
                                 <color key="backgroundColor" red="0.35686274509803922" green="0.68235294117647061" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="길찾기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,46 +45,49 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-FE-w3T" userLabel="innerView">
-                                <rect key="frame" x="271" y="473" width="226" height="79"/>
+                                <rect key="frame" x="259" y="473" width="250" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9875 Dublin Canyon Rd. Castro Valley CA 94552" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-nD-Gkg">
-                                        <rect key="frame" x="55" y="0.0" width="161" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9875 Dublin Canyon Rd. Castro Valley CA 94552" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-nD-Gkg">
+                                        <rect key="frame" x="65" y="0.0" width="185" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-YC-ebP">
-                                        <rect key="frame" x="8" y="8" width="32" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-YC-ebP">
+                                        <rect key="frame" x="0.0" y="4" width="50" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="tOz-5j-YXI"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" (510) - 582 - 1240" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-GD-X1E">
-                                        <rect key="frame" x="70" y="38" width="125" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(510) - 582 - 1240" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-GD-X1E">
+                                        <rect key="frame" x="65" y="39.5" width="119" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-aM-ESW">
-                                        <rect key="frame" x="3" y="68" width="42" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-aM-ESW">
+                                        <rect key="frame" x="0.0" y="64" width="42" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="KZi-7O-c8S"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="joyfulpastorlee@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-JW-6cZ">
-                                        <rect key="frame" x="51" y="63" width="177" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="joyfulpastorlee@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-JW-6cZ">
+                                        <rect key="frame" x="65" y="63.5" width="174.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="교회전화:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-eU-3Z6">
-                                        <rect key="frame" x="3" y="38" width="54" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회전화:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-eU-3Z6">
+                                        <rect key="frame" x="-1" y="40" width="54" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="exY-9X-mEf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -92,13 +95,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="226" id="VpO-o7-6LW"/>
+                                    <constraint firstItem="an6-JW-6cZ" firstAttribute="centerY" secondItem="QKW-aM-ESW" secondAttribute="centerY" id="18T-iQ-QzR"/>
+                                    <constraint firstItem="ZQs-GD-X1E" firstAttribute="leading" secondItem="Yxx-nD-Gkg" secondAttribute="leading" id="D1c-0i-RSq"/>
+                                    <constraint firstItem="QKW-aM-ESW" firstAttribute="top" secondItem="gsz-eU-3Z6" secondAttribute="bottom" constant="7" id="ICQ-aW-gVF"/>
+                                    <constraint firstItem="Yxx-nD-Gkg" firstAttribute="top" secondItem="6B0-FE-w3T" secondAttribute="top" id="JIM-v7-wum"/>
+                                    <constraint firstItem="tqT-YC-ebP" firstAttribute="top" secondItem="6B0-FE-w3T" secondAttribute="top" constant="4" id="LCj-ia-hYJ"/>
+                                    <constraint firstItem="tqT-YC-ebP" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" id="PZs-dZ-eIo"/>
+                                    <constraint firstItem="gsz-eU-3Z6" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" constant="-1" id="Sxt-LT-syK"/>
+                                    <constraint firstAttribute="width" constant="250" id="VpO-o7-6LW"/>
+                                    <constraint firstItem="an6-JW-6cZ" firstAttribute="leading" secondItem="ZQs-GD-X1E" secondAttribute="leading" id="YzO-wg-4Al"/>
+                                    <constraint firstItem="Yxx-nD-Gkg" firstAttribute="leading" secondItem="tqT-YC-ebP" secondAttribute="trailing" constant="15" id="dPa-sr-gfn"/>
+                                    <constraint firstItem="ZQs-GD-X1E" firstAttribute="centerY" secondItem="gsz-eU-3Z6" secondAttribute="centerY" id="eqr-et-a1d"/>
+                                    <constraint firstItem="gsz-eU-3Z6" firstAttribute="top" secondItem="tqT-YC-ebP" secondAttribute="bottom" constant="19" id="h8t-Qb-TiY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yxx-nD-Gkg" secondAttribute="trailing" id="mLs-ag-276"/>
+                                    <constraint firstItem="QKW-aM-ESW" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" id="ug4-Nb-Mu5"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="8" id="E0F-0E-c4Q"/>
+                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="30" id="E0F-0E-c4Q"/>
                             <constraint firstItem="eEW-xk-2jm" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="Hdu-zp-Cjx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4g8-qs-w6j" secondAttribute="trailing" id="Ldh-0n-Ram"/>
                             <constraint firstItem="eEW-xk-2jm" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="32" id="TEM-Iz-phE"/>
@@ -120,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH5-nB-qIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473.91304347826093" y="734.51086956521749"/>
+            <point key="canvasLocation" x="473.4375" y="734.1796875"/>
         </scene>
         <!--Info-->
         <scene sceneID="Cs4-Hj-3qd">
@@ -128,7 +144,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wwK-ik-WhQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" id="hZ6-56-ELm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e5o-vZ-8Gj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e5o-vZ-8Gj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

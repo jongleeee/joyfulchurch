@@ -108,6 +108,8 @@
 - (IBAction)saveAnnouncement:(id)sender {
     if (self.announcementTitle.text.length == 0 || self.announcementContent.text.length == 0 || [self.announcementContent.text isEqualToString:@"Context"]) {
         [self displayAlertWithTitle:@"Error" andContext:@"Please fill all the information"];
+    } else if (self.announcementTitle.text.length > 15) {
+        [self displayAlertWithTitle:@"Error" andContext:@"Title should be no more than 15 characters"];
     } else {
         Announcements *announcement = [Announcements new];
         announcement._title = self.announcementTitle.text;
@@ -120,7 +122,6 @@
                 [self displayAlertWithTitle:@"Error" andContext:@"Could not save at this time. Please try again later"];
             } else {
                 [self sendNotification:self.selectedCategory];
-                
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"updateAnnouncements" object:nil];
                 [self.navigationController popViewControllerAnimated:YES];
             }
@@ -130,7 +131,7 @@
 }
 
 - (void)displayAlertWithTitle:(NSString *)title andContext:(NSString *)context {
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please fill all the informations" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:context preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
     [alert addAction:okButton];
     [self presentViewController:alert animated:YES completion:nil];

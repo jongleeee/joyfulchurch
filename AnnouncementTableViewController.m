@@ -10,10 +10,12 @@
 #import "User.h"
 #import "Utils.h"
 
+
 @interface AnnouncementTableViewController () {
     NSMutableArray *announcements;
     User *user;
 }
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addAnnouncementButton;
 
 @end
@@ -35,7 +37,12 @@
                   forControlEvents:UIControlEventValueChanged];
     [self getLatestAnnouncements];
     
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:71.0f/255.0f green:185.0f/255.0f blue:47.0f/255.0f alpha:1.0f]];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAnnouncements:) name:@"updateAnnouncements" object:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -106,7 +113,6 @@
     return [announcements count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AnnouncementTableViewCell *cell = (AnnouncementTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"AnnouncementTableViewCell"];
     if (cell == nil)
@@ -117,23 +123,38 @@
     
     Announcement *announcement = [announcements objectAtIndex:indexPath.row];
     
-    cell.category.text = [NSString stringWithFormat:@"  %@  ", [announcement getCategory]];
-    cell.category.backgroundColor = [self getColorForCategory:[announcement getCategory]];
-    [cell.category sizeToFit];
-    
     cell.title.text = [announcement getTitle];
     [cell.title sizeToFit];
     cell.title.adjustsFontSizeToFitWidth = YES;
 
-    cell.date.text = [announcement getNumberOfDaysInString];
+    cell.date.text = [announcement getDay];
     [cell.date sizeToFit];
     
+    cell.month.text = [announcement getMonth];
+    [cell.date sizeToFit];
+    
+    cell.year.text = [announcement getYear];
+    [cell.date sizeToFit];
+    
+    UIImage *img = [UIImage imageNamed:@"WhiteBanner"];
+    cell.categoryImage.image = img;
+    cell.categoryImage.image = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    cell.categoryImage.tintColor = [self getColorForCategory:[announcement getCategory]];
+
+    [cell.categoryImage setTranslatesAutoresizingMaskIntoConstraints:NO];
+    cell.categoryImage.autoresizingMask = UIViewAutoresizingNone;
+    cell.categoryImage.clipsToBounds = YES;
+
+    cell.categoryLabel.text = [NSString stringWithFormat:@"%@", [announcement getCategory]];
+
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 58.0f;
+    return 100.0f;
 }
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AnnouncementDetailStoryboard" bundle:nil];

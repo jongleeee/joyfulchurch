@@ -32,23 +32,27 @@
                             <outlet property="delegate" destination="m4S-vY-MRc" id="vxZ-50-lph"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Announcement" id="mfi-69-Hdh">
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Pt-z6-WdT">
+                    <navigationItem key="navigationItem" id="mfi-69-Hdh">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nq0-iE-dNi">
                             <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="교회 소식"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <state key="normal" title="교회 소식">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                             <connections>
-                                <action selector="chooseAnnouncements:" destination="m4S-vY-MRc" eventType="touchUpInside" id="LY6-di-90I"/>
+                                <action selector="addAnnouncementPressed:" destination="m4S-vY-MRc" eventType="touchUpInside" id="nab-L9-9Kb"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hzi-sn-VzP">
+                        <barButtonItem key="rightBarButtonItem" title="Subscribe" id="Hzi-sn-VzP">
                             <connections>
-                                <action selector="addAnnouncementPressed:" destination="m4S-vY-MRc" id="yBf-fz-sRZ"/>
+                                <action selector="chooseAnnouncements:" destination="m4S-vY-MRc" id="mgW-Ag-ejh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addAnnouncementButton" destination="Hzi-sn-VzP" id="IjW-8U-HYq"/>
+                        <outlet property="addAnnouncementButton" destination="nq0-iE-dNi" id="DJI-0x-oIj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaM-ZU-nwC" userLabel="First Responder" sceneMemberID="firstResponder"/>

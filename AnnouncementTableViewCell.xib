@@ -1,61 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="THEJUNG_bold_130.otf">
+            <string>THEJung130</string>
+        </array>
+        <array key="THEJUNG_bold_140.otf">
+            <string>THEJung140</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementTableViewCell" rowHeight="58" id="KGk-i7-Jjw" customClass="AnnouncementTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="AnnouncementTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                <rect key="frame" x="0.0" y="0.0" width="376" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-Bl-bWJ">
-                        <rect key="frame" x="8" y="8" width="62.5" height="17"/>
-                        <color key="backgroundColor" red="0.86203204314720816" green="0.54089598044401777" blue="0.29841957992799684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29w-UZ-pcY">
-                        <rect key="frame" x="33" y="25" width="251" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29w-UZ-pcY">
+                        <rect key="frame" x="88" y="40" width="288" height="21"/>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-Jy-VFg">
-                        <rect key="frame" x="283" y="8" width="25.5" height="13.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-Jy-VFg">
+                        <rect key="frame" x="8" y="29" width="72" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="71.799999999999997" id="Glj-hx-T6S"/>
+                            <constraint firstAttribute="height" constant="40" id="LaP-Vs-gL5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="36"/>
+                        <color key="textColor" red="0.13799835329999999" green="0.63273154149999999" blue="0.1139267768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0S-kD-wEu">
+                        <rect key="frame" x="8" y="14" width="72" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="DCl-GQ-6dH"/>
+                            <constraint firstAttribute="width" constant="71.799999999999997" id="x8X-sb-JKC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="14"/>
+                        <color key="textColor" red="0.13799835329999999" green="0.63273154149999999" blue="0.1139267768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-Ck-5XH">
+                        <rect key="frame" x="8" y="69" width="72" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="71.799999999999997" id="ANu-nS-U7N"/>
+                            <constraint firstAttribute="height" constant="15" id="VIx-KA-7O2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="12"/>
+                        <color key="textColor" red="0.13799835329999999" green="0.63273154149999999" blue="0.1139267768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBanner" translatesAutoresizingMaskIntoConstraints="NO" id="4j3-1h-DKt">
+                        <rect key="frame" x="279" y="8" width="89" height="20"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VF-JW-ytd">
+                        <rect key="frame" x="326" y="0.0" width="42" height="21"/>
+                        <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="29w-UZ-pcY" firstAttribute="top" secondItem="2vw-Bl-bWJ" secondAttribute="bottom" id="A1r-yo-myp"/>
-                    <constraint firstItem="29w-UZ-pcY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="25" id="LiM-Ih-bhT"/>
-                    <constraint firstAttribute="topMargin" secondItem="2vw-Bl-bWJ" secondAttribute="top" id="Tlx-Cc-Roy"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="29w-UZ-pcY" secondAttribute="trailing" constant="25" id="UsK-h3-taJ"/>
-                    <constraint firstItem="29w-UZ-pcY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Wis-0n-qD5"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="2vw-Bl-bWJ" secondAttribute="leading" id="l52-xW-xCh"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wKP-Jy-VFg" secondAttribute="trailing" id="mIv-rM-LkQ"/>
-                    <constraint firstAttribute="topMargin" secondItem="wKP-Jy-VFg" secondAttribute="top" id="xKo-8b-tcR"/>
+                    <constraint firstItem="DsG-Ck-5XH" firstAttribute="trailing" secondItem="wKP-Jy-VFg" secondAttribute="trailing" id="0ac-fR-7Xa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4j3-1h-DKt" secondAttribute="trailing" id="22N-nf-3gD"/>
+                    <constraint firstItem="5VF-JW-ytd" firstAttribute="top" secondItem="4j3-1h-DKt" secondAttribute="top" id="3Cd-FP-jwM"/>
+                    <constraint firstItem="n0S-kD-wEu" firstAttribute="trailing" secondItem="wKP-Jy-VFg" secondAttribute="trailing" id="9JY-qH-NrU"/>
+                    <constraint firstItem="5VF-JW-ytd" firstAttribute="trailing" secondItem="4j3-1h-DKt" secondAttribute="trailing" constant="-7" id="FWk-DQ-0BP"/>
+                    <constraint firstItem="wKP-Jy-VFg" firstAttribute="top" secondItem="n0S-kD-wEu" secondAttribute="bottom" id="J1v-cg-cMB"/>
+                    <constraint firstItem="wKP-Jy-VFg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Jjt-Yj-tG3"/>
+                    <constraint firstItem="n0S-kD-wEu" firstAttribute="leading" secondItem="wKP-Jy-VFg" secondAttribute="leading" id="Kb3-2z-uEO"/>
+                    <constraint firstItem="wKP-Jy-VFg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XfU-GN-vwd"/>
+                    <constraint firstItem="29w-UZ-pcY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Yke-Y6-b8K"/>
+                    <constraint firstItem="n0S-kD-wEu" firstAttribute="centerX" secondItem="wKP-Jy-VFg" secondAttribute="centerX" id="Yx9-sH-8td"/>
+                    <constraint firstItem="29w-UZ-pcY" firstAttribute="centerY" secondItem="wKP-Jy-VFg" secondAttribute="centerY" id="dYL-h5-xll"/>
+                    <constraint firstItem="29w-UZ-pcY" firstAttribute="leading" secondItem="wKP-Jy-VFg" secondAttribute="trailing" constant="8" id="eKI-VW-V17"/>
+                    <constraint firstItem="DsG-Ck-5XH" firstAttribute="centerX" secondItem="wKP-Jy-VFg" secondAttribute="centerX" id="oJz-gl-wdm"/>
+                    <constraint firstItem="DsG-Ck-5XH" firstAttribute="top" secondItem="wKP-Jy-VFg" secondAttribute="bottom" id="wHx-WB-fBa"/>
+                    <constraint firstItem="4j3-1h-DKt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="y4f-xd-o9V"/>
+                    <constraint firstItem="DsG-Ck-5XH" firstAttribute="leading" secondItem="wKP-Jy-VFg" secondAttribute="leading" id="ykn-q3-eid"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="category" destination="2vw-Bl-bWJ" id="ut8-NN-t1o"/>
+                <outlet property="categoryImage" destination="4j3-1h-DKt" id="go8-lS-8cz"/>
+                <outlet property="categoryLabel" destination="5VF-JW-ytd" id="Qrm-tg-JMX"/>
                 <outlet property="date" destination="wKP-Jy-VFg" id="mYy-gs-tMh"/>
+                <outlet property="month" destination="n0S-kD-wEu" id="rbw-dJ-PmY"/>
                 <outlet property="title" destination="29w-UZ-pcY" id="rem-KT-PWN"/>
+                <outlet property="year" destination="DsG-Ck-5XH" id="vDL-Ha-jhI"/>
             </connections>
-            <point key="canvasLocation" x="32.5" y="61"/>
+            <point key="canvasLocation" x="62" y="82"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="WhiteBanner" width="89" height="20"/>
+    </resources>
 </document>

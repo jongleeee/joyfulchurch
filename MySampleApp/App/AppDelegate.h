@@ -12,6 +12,8 @@
 //
 #import <UIKit/UIKit.h>
 #import <UserNotifications/UserNotifications.h>  
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 

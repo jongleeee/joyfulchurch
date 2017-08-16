@@ -9,10 +9,13 @@
 #import "SermonTableViewController.h"
 #import "User.h"
 #import "Utils.h"
+#import "AudioPlayer.h"
 
 @interface SermonTableViewController () {
     NSMutableArray *sermons;
     User *user;
+    NSString *myTitle;
+    AudioPlayer *player;
 }
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addSermonButton;
 
@@ -23,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     user = [User sharedManager];
+    player = [AudioPlayer sharedManager];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -41,7 +45,9 @@
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self setNeedsStatusBarAppearanceUpdate];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
 }
+
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
@@ -49,6 +55,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.hidden = NO;
+    [self reloadSermons];
     
     if (![user isAuthorizedFor:@"Sermon"]) {
         self.addSermonButton.enabled = false;
@@ -106,7 +113,6 @@
         self.tableView.backgroundView = messageLabel;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
-    
     return 0;
 }
 
@@ -123,59 +129,65 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SermonTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    UIColor *black = [UIColor blackColor];
+    UIColor *green = [UIColor colorWithRed:71.0f/255.0f green:185.0f/255.0f blue:47.0f/255.0f alpha:1.0f];
+    
     Sermon *sermon = [sermons objectAtIndex:indexPath.row];
     cell.title.text = [sermon getTitle];
+    cell.title.textColor = black;
     cell.title.adjustsFontSizeToFitWidth = YES;
     [cell.title sizeToFit];
     
     cell.verse.text = [sermon getVerse];
+    cell.verse.textColor = black;
     cell.verse.adjustsFontSizeToFitWidth = YES;
     [cell.verse sizeToFit];
     
     cell.series.text = [sermon getSeries];
+    cell.series.textColor = black;
     cell.series.adjustsFontSizeToFitWidth = YES;
     [cell.series sizeToFit];
     
     cell.month.text = [sermon getMonth];
+    cell.month.textColor = green;
     cell.month.adjustsFontSizeToFitWidth = YES;
     [cell.month sizeToFit];
     
     cell.date.text = [sermon getDay];
+    cell.date.textColor = green;
     cell.date.adjustsFontSizeToFitWidth = YES;
     [cell.date sizeToFit];
     
     cell.year.text = [sermon getYear];
+    cell.year.textColor = green;
     cell.year.adjustsFontSizeToFitWidth = YES;
     [cell.year sizeToFit];
+    
+    double time = player.getCurrTimeInSec;
+    if ([[player getSermon] isEqualToString:[sermon getSermon]] && (time > 0.0)) {
+    UIColor *blue= [UIColor colorWithRed:80.0f/255.0f green:168.0f/255.0f blue:215.0f/255.0f alpha:1.0f];
+    cell.title.textColor = blue;
+    cell.verse.textColor = blue;
+    cell.series.textColor = blue;
+    cell.month.textColor = blue;
+    cell.date.textColor = blue;
+    cell.year.textColor = blue;
+    }
     
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Sermon *sermon = [sermons objectAtIndex:indexPath.row];
-    NSString *url = [sermon getSermon];
-    
-    if ([url isEqualToString:@" "]) {
-        url = @"2mD7KMJ";
-    }
-    
-    MPMoviePlayerViewController *controller = [[MPMoviePlayerViewController alloc]initWithContentURL: [NSURL URLWithString: [NSString stringWithFormat:@"https://bit.ly/%@", url]]];
-    [controller.moviePlayer prepareToPlay];
-    [controller.moviePlayer play];
-    
-    [self.navigationController presentMoviePlayerViewControllerAnimated:controller];
-    
-    /*
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SermonDetailStoryboard" bundle:nil];
     SermonDetailViewController *sermonDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"SermonDetailStoryboard"];
     sermonDetailViewController.sermon = [sermons objectAtIndex:indexPath.row];
-
+    
     [self.navigationController pushViewController:sermonDetailViewController animated:YES];
-     */
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

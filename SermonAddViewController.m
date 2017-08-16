@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *sermonVerse;
 @property (weak, nonatomic) IBOutlet UITextField *sermonURL;
 @property (weak, nonatomic) IBOutlet UIDatePicker *sermonDatePicker;
+@property (weak, nonatomic) IBOutlet UITextField *sermonSeries;
 @property (nonatomic, strong) NSDate *sermonDate;
 @property (nonatomic, strong) PushNotification *notificationHandler;
 @end
@@ -38,6 +39,7 @@
     [self.sermonTitle resignFirstResponder];
     [self.sermonVerse resignFirstResponder];
     [self.sermonURL resignFirstResponder];
+    [self.sermonSeries resignFirstResponder];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
@@ -51,13 +53,14 @@
 }
 
 - (IBAction)save:(id)sender {
-    if (self.sermonTitle.text.length == 0 || self.sermonVerse.text.length == 0 || self.sermonURL.text.length == 0) {
+    if (self.sermonTitle.text.length == 0 || self.sermonVerse.text.length == 0 || self.sermonURL.text.length == 0 || self.sermonSeries.text.length == 0) {
         [self displayAlertWithTitle:@"Error" andContext:@"Please fill all the information"];
     } else {
         Sermons *sermon = [Sermons new];
         sermon._title = self.sermonTitle.text;
         sermon._verse = self.sermonVerse.text;
         sermon._sermon = self.sermonURL.text;
+        sermon._series = self.sermonSeries.text;
         
         NSTimeInterval timeStamp = [self.sermonDate timeIntervalSince1970];
         NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
@@ -70,6 +73,7 @@
                 [self displayAlertWithTitle:@"Error" andContext:@"Could not save at this time. Please try again later"];
             } else {
                 [self.notificationHandler sendNotificationToChannel:@"설교" withMessage:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"updateSermons" object:nil];
                 [self.navigationController popViewControllerAnimated:YES];
             }}];
     }
