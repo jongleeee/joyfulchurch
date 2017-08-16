@@ -61,6 +61,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
          }];  
     }
     
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"SermonGreenGradient.png"] forBarMetrics:UIBarMetricsDefault];
+
     // Override point for customization after application launch.
     return [[AWSMobileClient sharedInstance] didFinishLaunching:application
                                              withOptions:launchOptions];

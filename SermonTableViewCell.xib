@@ -1,61 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="THEJUNG_bold_140.otf">
+            <string>THEJung140</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SermonTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SermonTableViewCell" rowHeight="70" id="KGk-i7-Jjw" customClass="SermonTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="284" height="70"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SermonTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SermonTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="SermonTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="284" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KND-sa-PM7">
-                        <rect key="frame" x="31" y="26" width="222" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KND-sa-PM7">
+                        <rect key="frame" x="88" y="38.5" width="269" height="23"/>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-2J-cZz">
-                        <rect key="frame" x="117" y="50" width="50" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-2J-cZz">
+                        <rect key="frame" x="88" y="70.5" width="269" height="14"/>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Date " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5So-15-ebs">
-                        <rect key="frame" x="7" y="3" width="36" height="16"/>
-                        <color key="backgroundColor" red="0.36385648749999999" green="0.69125474919999996" blue="0.90749920689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A P R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5So-15-ebs">
+                        <rect key="frame" x="8" y="15" width="70.5" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="ByT-Xs-6DQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="14"/>
+                        <color key="textColor" red="0.00077391138000131715" green="0.61981865284974091" blue="0.0012006800641620667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01P-b1-SgF">
+                        <rect key="frame" x="8" y="70" width="70" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="xK7-df-ROl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="12"/>
+                        <color key="textColor" red="0.00077391137999999996" green="0.61981865280000004" blue="0.0012006800639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="창세기 족장 강해(40)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3up-po-RoO">
+                        <rect key="frame" x="88" y="12.5" width="269" height="17"/>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFv-2r-ap9">
+                        <rect key="frame" x="8" y="30" width="70" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Lg0-Mk-8sP"/>
+                            <constraint firstAttribute="width" constant="70" id="O2F-kv-8Yf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="36"/>
+                        <color key="textColor" red="0.00077391137999999996" green="0.61981865280000004" blue="0.0012006800639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KND-sa-PM7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4ir-0M-nVF"/>
-                    <constraint firstItem="Xdc-2J-cZz" firstAttribute="top" secondItem="KND-sa-PM7" secondAttribute="bottom" constant="4" id="L4f-3T-JjF"/>
-                    <constraint firstItem="Xdc-2J-cZz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QRh-hj-gfn"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="5So-15-ebs" secondAttribute="leading" constant="1" id="R7L-H8-oW1"/>
-                    <constraint firstItem="KND-sa-PM7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="25" id="Zh3-ae-Hqr"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="KND-sa-PM7" secondAttribute="trailing" constant="25" id="m91-77-tn4"/>
-                    <constraint firstAttribute="topMargin" secondItem="5So-15-ebs" secondAttribute="top" constant="5" id="wXj-yu-zmC"/>
-                    <constraint firstItem="KND-sa-PM7" firstAttribute="top" secondItem="5So-15-ebs" secondAttribute="bottom" constant="2" id="wzg-kM-wLP"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="trailing" secondItem="5So-15-ebs" secondAttribute="trailing" id="01C-ag-jXl"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0zs-hA-AbI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KND-sa-PM7" secondAttribute="trailing" constant="10" id="1Rh-j8-6fe"/>
+                    <constraint firstItem="KND-sa-PM7" firstAttribute="centerY" secondItem="rFv-2r-ap9" secondAttribute="centerY" id="5vu-CA-jcg"/>
+                    <constraint firstItem="Xdc-2J-cZz" firstAttribute="trailing" secondItem="KND-sa-PM7" secondAttribute="trailing" id="DWK-gu-5HW"/>
+                    <constraint firstItem="Xdc-2J-cZz" firstAttribute="centerX" secondItem="KND-sa-PM7" secondAttribute="centerX" id="G4i-0W-p8f"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="leading" secondItem="5So-15-ebs" secondAttribute="leading" id="I3m-pp-XVi"/>
+                    <constraint firstItem="01P-b1-SgF" firstAttribute="top" secondItem="rFv-2r-ap9" secondAttribute="bottom" id="IJ4-UH-XV6"/>
+                    <constraint firstItem="3up-po-RoO" firstAttribute="trailing" secondItem="KND-sa-PM7" secondAttribute="trailing" id="MxH-se-AfK"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Pm5-jW-PSb"/>
+                    <constraint firstItem="KND-sa-PM7" firstAttribute="leading" secondItem="rFv-2r-ap9" secondAttribute="trailing" constant="10" id="UBH-DB-rwB"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="trailing" secondItem="01P-b1-SgF" secondAttribute="trailing" id="Uve-cr-vcf"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="top" secondItem="5So-15-ebs" secondAttribute="bottom" id="dGW-30-RtK"/>
+                    <constraint firstItem="01P-b1-SgF" firstAttribute="centerX" secondItem="rFv-2r-ap9" secondAttribute="centerX" id="h2C-Ms-IWn"/>
+                    <constraint firstItem="Xdc-2J-cZz" firstAttribute="leading" secondItem="KND-sa-PM7" secondAttribute="leading" id="kzs-IE-krA"/>
+                    <constraint firstItem="3up-po-RoO" firstAttribute="leading" secondItem="KND-sa-PM7" secondAttribute="leading" id="qjZ-Pc-i91"/>
+                    <constraint firstItem="rFv-2r-ap9" firstAttribute="leading" secondItem="01P-b1-SgF" secondAttribute="leading" id="qyC-AY-Ass"/>
+                    <constraint firstItem="3up-po-RoO" firstAttribute="centerX" secondItem="KND-sa-PM7" secondAttribute="centerX" id="uZF-MA-DL9"/>
+                    <constraint firstItem="5So-15-ebs" firstAttribute="centerX" secondItem="rFv-2r-ap9" secondAttribute="centerX" id="uvE-e4-6br"/>
+                    <constraint firstItem="KND-sa-PM7" firstAttribute="top" secondItem="3up-po-RoO" secondAttribute="bottom" constant="9" id="vrO-ob-fB4"/>
+                    <constraint firstItem="Xdc-2J-cZz" firstAttribute="top" secondItem="KND-sa-PM7" secondAttribute="bottom" constant="9" id="xm1-HR-xnW"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="date" destination="5So-15-ebs" id="Brf-fn-QBv"/>
-                <outlet property="subtitle" destination="Xdc-2J-cZz" id="koK-Te-snJ"/>
+                <outlet property="date" destination="rFv-2r-ap9" id="gKp-Ec-Bqe"/>
+                <outlet property="month" destination="5So-15-ebs" id="dhN-si-Pm1"/>
+                <outlet property="series" destination="3up-po-RoO" id="3nK-4n-rBG"/>
                 <outlet property="title" destination="KND-sa-PM7" id="L0d-j7-ibL"/>
+                <outlet property="verse" destination="Xdc-2J-cZz" id="C1Y-E2-e2s"/>
+                <outlet property="year" destination="01P-b1-SgF" id="clE-fp-vrr"/>
             </connections>
-            <point key="canvasLocation" x="16" y="67"/>
+            <point key="canvasLocation" x="3" y="28"/>
         </tableViewCell>
     </objects>
 </document>
