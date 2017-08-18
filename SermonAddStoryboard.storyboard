@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,20 +37,14 @@
                                     <action selector="selectSermonDate:" destination="Bn6-IM-07r" eventType="valueChanged" id="Ucj-2W-vHI"/>
                                 </connections>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sermon URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-71-iIO">
-                                <rect key="frame" x="0.0" y="357" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sermon URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-71-iIO">
+                                <rect key="frame" x="0.0" y="371" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verse" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDG-ff-bmi">
-                                <rect key="frame" x="0.0" y="306" width="375" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-pW-iTU">
-                                <rect key="frame" x="0.0" y="467" width="375" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-pW-iTU">
+                                <rect key="frame" x="0.0" y="441" width="375" height="30"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.67450980390000004" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Save">
@@ -60,28 +54,45 @@
                                     <action selector="save:" destination="Bn6-IM-07r" eventType="touchUpInside" id="56W-TJ-k5Y"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Series" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAD-zR-cgz" userLabel="Sermon Series">
+                                <rect key="frame" x="0.0" y="291" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verse" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDG-ff-bmi">
+                                <rect key="frame" x="0.0" y="331" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PgI-lp-qJh" firstAttribute="leading" secondItem="c2g-I6-rG1" secondAttribute="leadingMargin" constant="-16" id="2Ty-dZ-naq"/>
-                            <constraint firstItem="SDG-ff-bmi" firstAttribute="leading" secondItem="c2g-I6-rG1" secondAttribute="leadingMargin" constant="-16" id="RMy-IG-CLc"/>
+                            <constraint firstItem="SDG-ff-bmi" firstAttribute="trailing" secondItem="KAD-zR-cgz" secondAttribute="trailing" id="Dxg-Z3-2NQ"/>
                             <constraint firstItem="jke-8d-ejG" firstAttribute="leading" secondItem="c2g-I6-rG1" secondAttribute="leadingMargin" id="SoI-5g-CO9"/>
                             <constraint firstItem="1Sb-pW-iTU" firstAttribute="top" secondItem="EU5-71-iIO" secondAttribute="bottom" constant="40" id="U55-Y6-5TN"/>
+                            <constraint firstItem="SDG-ff-bmi" firstAttribute="top" secondItem="KAD-zR-cgz" secondAttribute="bottom" constant="10" id="V5P-EZ-mdu"/>
                             <constraint firstItem="EU5-71-iIO" firstAttribute="leading" secondItem="c2g-I6-rG1" secondAttribute="leadingMargin" constant="-16" id="VJk-hA-wbE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Sb-pW-iTU" secondAttribute="trailing" constant="-16" id="VZe-An-rdd"/>
                             <constraint firstItem="jke-8d-ejG" firstAttribute="top" secondItem="gO6-Fq-aUX" secondAttribute="bottom" id="X60-2Z-jvg"/>
-                            <constraint firstItem="SDG-ff-bmi" firstAttribute="top" secondItem="PgI-lp-qJh" secondAttribute="bottom" constant="10" id="cWR-lQ-HU2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jke-8d-ejG" secondAttribute="trailing" id="cwS-Qp-3N1"/>
                             <constraint firstItem="1Sb-pW-iTU" firstAttribute="leading" secondItem="c2g-I6-rG1" secondAttribute="leadingMargin" constant="-16" id="eyd-bw-23c"/>
                             <constraint firstItem="PgI-lp-qJh" firstAttribute="top" secondItem="jke-8d-ejG" secondAttribute="bottom" constant="15" id="g9n-9o-vtQ"/>
+                            <constraint firstItem="KAD-zR-cgz" firstAttribute="trailing" secondItem="PgI-lp-qJh" secondAttribute="trailing" id="hDE-3A-Yci"/>
+                            <constraint firstItem="KAD-zR-cgz" firstAttribute="top" secondItem="PgI-lp-qJh" secondAttribute="bottom" constant="10" id="lXg-BR-7W9"/>
+                            <constraint firstItem="SDG-ff-bmi" firstAttribute="leading" secondItem="KAD-zR-cgz" secondAttribute="leading" id="leg-U9-8A0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EU5-71-iIO" secondAttribute="trailing" constant="-16" id="oZK-er-cHR"/>
+                            <constraint firstItem="KAD-zR-cgz" firstAttribute="leading" secondItem="PgI-lp-qJh" secondAttribute="leading" id="qOe-rP-U5j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PgI-lp-qJh" secondAttribute="trailing" constant="-16" id="wQL-YM-NFF"/>
                             <constraint firstItem="EU5-71-iIO" firstAttribute="top" secondItem="SDG-ff-bmi" secondAttribute="bottom" constant="10" id="zCK-ze-eU5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SDG-ff-bmi" secondAttribute="trailing" constant="-16" id="znt-gx-cfd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SermonSeries" destination="KAD-zR-cgz" id="B9K-k0-ssW"/>
                         <outlet property="sermonDatePicker" destination="jke-8d-ejG" id="Xc2-Sf-pWx"/>
+                        <outlet property="sermonSeries" destination="KAD-zR-cgz" id="bZM-2Y-Wtb"/>
                         <outlet property="sermonTitle" destination="PgI-lp-qJh" id="wlj-Ld-5KW"/>
                         <outlet property="sermonURL" destination="EU5-71-iIO" id="IlD-O1-4md"/>
                         <outlet property="sermonVerse" destination="SDG-ff-bmi" id="OJ7-Wv-0zN"/>

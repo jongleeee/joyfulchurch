@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Announcement.h"
 
-@interface Announcement ()
+@interface Announcement () {
+    NSDateFormatter *formatter;
+}
 
 @property NSString *category;
 @property NSString *title;
@@ -20,6 +22,11 @@
 @end
 
 @implementation Announcement
+
+- (Announcement *)init {
+    formatter = [[NSDateFormatter alloc] init];
+    return self;
+}
 
 - (void)configureAnnouncement:(NSDictionary *)announcement {
     self.category = [announcement objectForKey:@"_category"];
@@ -49,10 +56,27 @@
     return [NSDate dateWithTimeIntervalSince1970:[self.date doubleValue]];
 }
 
+- (NSString *)getMonth {
+    [formatter setDateFormat:@"MMM"];
+    NSString *uppercase = [formatter stringFromDate:[self getDate]];
+    return [uppercase uppercaseString];
+}
+
+- (NSString *)getDay {
+    [formatter setDateFormat:@"dd"];
+    NSString *day = [formatter stringFromDate:[self getDate]];
+    return day;
+}
+
+- (NSString *)getYear {
+    [formatter setDateFormat:@"yyyy"];
+    NSString *year = [formatter stringFromDate:[self getDate]];
+    return year;
+}
+
 - (NSString *)getDateInString {
-    NSDateFormatter *dateFormatterr = [[NSDateFormatter alloc] init];
-    [dateFormatterr setDateFormat:@"MMM dd, YY"];
-    return [dateFormatterr stringFromDate:[self getDate]];
+    [formatter setDateFormat:@"MMM dd, YY"];
+    return [formatter stringFromDate:[self getDate]];
 }
 
 - (NSString *)getNumberOfDaysInString {

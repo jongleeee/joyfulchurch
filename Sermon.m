@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Sermon.h"
 
-@interface Sermon ()
+@interface Sermon () {
+    NSDateFormatter *formatter;
+}
 
 @property NSString *title;
 @property NSString *verse;
@@ -20,6 +22,11 @@
 @end
 
 @implementation Sermon
+
+- (Sermon *)init {
+    formatter = [[NSDateFormatter alloc] init];
+    return self;
+}
 
 - (void)configureSermon:(NSDictionary *)sermon {
     self.title = [sermon objectForKey:@"_title"];
@@ -54,31 +61,21 @@
 }
 
 - (NSString *)getMonth {
-    NSDateFormatter *dateFormatterr = [[NSDateFormatter alloc] init];
-    [dateFormatterr setDateFormat:@"MMM"];
-    NSString *uppercase = [dateFormatterr stringFromDate:[self getDate]];
+    [formatter setDateFormat:@"MMM"];
+    NSString *uppercase = [formatter stringFromDate:[self getDate]];
     return [uppercase uppercaseString];
 }
 
 - (NSString *)getDay {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd"];
     NSString *day = [formatter stringFromDate:[self getDate]];
     return day;
 }
 
 - (NSString *)getYear {
-    NSDateFormatter *formatterr = [[NSDateFormatter alloc] init];
-    [formatterr setDateFormat:@"yyyy"];
-    NSString *year = [formatterr stringFromDate:[self getDate]];
+    [formatter setDateFormat:@"yyyy"];
+    NSString *year = [formatter stringFromDate:[self getDate]];
     return year;
-}
-
-
-- (NSString *)getDateInString {
-    NSDateFormatter *dateFormatterr = [[NSDateFormatter alloc] init];
-    [dateFormatterr setDateFormat:@" MMM dd "];
-    return [dateFormatterr stringFromDate:[self getDate]];
 }
 
 @end

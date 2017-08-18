@@ -17,5 +17,8 @@
 - (NSDate *)getDate;
 - (NSString *)getDateInString;
 - (NSString *)getNumberOfDaysInString;
+- (NSString *)getMonth;
+- (NSString *)getDay;
+- (NSString *)getYear;
 
 @end

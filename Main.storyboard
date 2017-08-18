@@ -10,6 +10,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="THEJUNG_bold_130.otf">
+            <string>THEJung130</string>
+        </array>
+        <array key="THEJUNG_bold_140.otf">
+            <string>THEJung140</string>
+        </array>
+        <array key="THEJUNG_thin_110.otf">
+            <string>THEJung110</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--HomePageViewController-->
         <scene sceneID="5kU-rh-vgB">
@@ -24,33 +35,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="H9u-iY-UkB">
-                                <rect key="frame" x="4" y="44" width="406" height="448"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="444"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-nU-gCk">
-                                <rect key="frame" x="4" y="492" width="406" height="244"/>
+                                <rect key="frame" x="0.0" y="488" width="414" height="248"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KR8-Ja-x14">
-                                        <rect key="frame" x="0.0" y="0.0" width="406" height="81.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CrossIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uiE-hv-MPI">
-                                                <rect key="frame" x="13" y="17.666666666666686" width="27" height="39.999999999999943"/>
+                                                <rect key="frame" x="13" y="21.666666666666686" width="27" height="39.999999999999943"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="h5J-9V-KEs"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설교 말씀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRY-iz-YoD">
-                                                <rect key="frame" x="64" y="27" width="67" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="64" y="32" width="67.333333333333343" height="19.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="35"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="uiE-hv-MPI" firstAttribute="centerY" secondItem="aRY-iz-YoD" secondAttribute="centerY" id="6qk-cI-D32"/>
-                                            <constraint firstItem="aRY-iz-YoD" firstAttribute="top" secondItem="KR8-Ja-x14" secondAttribute="top" constant="27" id="cMG-cW-eSB"/>
-                                            <constraint firstAttribute="bottom" secondItem="aRY-iz-YoD" secondAttribute="bottom" constant="33.329999999999998" id="dvs-3r-Ewn"/>
+                                            <constraint firstItem="uiE-hv-MPI" firstAttribute="centerY" secondItem="KR8-Ja-x14" secondAttribute="centerY" id="Li3-Ez-ngH"/>
+                                            <constraint firstItem="aRY-iz-YoD" firstAttribute="centerY" secondItem="uiE-hv-MPI" secondAttribute="centerY" id="kXa-Os-udR"/>
                                             <constraint firstItem="aRY-iz-YoD" firstAttribute="leading" secondItem="uiE-hv-MPI" secondAttribute="trailing" constant="24" id="l0l-go-Yi2"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -58,16 +71,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0k-aM-VBI">
-                                        <rect key="frame" x="0.0" y="162.66666666666663" width="406" height="81.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="166" width="414" height="82.666666666666629"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-kU-oOf">
-                                                <rect key="frame" x="64" y="27" width="67" height="22"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="64" y="32" width="67.333333333333343" height="19.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="35"/>
+                                                </variation>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Urv-tK-Zrd">
-                                                <rect key="frame" x="17" y="25.666666666666742" width="27" height="25"/>
+                                                <rect key="frame" x="13" y="29" width="27" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="Te2-Ui-g9b"/>
                                                 </constraints>
@@ -75,22 +91,25 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="dtV-kU-oOf" secondAttribute="bottom" constant="33.329999999999998" id="4ef-PX-CXk"/>
-                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="centerY" secondItem="Urv-tK-Zrd" secondAttribute="centerY" id="ZDV-Ge-jCj"/>
-                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="leading" secondItem="Urv-tK-Zrd" secondAttribute="trailing" constant="20" id="pfx-lf-P9a"/>
+                                            <constraint firstItem="Urv-tK-Zrd" firstAttribute="centerY" secondItem="I0k-aM-VBI" secondAttribute="centerY" id="koZ-Jw-HlB"/>
+                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="leading" secondItem="Urv-tK-Zrd" secondAttribute="trailing" constant="24" id="pfx-lf-P9a"/>
+                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="centerY" secondItem="Urv-tK-Zrd" secondAttribute="centerY" id="udw-Bj-aFH"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-SH-EG4">
-                                        <rect key="frame" x="0.0" y="81.666666666666629" width="406" height="81"/>
+                                        <rect key="frame" x="0.0" y="83" width="414" height="83"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회 소식" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jf-gI-v13">
-                                                <rect key="frame" x="66" y="30.333333333333371" width="67" height="20.666666666666629"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="63" y="32" width="67.333333333333343" height="19.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="35"/>
+                                                </variation>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AnnIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Cw2-VP-XTd">
-                                                <rect key="frame" x="14" y="26.666666666666742" width="26" height="29"/>
+                                                <rect key="frame" x="13" y="27" width="26" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="arP-cl-hay"/>
                                                 </constraints>
@@ -98,11 +117,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="8jf-gI-v13" firstAttribute="top" secondItem="3hj-SH-EG4" secondAttribute="top" constant="30" id="6Ys-sM-1dJ"/>
-                                            <constraint firstItem="8jf-gI-v13" firstAttribute="centerY" secondItem="Cw2-VP-XTd" secondAttribute="centerY" id="966-pR-8s1"/>
-                                            <constraint firstItem="8jf-gI-v13" firstAttribute="leading" secondItem="Cw2-VP-XTd" secondAttribute="trailing" constant="26" id="leE-GF-Eg3"/>
-                                            <constraint firstAttribute="bottom" secondItem="8jf-gI-v13" secondAttribute="bottom" constant="30" id="qo6-Qp-lmu"/>
-                                            <constraint firstItem="Cw2-VP-XTd" firstAttribute="leading" secondItem="3hj-SH-EG4" secondAttribute="leading" constant="14" id="w9e-qw-9Jf"/>
+                                            <constraint firstItem="Cw2-VP-XTd" firstAttribute="centerY" secondItem="3hj-SH-EG4" secondAttribute="centerY" id="ARS-5I-ieB"/>
+                                            <constraint firstItem="8jf-gI-v13" firstAttribute="leading" secondItem="Cw2-VP-XTd" secondAttribute="trailing" constant="24" id="leE-GF-Eg3"/>
+                                            <constraint firstItem="8jf-gI-v13" firstAttribute="centerY" secondItem="Cw2-VP-XTd" secondAttribute="centerY" id="mrL-Ru-gM4"/>
+                                            <constraint firstItem="Cw2-VP-XTd" firstAttribute="leading" secondItem="3hj-SH-EG4" secondAttribute="leading" constant="13" id="w9e-qw-9Jf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -112,7 +130,7 @@
                                     <constraint firstItem="3hj-SH-EG4" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" id="22g-07-89X"/>
                                     <constraint firstAttribute="trailing" secondItem="3hj-SH-EG4" secondAttribute="trailing" id="EyC-9P-IW1"/>
                                     <constraint firstItem="3hj-SH-EG4" firstAttribute="top" secondItem="KR8-Ja-x14" secondAttribute="bottom" id="HMP-Y2-jYR"/>
-                                    <constraint firstItem="Urv-tK-Zrd" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="17" id="Lag-tN-T8E"/>
+                                    <constraint firstItem="Urv-tK-Zrd" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="13" id="Lag-tN-T8E"/>
                                     <constraint firstItem="I0k-aM-VBI" firstAttribute="height" secondItem="3hj-SH-EG4" secondAttribute="height" id="PVk-Vi-0dN"/>
                                     <constraint firstItem="uiE-hv-MPI" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="13" id="QA9-je-amE"/>
                                     <constraint firstAttribute="trailing" secondItem="KR8-Ja-x14" secondAttribute="trailing" id="T1H-TP-k8A"/>
@@ -122,35 +140,40 @@
                                     <constraint firstAttribute="bottom" secondItem="I0k-aM-VBI" secondAttribute="bottom" id="kSB-CH-yTV"/>
                                     <constraint firstItem="I0k-aM-VBI" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" id="ko9-km-pan"/>
                                     <constraint firstItem="3hj-SH-EG4" firstAttribute="height" secondItem="KR8-Ja-x14" secondAttribute="height" id="sJt-GC-nYY"/>
-                                    <constraint firstItem="dtV-kU-oOf" firstAttribute="top" secondItem="3hj-SH-EG4" secondAttribute="bottom" constant="27" id="yju-1W-It4"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="죠이플 교회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPf-Fe-fhB">
-                                <rect key="frame" x="24" y="295" width="229" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <rect key="frame" x="24" y="290.66666666666674" width="257.66666666666669" height="60.333333333333314"/>
+                                <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="70"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-9O-dZ3">
-                                <rect key="frame" x="24" y="275" width="87" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.79306640625000002" green="0.79306640625000002" blue="0.79306640625000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="27" y="270.66666666666669" width="95" height="24"/>
+                                <fontDescription key="fontDescription" name="THEJung110" family="THEJung110" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="THEJung110" family="THEJung110" pointSize="30"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="w0S-nU-gCk" secondAttribute="trailing" constant="-16" id="7kN-hF-0Jf"/>
-                            <constraint firstItem="H9u-iY-UkB" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="-16" id="FQI-6U-Xag"/>
-                            <constraint firstItem="wPf-Fe-fhB" firstAttribute="leading" secondItem="Jzc-9O-dZ3" secondAttribute="leading" id="GoR-Jj-8Du"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w0S-nU-gCk" secondAttribute="trailing" constant="-20" id="7kN-hF-0Jf"/>
+                            <constraint firstItem="H9u-iY-UkB" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="-20" id="FQI-6U-Xag"/>
+                            <constraint firstItem="wPf-Fe-fhB" firstAttribute="leading" secondItem="Jzc-9O-dZ3" secondAttribute="leading" constant="-3" id="GoR-Jj-8Du"/>
                             <constraint firstItem="w0S-nU-gCk" firstAttribute="top" secondItem="H9u-iY-UkB" secondAttribute="bottom" id="LHc-yS-yoU"/>
                             <constraint firstItem="eU3-6h-yNa" firstAttribute="top" secondItem="w0S-nU-gCk" secondAttribute="bottom" id="MHU-f0-Jyf"/>
                             <constraint firstItem="wPf-Fe-fhB" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="4" id="WJN-o6-4Vz"/>
                             <constraint firstItem="w0S-nU-gCk" firstAttribute="top" secondItem="wPf-Fe-fhB" secondAttribute="bottom" constant="137" id="WQ2-4j-bIp"/>
                             <constraint firstItem="H9u-iY-UkB" firstAttribute="width" secondItem="w0S-nU-gCk" secondAttribute="height" multiplier="5:3" id="c7Z-Wc-fB8"/>
                             <constraint firstItem="H9u-iY-UkB" firstAttribute="top" secondItem="fBC-dj-Ofp" secondAttribute="bottom" constant="-20" id="ebp-H2-qK5"/>
-                            <constraint firstItem="w0S-nU-gCk" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="-16" id="okA-0J-pDv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H9u-iY-UkB" secondAttribute="trailing" constant="-16" id="sbW-ov-bs5"/>
+                            <constraint firstItem="w0S-nU-gCk" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="-20" id="okA-0J-pDv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9u-iY-UkB" secondAttribute="trailing" constant="-20" id="sbW-ov-bs5"/>
                             <constraint firstItem="wPf-Fe-fhB" firstAttribute="top" secondItem="Jzc-9O-dZ3" secondAttribute="bottom" constant="-4" id="yc7-qe-uyo"/>
                         </constraints>
                     </view>

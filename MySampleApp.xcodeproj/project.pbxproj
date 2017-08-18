@@ -11,6 +11,7 @@
 		101CCF711EECA57700BED961 /* Sermon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF701EECA57700BED961 /* Sermon.storyboard */; };
 		101CCF731EECA5B900BED961 /* Announcement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF721EECA5B900BED961 /* Announcement.storyboard */; };
 		101CCF771EECA64D00BED961 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101CCF761EECA64D00BED961 /* HomePageViewController.m */; };
+		4312DABC1F21C85D00A3A898 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4312DABB1F21C85D00A3A898 /* AudioPlayer.m */; };
 		43F7C1041F10A103003F305B /* THEJUNG_bold_130.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */; };
 		43F7C1051F10A103003F305B /* THEJUNG_bold_140.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */; };
 		43F7C1061F10A103003F305B /* THEJUNG_regular_120.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */; };
@@ -235,6 +236,8 @@
 		1DD70E29FCEC013600000000 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1DD70E29FEC7693400000000 /* UserPoolForgotPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserPoolForgotPasswordViewController.h; path = MySampleApp/App/SignIn/UserPools/UserPoolForgotPasswordViewController.h; sourceTree = SOURCE_ROOT; };
 		1DD70E29FF5A433A00000000 /* UserPoolForgotPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UserPoolForgotPasswordViewController.m; path = MySampleApp/App/SignIn/UserPools/UserPoolForgotPasswordViewController.m; sourceTree = SOURCE_ROOT; };
+		4312DABA1F21C85D00A3A898 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = SOURCE_ROOT; };
+		4312DABB1F21C85D00A3A898 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = SOURCE_ROOT; };
 		43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_bold_130.otf; sourceTree = "<group>"; };
 		43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_bold_140.otf; sourceTree = "<group>"; };
 		43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_regular_120.otf; sourceTree = "<group>"; };
@@ -390,6 +393,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4312DAB91F21C83700A3A898 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				4312DABA1F21C85D00A3A898 /* AudioPlayer.h */,
+				4312DABB1F21C85D00A3A898 /* AudioPlayer.m */,
+			);
+			name = AudioPlayer;
+			sourceTree = "<group>";
+		};
 		43F7C0F71F109FEF003F305B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +540,7 @@
 				FF50C3971E86DF23005D6135 /* User */,
 				FF7D3A3C1E99B57000FC108A /* Utils */,
 				FF40D1AA1E9604EC00996A59 /* Push */,
+				4312DAB91F21C83700A3A898 /* AudioPlayer */,
 				1DD70E2914BB171000000000 /* MainViewController.h */,
 				1DD70E29154DF11600000000 /* MainViewController.m */,
 				B401C979B6AD074900000000 /* SignIn */,
@@ -1101,6 +1114,7 @@
 				E7A30F04A8C9E29A00000000 /* UserPoolForgotPasswordViewController.m in Sources */,
 				FFC959881E7A758100D4944E /* Sermon.m in Sources */,
 				FFC9598B1E7A77D000D4944E /* Announcement.m in Sources */,
+				4312DABC1F21C85D00A3A898 /* AudioPlayer.m in Sources */,
 				E7A30F04771F74B900000000 /* CloudLogicAPIOperationsViewController.m in Sources */,
 				E7A30F042B8D72CF00000000 /* NoSQLModelHelpers.m in Sources */,
 				FF50C38D1E865108005D6135 /* ChurchInfoViewController.m in Sources */,

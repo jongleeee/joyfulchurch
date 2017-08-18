@@ -21,7 +21,15 @@
 - (void)play;
 - (void)resume;
 - (BOOL)isPlaying;
-- (double)getTotalTime;
-- (double)getCurrentTime;
+- (CMTime)getTotalTime;
+- (CMTime)getCurrentTime;
+- (void)seekToTime:(CMTime)time;
+- (void)seekToTimeWithTolerance:(CMTime)time;
+- (BOOL)compareURL:(NSURL *)url;
+- (void)setSermonTitle:(NSString*)sermonTitle;
+- (void)setSermonSeries:(NSString*)sermonSeries;
+- (double) getCurrTimeInSec;
+- (NSString *) getSermon;
+- (void)setSermonString:(NSString *) sermonInString;
 
 @end

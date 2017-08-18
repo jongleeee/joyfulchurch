@@ -61,9 +61,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
          }];  
     }
     
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"SermonGreenGradient.png"] forBarMetrics:UIBarMetricsDefault];
-
-    // Override point for customization after application launch.
+    UIImage *myImage = [[UIImage imageNamed:@"SermonGreenGradient.png"]
+     resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+    
+    [[UINavigationBar appearance] setBackgroundImage:myImage forBarMetrics:UIBarMetricsDefault];
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     return [[AWSMobileClient sharedInstance] didFinishLaunching:application
                                              withOptions:launchOptions];
 }

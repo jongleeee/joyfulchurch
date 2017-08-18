@@ -9,9 +9,12 @@
 #import "AudioPlayer.h"
 
 @implementation AudioPlayer {
-    NSURL *url;
+    NSURL *sermonurl;
     AVPlayerItem *playerItem;
     AVPlayer *audioPlayer;
+    NSString *title;
+    NSString *series;
+    NSString *sermon;
 }
 
 + (id)sharedManager {
@@ -30,26 +33,22 @@
 - (BOOL)prepareToPlayWithURL:(NSURL *)audioUrl {
 
     @try {
-        playerItem = [[AVPlayerItem alloc] initWithURL:audioUrl];
-        audioPlayer = [[AVPlayer alloc] initWithPlayerItem:playerItem];
-        [self updatePlayingInfoCenter];
+        if ([self compareURL:audioUrl]) {
+            playerItem = [[AVPlayerItem alloc] initWithURL:audioUrl];
+            audioPlayer = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+            sermonurl = audioUrl;
+            [self updatePlayingInfoCenter];
+        }
     } @catch (NSException *exception) {
         return NO;
     }
-
     return YES;
 }
 
 - (void)play {
     [[AVAudioSession sharedInstance] setActive:YES error:nil];
-    
     [audioPlayer play];
-    
-    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
-    
-    NSMutableDictionary *playingInfo = [NSMutableDictionary dictionaryWithDictionary:center.nowPlayingInfo];
-    playingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = @(CMTimeGetSeconds(audioPlayer.currentTime));
-    center.nowPlayingInfo = playingInfo;
+    [self updatePlayTimeInPlayingInfoCenter:audioPlayer.currentTime];
 }
 
 - (void)resume {
@@ -60,18 +59,55 @@
     return audioPlayer.rate != 0 && audioPlayer.error == nil;
 }
 
-- (double)getTotalTime {
-    return CMTimeGetSeconds(playerItem.asset.duration);
+- (CMTime)getTotalTime {
+    return playerItem.asset.duration;
 }
-- (double)getCurrentTime {
+- (CMTime)getCurrentTime {
+    return audioPlayer.currentTime;
+}
+
+- (double) getCurrTimeInSec {
     return CMTimeGetSeconds(audioPlayer.currentTime);
+}
+
+- (NSString *) getSermon {
+    return sermon;
+}
+
+- (void)seekToTime:(CMTime)time {
+    [audioPlayer seekToTime:time];
+    [self updatePlayTimeInPlayingInfoCenter:time];
+}
+
+- (void)seekToTimeWithTolerance:(CMTime)time {
+    [audioPlayer seekToTime:time toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+    [self updatePlayTimeInPlayingInfoCenter:time];
+}
+
+- (void)setSermonString:(NSString *) sermonInString {
+    sermon = sermonInString;
+}
+
+- (BOOL)compareURL:(NSURL *)url {
+    if (![url isEqual:sermonurl] || [sermonurl isEqual:NULL]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)setSermonTitle:(NSString*)sermonTitle {
+    title = sermonTitle;
+}
+
+- (void)setSermonSeries:(NSString*)sermonSeries {
+    series = sermonSeries;
 }
 
 - (void)updatePlayingInfoCenter {
     NSMutableDictionary *playingInfo = [[NSMutableDictionary alloc] init];
-    playingInfo[MPMediaItemPropertyAlbumTitle] = @"Series 1";
-    playingInfo[MPMediaItemPropertyArtist] = @"Joyful Church";
-    playingInfo[MPMediaItemPropertyTitle] = @"Sermon - 1";
+    playingInfo[MPMediaItemPropertyAlbumTitle] = series;
+    playingInfo[MPMediaItemPropertyArtist] = @"이상준 목사";
+    playingInfo[MPMediaItemPropertyTitle] = title;
     playingInfo[MPMediaItemPropertyPlaybackDuration] = @(CMTimeGetSeconds(playerItem.asset.duration));
     playingInfo[MPNowPlayingInfoPropertyPlaybackRate] = @(1);
     
@@ -84,6 +120,14 @@
     
     commandCenter.pauseCommand.enabled = true;
     [commandCenter.pauseCommand addTarget:self action:@selector(resume)];
+}
+
+- (void)updatePlayTimeInPlayingInfoCenter:(CMTime)time {
+    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    
+    NSMutableDictionary *playingInfo = [NSMutableDictionary dictionaryWithDictionary:center.nowPlayingInfo];
+    playingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = @(CMTimeGetSeconds(time));
+    center.nowPlayingInfo = playingInfo;
 }
 
 @end

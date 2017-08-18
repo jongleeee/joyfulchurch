@@ -8,16 +8,30 @@
 
 #import "SermonDetailViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "AudioPlayer.h"
 
 @interface SermonDetailViewController () {
-    BOOL playerStarted;
-    BOOL playing;
+    double duration;
+    NSString *currTime;
+    NSString *timeRemain;
+    double countup;
+    double countdown;
+    double sliderVal;
+    AudioPlayer *audioPlayer;
+    NSURL *sermonURL;
 }
-
+@property (weak, nonatomic) IBOutlet UILabel *sermonMonth;
+@property (weak, nonatomic) IBOutlet UILabel *sermonDate;
+@property (weak, nonatomic) IBOutlet UILabel *sermonYear;
+@property (weak, nonatomic) IBOutlet UILabel *sermonSeries;
+@property (weak, nonatomic) IBOutlet UIView *sermonInfo;
 @property (weak, nonatomic) IBOutlet UILabel *sermonTitle;
 @property (weak, nonatomic) IBOutlet UILabel *sermonVerse;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UISlider *sliderAudio;
+@property (weak, nonatomic) IBOutlet UILabel *currentTime;
+@property (weak, nonatomic) IBOutlet UILabel *timeRemaining;
 @property (strong, nonatomic) AVPlayer *player;
 @end
 
@@ -25,22 +39,75 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    audioPlayer = [AudioPlayer sharedManager];
     
     self.sermonTitle.text = [self.sermon getTitle];
     self.sermonTitle.adjustsFontSizeToFitWidth = YES;
     self.sermonVerse.text = [self.sermon getVerse];
+    [audioPlayer setSermonTitle:[self.sermon getTitle]];
     
     self.sermonTitle.adjustsFontSizeToFitWidth = YES;
     [self.sermonTitle sizeToFit];
     [self.sermonVerse sizeToFit];
     
+    self.sermonSeries.text = [self.sermon getSeries];
+    self.sermonSeries.adjustsFontSizeToFitWidth = YES;
+    [self.sermonSeries sizeToFit];
+    [audioPlayer setSermonSeries:[self.sermon getSeries]];
+    
+    self.sermonMonth.text = [self.sermon getMonth];
+    self.sermonMonth.adjustsFontSizeToFitWidth = YES;
+    [self.sermonMonth sizeToFit];
+    
+    self.sermonDate.text = [self.sermon getDay];
+    self.sermonDate.adjustsFontSizeToFitWidth = YES;
+    [self.sermonDate sizeToFit];
+    
+    self.sermonYear.text = [self.sermon getYear];
+    self.sermonYear.adjustsFontSizeToFitWidth = YES;
+    [self.sermonYear sizeToFit];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(becomeActive)
+                                                name:UIApplicationDidBecomeActiveNotification
+                                              object:nil];
+    [self initiatePlayer];
+    if ([audioPlayer isPlaying]) {
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countUp) userInfo:nil repeats:YES];
+    }
+
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self    selector:@selector(updateSlider) userInfo:nil repeats:YES];
+    self.sliderAudio.maximumValue = duration;
+    [self.sliderAudio addTarget:self action:@selector(sliderSlid:) forControlEvents:UIControlEventValueChanged];
+    self.sliderAudio.minimumValue = 0.0;
+    self.sliderAudio.continuous = YES;
+    
+    self.sermonInfo.layer.borderColor = [UIColor colorWithRed:71.0f/255.0f green:185.0f/255.0f blue:47.0f/255.0f alpha:1.0f].CGColor;
+    self.sermonInfo.layer.borderWidth = 1.0;
+    self.sermonInfo.layer.shadowOpacity = 0.4;
+    self.sermonInfo.layer.shadowRadius = 5.0f;
+    self.sermonInfo.layer.shadowOffset = CGSizeMake(0.0f, 8.0f);
     self.activityIndicator.hidden = YES;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    if (playerStarted) {
-        [self.player removeObserver:self forKeyPath:@"status"];
+- (void)becomeActive
+{
+    if (![audioPlayer isPlaying]) {
+        [self changeButtonImageToPlay];
     }
+    else {
+        [self changeButtonImageToPause];
+    }
+
+}
+
+- (IBAction)sliderSlid:(id)sender {
+    float inputSeconds = self.sliderAudio.value;
+    self.currentTime.text = [self displayTime:inputSeconds];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.player removeObserver:self forKeyPath:@"status"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,85 +117,113 @@
 
 - (IBAction)playSermon:(id)sender {
 
-    MPMoviePlayerViewController *controller = [[MPMoviePlayerViewController alloc]initWithContentURL: [NSURL URLWithString: @"https://bit.ly/2mD7KMJ"]];
-    [controller.moviePlayer prepareToPlay];
-    [controller.moviePlayer play];
-    
-    [self.navigationController presentMoviePlayerViewControllerAnimated:controller];
-    
-    /*
-    if (playerStarted) {
-
-        if (playing) {
-            
-            [self pause];
-            
-        } else {
-            
-            [self play];
-            
-        }
+    if ([audioPlayer isPlaying]) {
+        [self pause];
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countUp) userInfo:nil repeats:YES];
+        
     } else {
-        
-        [self showLoading];
-        [self.playButton setHidden:YES];
-        [self initiatePlayer];
-        
+        [self play];
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countUp) userInfo:nil repeats:YES];
     }
-     */
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
-    if (object == self.player && [keyPath isEqualToString:@"status"]) {
-        
-        if (self.player.status == AVPlayerStatusFailed || self.player.status == AVPlayerItemStatusUnknown){
-            
-            [self displayAlertWithTitle:@"Error" andContext:@"Could not play sermon at this time. Please try again"];
-            
-        } else if (self.player.status == AVPlayerStatusReadyToPlay) {
-            [self stopLoading];
-            [self play];
-            [self.playButton setHidden:NO];
-            
-        }
-    }
 }
 
-- (void)playerItemDidReachEnd:(NSNotification *)notification {
-    [self resetPlayer];
+-(void)countUp {
+    double inputSec = CMTimeGetSeconds(audioPlayer.getCurrentTime);
+    self.sliderAudio.value = inputSec;
+    self.currentTime.text = [self displayTime:inputSec];
+}
+
+- (void)playerItemDidReachEnd {
+    [audioPlayer seekToTime:kCMTimeZero];
+    [self changeButtonImageToPlay];
 }
 
 - (void)initiatePlayer {
-    NSURL *sermonURL = [NSURL URLWithString: @"https://bit.ly/2mD7KMJ"];
-    self.player = [[AVPlayer alloc]initWithURL:sermonURL];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:[self.player currentItem]];
-    [self.player addObserver:self forKeyPath:@"status" options:0 context:nil];
+    [audioPlayer setSermonString:[self.sermon getSermon]];
+    NSString *urlString = [NSString stringWithFormat:@"https://bit.ly/%@", [self.sermon getSermon]];
+    sermonURL = [NSURL URLWithString: urlString];
+
+    if ([audioPlayer isPlaying] && ![audioPlayer compareURL:sermonURL]) {
+        [self changeButtonImageToPause];
+    }
+    
+    [audioPlayer prepareToPlayWithURL:sermonURL];
+    duration = CMTimeGetSeconds([audioPlayer getTotalTime]);
+    NSNumber *theDouble = [NSNumber numberWithDouble:duration];
+    int inputSeconds = [theDouble intValue];
+    self.timeRemaining.text = [self displayTime:inputSeconds];
+
+    double curTime = CMTimeGetSeconds([audioPlayer getCurrentTime]);
+    NSNumber *theDoubleCurr = [NSNumber numberWithDouble:curTime];
+    int inputSecs = [theDoubleCurr intValue];
+    self.currentTime.text = [self displayTime:inputSecs];
+    sliderVal = curTime;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player];
+}
+
+- (NSString *)displayTime:(double)inputSeconds {
+    int hours =  inputSeconds / 3600;
+    int minutes = ( inputSeconds - hours * 3600 ) / 60;
+    int seconds = inputSeconds - hours * 3600 - minutes * 60;
+    
+    NSString *time;
+    if (hours != 0) {
+        time = [NSString stringWithFormat:@"%.2d:%.2d:%.2d", hours, minutes, seconds];
+    }
+    
+    else {
+        time = [NSString stringWithFormat:@"%.2d:%.2d", minutes, seconds];
+    }
+    return time;
+}
+
+- (IBAction)sliderDidFinishedMoving:(id)sender {
+    if ([sender isKindOfClass:[UISlider class]]) {
+        UISlider *slider = sender;
+        
+        if (CMTIME_IS_INVALID([audioPlayer getTotalTime])) {
+            return;
+        }
+        float minValue = [slider minimumValue];
+        float maxValue = [slider maximumValue];
+        float value = [slider value];
+        double time = duration * (value - minValue) / (maxValue - minValue);
+        [audioPlayer seekToTimeWithTolerance:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
+    }
+}
+
+- (void)updateSlider {
+    self.sliderAudio.maximumValue = [self durationInSeconds];
+    self.sliderAudio.value = [self currentTimeInSeconds];
+}
+
+- (Float64)durationInSeconds {
+    Float64 dur = CMTimeGetSeconds([audioPlayer getTotalTime]);
+    return dur;
+}
+
+- (Float64)currentTimeInSeconds {
+    Float64 dur = CMTimeGetSeconds([audioPlayer getCurrentTime]);
+    return dur;
 }
 
 - (void)play {
-    [self.player play];
-    playing = true;
-    playerStarted = true;
-    [self changePlayerButtonName:@"Pause"];
+    [audioPlayer play];
+    [self changeButtonImageToPause];
 }
 
 - (void)pause {
-    [self.player pause];
-    playing = false;
-    [self changePlayerButtonName:@"Play"];
+    [audioPlayer resume];
+    [self changeButtonImageToPlay];
 }
 
-- (void)resetPlayer {
-    playerStarted = false;
-    playing = false;
-    [self changePlayerButtonName:@"Play"];
-    [self.player removeObserver:self forKeyPath:@"status"];
+- (void)changeButtonImageToPlay {
+    [self.playButton setImage:[UIImage imageNamed:@"PlayButton"] forState:UIControlStateNormal];
 }
 
-- (void)changePlayerButtonName:(NSString *)name {
-    [self.playButton setTitle:name forState:UIControlStateNormal];
-    [self.playButton sizeToFit];
+- (void)changeButtonImageToPause {
+    [self.playButton setImage:[UIImage imageNamed:@"PauseButton"] forState:UIControlStateNormal];
 }
 
 - (void)displayAlertWithTitle:(NSString *)title andContext:(NSString *)context {
@@ -137,15 +232,5 @@
     [alert addAction:okButton];
     [self presentViewController:alert animated:YES completion:nil];
 }
-
-- (void)showLoading {
-    self.activityIndicator.hidden = NO;
-    [self.activityIndicator startAnimating];
-}
-
-- (void)stopLoading {
-    [self.activityIndicator stopAnimating];
-}
-
 
 @end

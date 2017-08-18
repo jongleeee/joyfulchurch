@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="THEJUNG_bold_130.otf">
+            <string>THEJung130</string>
+        </array>
+        <array key="THEJUNG_bold_140.otf">
+            <string>THEJung140</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Announcement Detail View Controller-->
         <scene sceneID="b4d-xt-p7U">
@@ -19,47 +27,116 @@
                         <viewControllerLayoutGuide type="bottom" id="HK2-nQ-dr5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZCF-QQ-kvB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSc-fy-lKi">
-                                <rect key="frame" x="41" y="35" width="293" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lu-Wm-89n">
-                                <rect key="frame" x="328.5" y="66" width="30.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-32-fu6">
-                                <rect key="frame" x="29" y="107" width="317" height="445"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baB-Td-2ya">
+                                <rect key="frame" x="20" y="40" width="984" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXs-FA-eQR" userLabel="Year">
+                                        <rect key="frame" x="-8" y="58" width="72" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71.799999999999997" id="QPc-TK-YO1"/>
+                                            <constraint firstAttribute="height" constant="15" id="nyw-G2-6nl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="12"/>
+                                        <color key="textColor" red="0.27881081000000002" green="0.63035374369999997" blue="0.18367261300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r3-k0-gWc" userLabel="Month">
+                                        <rect key="frame" x="-8" y="3" width="72" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71.799999999999997" id="6ma-5s-zgL"/>
+                                            <constraint firstAttribute="height" constant="15" id="Nzh-f3-1EO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="14"/>
+                                        <color key="textColor" red="0.27881081000000002" green="0.63035374369999997" blue="0.18367261300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lu-Wm-89n">
+                                        <rect key="frame" x="-8" y="18" width="72" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71.799999999999997" id="45I-B0-siM"/>
+                                            <constraint firstAttribute="height" constant="40" id="EGZ-fc-22P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="36"/>
+                                        <color key="textColor" red="0.27881081000000002" green="0.63035374369999997" blue="0.18367261300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSc-fy-lKi">
+                                        <rect key="frame" x="74" y="25.5" width="265" height="25.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="265" id="Pwa-3B-ofx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJF-B7-1f5">
+                                        <rect key="frame" x="902" y="-10" width="89" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="5vT-09-NVx"/>
+                                            <constraint firstAttribute="width" constant="89" id="kLZ-Ji-X3y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-76-meM">
+                                        <rect key="frame" x="895" y="-10" width="89" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="l5l-3p-L3G"/>
+                                            <constraint firstAttribute="width" constant="89" id="ojr-Fk-Jc7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gJF-B7-1f5" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="top" constant="-10" id="0He-OU-EGG"/>
+                                    <constraint firstItem="HCc-76-meM" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="top" constant="-10" id="BOV-no-oT7"/>
+                                    <constraint firstItem="3r3-k0-gWc" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="top" constant="3" id="DYG-sT-IVw"/>
+                                    <constraint firstAttribute="trailing" secondItem="HCc-76-meM" secondAttribute="trailing" id="F5F-q3-4sM"/>
+                                    <constraint firstItem="6lu-Wm-89n" firstAttribute="top" secondItem="3r3-k0-gWc" secondAttribute="bottom" id="LmZ-cB-oHx"/>
+                                    <constraint firstItem="rSc-fy-lKi" firstAttribute="leading" secondItem="6lu-Wm-89n" secondAttribute="trailing" constant="10" id="LnS-T7-YK7"/>
+                                    <constraint firstItem="rSc-fy-lKi" firstAttribute="centerY" secondItem="6lu-Wm-89n" secondAttribute="centerY" id="Ni8-cq-P2d"/>
+                                    <constraint firstItem="JXs-FA-eQR" firstAttribute="top" secondItem="6lu-Wm-89n" secondAttribute="bottom" id="U1b-aN-rao"/>
+                                    <constraint firstItem="JXs-FA-eQR" firstAttribute="trailing" secondItem="6lu-Wm-89n" secondAttribute="trailing" id="ZCb-yz-pEu"/>
+                                    <constraint firstAttribute="trailing" secondItem="gJF-B7-1f5" secondAttribute="trailing" constant="-7" id="ajm-dr-Tta"/>
+                                    <constraint firstItem="JXs-FA-eQR" firstAttribute="leading" secondItem="6lu-Wm-89n" secondAttribute="leading" id="b2n-Yj-k7g"/>
+                                    <constraint firstItem="3r3-k0-gWc" firstAttribute="leading" secondItem="baB-Td-2ya" secondAttribute="leading" constant="-8" id="gxt-ff-5hh"/>
+                                    <constraint firstItem="6lu-Wm-89n" firstAttribute="trailing" secondItem="3r3-k0-gWc" secondAttribute="trailing" id="hii-wV-mok"/>
+                                    <constraint firstItem="6lu-Wm-89n" firstAttribute="leading" secondItem="3r3-k0-gWc" secondAttribute="leading" id="irg-hy-4gF"/>
+                                    <constraint firstAttribute="height" constant="80" id="uNV-Fi-kTZ"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-32-fu6">
+                                <rect key="frame" x="94" y="140" width="870" height="1206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0n5-32-fu6" firstAttribute="leading" secondItem="ZCF-QQ-kvB" secondAttribute="leadingMargin" id="0Od-MZ-UJa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0n5-32-fu6" secondAttribute="trailing" id="5qd-gH-39p"/>
-                            <constraint firstItem="rSc-fy-lKi" firstAttribute="leading" secondItem="ZCF-QQ-kvB" secondAttribute="leadingMargin" constant="25" id="A1K-3I-tS9"/>
-                            <constraint firstItem="0n5-32-fu6" firstAttribute="top" secondItem="6lu-Wm-89n" secondAttribute="bottom" constant="30" id="DK7-l3-S2R"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rSc-fy-lKi" secondAttribute="trailing" constant="25" id="UFL-Be-SNL"/>
-                            <constraint firstItem="6lu-Wm-89n" firstAttribute="top" secondItem="rSc-fy-lKi" secondAttribute="bottom" constant="5" id="aMU-8S-4CC"/>
-                            <constraint firstItem="rSc-fy-lKi" firstAttribute="top" secondItem="676-kX-UUi" secondAttribute="bottom" constant="15" id="cG0-du-QuT"/>
-                            <constraint firstItem="rSc-fy-lKi" firstAttribute="centerX" secondItem="ZCF-QQ-kvB" secondAttribute="centerX" id="fla-oO-3wj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6lu-Wm-89n" secondAttribute="trailing" id="rw7-RN-5ku"/>
-                            <constraint firstItem="HK2-nQ-dr5" firstAttribute="top" secondItem="0n5-32-fu6" secondAttribute="bottom" id="tVN-8G-U83"/>
+                            <constraint firstItem="HK2-nQ-dr5" firstAttribute="top" secondItem="0n5-32-fu6" secondAttribute="bottom" constant="20" id="0J5-7A-2eH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0n5-32-fu6" secondAttribute="trailing" constant="40" id="5qd-gH-39p"/>
+                            <constraint firstItem="0n5-32-fu6" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="bottom" constant="20" id="82B-ej-e7f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="baB-Td-2ya" secondAttribute="trailing" id="H61-Q0-WAz"/>
+                            <constraint firstItem="0n5-32-fu6" firstAttribute="leading" secondItem="rSc-fy-lKi" secondAttribute="leading" id="XHN-Ng-jzU"/>
+                            <constraint firstItem="baB-Td-2ya" firstAttribute="leading" secondItem="ZCF-QQ-kvB" secondAttribute="leadingMargin" id="jWY-Ox-DgS"/>
+                            <constraint firstItem="baB-Td-2ya" firstAttribute="top" secondItem="676-kX-UUi" secondAttribute="bottom" constant="20" id="lp7-tE-fwJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="announcementInfo" destination="baB-Td-2ya" id="Jd6-KC-jOV"/>
+                        <outlet property="categoryImage" destination="gJF-B7-1f5" id="4pE-NO-wz0"/>
+                        <outlet property="categoryLabel" destination="HCc-76-meM" id="tO8-5g-2nf"/>
                         <outlet property="contentLabel" destination="0n5-32-fu6" id="tlu-xL-Oty"/>
                         <outlet property="dateLabel" destination="6lu-Wm-89n" id="l3g-bh-h34"/>
+                        <outlet property="monthLabel" destination="3r3-k0-gWc" id="jrB-1K-g5b"/>
                         <outlet property="titleLabel" destination="rSc-fy-lKi" id="iNm-Om-VpW"/>
+                        <outlet property="yearLabel" destination="JXs-FA-eQR" id="g5g-n9-bcs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2N-19-hPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
