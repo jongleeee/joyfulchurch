@@ -15,6 +15,7 @@
 #import "DemoFeature.h"
 #import <AWSMobileHubHelper/AWSMobileHubHelper.h>
 #import "ColorThemeSettings.h"
+#import "TutorialPageViewController.h"
 
 static NSString * LOG_TAG = @"MainViewController";
 
@@ -25,6 +26,7 @@ static NSString * LOG_TAG = @"MainViewController";
 @property (nonatomic, strong) id didSignInObserver;
 @property (nonatomic, strong) id didSignOutObserver;
 @property (nonatomic, strong) id willEnterForegroundObserver;
+@property (nonatomic, strong) UIPageViewController *pageController;
 
 @end
 
@@ -115,6 +117,7 @@ static NSString * LOG_TAG = @"MainViewController";
 
     [self setupRightBarButtonItem];
 }
+
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self.didSignInObserver];

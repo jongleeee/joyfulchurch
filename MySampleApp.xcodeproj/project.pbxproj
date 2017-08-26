@@ -12,6 +12,7 @@
 		101CCF731EECA5B900BED961 /* Announcement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101CCF721EECA5B900BED961 /* Announcement.storyboard */; };
 		101CCF771EECA64D00BED961 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101CCF761EECA64D00BED961 /* HomePageViewController.m */; };
 		4312DABC1F21C85D00A3A898 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4312DABB1F21C85D00A3A898 /* AudioPlayer.m */; };
+		43AC3C1A1F4906B700277C32 /* TutorialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AC3C181F4906B700277C32 /* TutorialPageViewController.m */; };
 		43F7C1041F10A103003F305B /* THEJUNG_bold_130.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */; };
 		43F7C1051F10A103003F305B /* THEJUNG_bold_140.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */; };
 		43F7C1061F10A103003F305B /* THEJUNG_regular_120.otf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */; };
@@ -109,6 +110,7 @@
 		FF73037E1E7D0BCB00B90F50 /* SermonAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF73037D1E7D0BCB00B90F50 /* SermonAddViewController.m */; };
 		FF7303921E823E1B00B90F50 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7303911E823E1B00B90F50 /* AVFoundation.framework */; };
 		FF7D3A3F1E99B5B800FC108A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7D3A3E1E99B5B800FC108A /* Utils.m */; };
+		FF7FDF031F5213DD00841AD1 /* TutorialPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7FDF021F5213DD00841AD1 /* TutorialPageStoryboard.storyboard */; };
 		FF80C1A51EADC97900DD7225 /* AWSLambda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF80C1A41EADC97900DD7225 /* AWSLambda.framework */; };
 		FF80C1A61EADC98000DD7225 /* AWSLambda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF80C1A41EADC97900DD7225 /* AWSLambda.framework */; };
 		FF80C1A71EADC98000DD7225 /* AWSLambda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF80C1A41EADC97900DD7225 /* AWSLambda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -238,6 +240,8 @@
 		1DD70E29FF5A433A00000000 /* UserPoolForgotPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UserPoolForgotPasswordViewController.m; path = MySampleApp/App/SignIn/UserPools/UserPoolForgotPasswordViewController.m; sourceTree = SOURCE_ROOT; };
 		4312DABA1F21C85D00A3A898 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = SOURCE_ROOT; };
 		4312DABB1F21C85D00A3A898 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = SOURCE_ROOT; };
+		43AC3C171F4906B700277C32 /* TutorialPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialPageViewController.h; sourceTree = SOURCE_ROOT; };
+		43AC3C181F4906B700277C32 /* TutorialPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialPageViewController.m; sourceTree = SOURCE_ROOT; };
 		43F7C1001F10A103003F305B /* THEJUNG_bold_130.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_bold_130.otf; sourceTree = "<group>"; };
 		43F7C1011F10A103003F305B /* THEJUNG_bold_140.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_bold_140.otf; sourceTree = "<group>"; };
 		43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_regular_120.otf; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 		FF7303911E823E1B00B90F50 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FF7D3A3D1E99B58500FC108A /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = SOURCE_ROOT; };
 		FF7D3A3E1E99B5B800FC108A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = SOURCE_ROOT; };
+		FF7FDF021F5213DD00841AD1 /* TutorialPageStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialPageStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		FF80C1A41EADC97900DD7225 /* AWSLambda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLambda.framework; sourceTree = "<group>"; };
 		FF869BF51EB028A600600FED /* AWSAPI_N11KQZNXH0_Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_N11KQZNXH0_Empty.h; sourceTree = "<group>"; };
 		FF869BF61EB028A600600FED /* AWSAPI_N11KQZNXH0_Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_N11KQZNXH0_Empty.m; sourceTree = "<group>"; };
@@ -400,6 +405,16 @@
 				4312DABB1F21C85D00A3A898 /* AudioPlayer.m */,
 			);
 			name = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		43AC3C161F49069800277C32 /* TutorialPage */ = {
+			isa = PBXGroup;
+			children = (
+				43AC3C171F4906B700277C32 /* TutorialPageViewController.h */,
+				43AC3C181F4906B700277C32 /* TutorialPageViewController.m */,
+				FF7FDF021F5213DD00841AD1 /* TutorialPageStoryboard.storyboard */,
+			);
+			name = TutorialPage;
 			sourceTree = "<group>";
 		};
 		43F7C0F71F109FEF003F305B /* Resources */ = {
@@ -532,6 +547,7 @@
 				1DD70E29A89C570C00000000 /* Launch Screen.storyboard */,
 				FFC959791E791DDE00D4944E /* MainTabBarViewController.h */,
 				FFC9597A1E791DDE00D4944E /* MainTabBarViewController.m */,
+				43AC3C161F49069800277C32 /* TutorialPage */,
 				101CCF741EECA63200BED961 /* HomePage */,
 				FFC9595D1E77C2E200D4944E /* Announcement */,
 				FFC9595B1E77C2D200D4944E /* Sermon */,
@@ -1006,6 +1022,7 @@
 				E7A30F041223775F00000000 /* Launch Screen.storyboard in Resources */,
 				FF50C3A31E877CBE005D6135 /* LoginStoryboard.storyboard in Resources */,
 				43F7C1061F10A103003F305B /* THEJUNG_regular_120.otf in Resources */,
+				FF7FDF031F5213DD00841AD1 /* TutorialPageStoryboard.storyboard in Resources */,
 				E7A30F04CA70216700000000 /* Images.xcassets in Resources */,
 				FF50C3931E86D682005D6135 /* AnnouncementSubscribeStoryboard.storyboard in Resources */,
 				43F7C1071F10A103003F305B /* THEJUNG_thin_110.otf in Resources */,
@@ -1061,6 +1078,7 @@
 				E7A30F04D35001FB00000000 /* AppDelegate.m in Sources */,
 				FF50C3961E86D6CE005D6135 /* AnnouncementSubscribeTableViewController.m in Sources */,
 				E7A30F042FD8B53D00000000 /* UserSettingsViewController.m in Sources */,
+				43AC3C1A1F4906B700277C32 /* TutorialPageViewController.m in Sources */,
 				FF7303781E7D0AB900B90F50 /* AnnouncementAddViewController.m in Sources */,
 				E7A30F04942E4A4D00000000 /* SignInViewController.m in Sources */,
 				FF869C0D1EBD6ED600600FED /* NotificationChannelHandler.m in Sources */,

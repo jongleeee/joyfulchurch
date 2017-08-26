@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="TC0-d1-c2s">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ff0-zF-Xrp" customClass="TutorialPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="njY-1h-VH4"/>
+                        <viewControllerLayoutGuide type="bottom" id="i69-9K-NIH"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PageContentViewController" id="mE6-GX-2bj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-sO-Qua">
+                                <rect key="frame" x="0.0" y="90" width="375" height="507"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-6I-8xq">
+                                <rect key="frame" x="329" y="40" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="SMW-XG-Vz5"/>
+                                    <constraint firstAttribute="width" constant="20" id="ujh-1I-ab5"/>
+                                </constraints>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="endTutorial:" destination="ff0-zF-Xrp" eventType="touchUpInside" id="TWV-Dl-6X4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2lg-6I-8xq" secondAttribute="trailing" constant="10" id="3uK-TW-oHt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sgg-sO-Qua" secondAttribute="trailing" constant="-16" id="4cX-lD-MoT"/>
+                            <constraint firstItem="sgg-sO-Qua" firstAttribute="top" secondItem="njY-1h-VH4" secondAttribute="bottom" constant="70" id="99d-3h-FJy"/>
+                            <constraint firstItem="sgg-sO-Qua" firstAttribute="leading" secondItem="mE6-GX-2bj" secondAttribute="leadingMargin" constant="-16" id="Nif-cT-kES"/>
+                            <constraint firstItem="i69-9K-NIH" firstAttribute="top" secondItem="sgg-sO-Qua" secondAttribute="bottom" constant="70" id="mla-3H-6lO"/>
+                            <constraint firstItem="2lg-6I-8xq" firstAttribute="top" secondItem="njY-1h-VH4" secondAttribute="bottom" constant="20" id="vcf-cw-Lto"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="sgg-sO-Qua" id="54u-mM-KCW"/>
+                        <outlet property="closeButton" destination="2lg-6I-8xq" id="DJb-8J-iOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uq2-mt-0S4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.6521739130435" y="645.6521739130435"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cancel" width="40" height="40"/>
+    </resources>
+</document>
