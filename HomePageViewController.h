@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "TutorialPage.h"
 
-@interface HomePageViewController : UIViewController
+@interface HomePageViewController : UIViewController <UIPageViewControllerDataSource> {
+    User *user;
+}
+
+- (void)endPageTutorial;
+
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSArray *pageImages;
+
 
 
 @end

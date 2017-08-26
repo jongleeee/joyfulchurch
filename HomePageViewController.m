@@ -11,10 +11,14 @@
 #import "SermonTableViewController.h"
 #import "AnnouncementTableViewController.h"
 #import "LoginViewController.h"
+#import "TutorialPage.h"
 
 
 
-@interface HomePageViewController ()
+@interface HomePageViewController () {
+    BOOL end;
+    BOOL needsRefresh;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UIView *announcementView;
@@ -34,6 +38,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    user = [User sharedManager];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endPageTutorial) name:@"start" object:nil];
+    
+    if (user.getSubscribedChannels) {
+        
+        self.pageImages = @[@"TutorialPage home", @"TutorialPage sermon", @"TutorialPage announcement"];
+        
+        // Create page view controller
+        self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
+        self.pageViewController.dataSource = self;
+        
+        TutorialPage *startingViewController = [self viewControllerAtIndex:0];
+        
+        NSArray *viewControllers = @[startingViewController];
+        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+        
+        // Change the size of page view controller
+        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        
+        [self addChildViewController:_pageViewController];
+        [self.view addSubview:_pageViewController.view];
+        [self.pageViewController didMoveToParentViewController:self];
+        
+    }
 
     [self addLabelManager];
     [self addTopUIViewTapRecognizer];
@@ -41,6 +71,64 @@
     [self addAnnouncementUIViewTapRecognizer];
     [self addChurchInfoUIViewTapRecognizer];
     [self addLayerManagerBtwEachUIView];
+}
+
+- (void)endPageTutorial{
+    [self.pageViewController.view removeFromSuperview];
+    [self.pageViewController removeFromParentViewController];
+}
+
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    NSUInteger index = ((TutorialPage*) viewController).pageIndex;
+    
+    if ((index == 0) || (index == NSNotFound)) {
+        return nil;
+    }
+    
+    index--;
+    return [self viewControllerAtIndex:index];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    NSUInteger index = ((TutorialPage*) viewController).pageIndex;
+    
+    if (index == NSNotFound) {
+        return nil;
+    }
+    
+    index++;
+    if (index == [self.pageImages count]) {
+        return nil;
+    }
+    
+    return [self viewControllerAtIndex:index];
+}
+
+- (TutorialPage *)viewControllerAtIndex:(NSUInteger)index
+{
+    if (([self.pageImages count] == 0) || (index >= [self.pageImages count])) {
+        return nil;
+    }
+    
+    // Create a new view controller and pass suitable data.
+    TutorialPage *tutorialPage = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialPage"];
+    tutorialPage.imageFile = self.pageImages[index];
+    tutorialPage.pageIndex = index;
+    
+    return tutorialPage;
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return [self.pageImages count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
 }
 
 -(void)addLabelManager {
@@ -129,6 +217,7 @@
         self.navigationController.navigationBar.hidden = NO;
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

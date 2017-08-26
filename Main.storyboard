@@ -42,16 +42,16 @@
                                 <rect key="frame" x="0.0" y="488" width="414" height="248"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KR8-Ja-x14">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82.666666666666629"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CrossIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uiE-hv-MPI">
-                                                <rect key="frame" x="13" y="21.666666666666686" width="27" height="39.999999999999943"/>
+                                                <rect key="frame" x="13" y="21.333333333333314" width="27" height="40.000000000000057"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="h5J-9V-KEs"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설교 말씀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRY-iz-YoD">
-                                                <rect key="frame" x="64" y="32" width="67.333333333333343" height="19.333333333333371"/>
+                                                <rect key="frame" x="64" y="32" width="67.333333333333343" height="19"/>
                                                 <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -71,10 +71,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0k-aM-VBI">
-                                        <rect key="frame" x="0.0" y="166" width="414" height="82.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="165.66666666666663" width="414" height="83"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-kU-oOf">
-                                                <rect key="frame" x="64" y="32" width="67.333333333333343" height="19.333333333333371"/>
+                                                <rect key="frame" x="64" y="32" width="67.333333333333343" height="19"/>
                                                 <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -97,10 +97,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-SH-EG4">
-                                        <rect key="frame" x="0.0" y="83" width="414" height="83"/>
+                                        <rect key="frame" x="0.0" y="82.666666666666629" width="414" height="83"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회 소식" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jf-gI-v13">
-                                                <rect key="frame" x="63" y="32" width="67.333333333333343" height="19.333333333333371"/>
+                                                <rect key="frame" x="63" y="32" width="67.333333333333343" height="19"/>
                                                 <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                                                 </variation>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AnnIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Cw2-VP-XTd">
-                                                <rect key="frame" x="13" y="27" width="26" height="29"/>
+                                                <rect key="frame" x="13" y="26.666666666666742" width="26" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="arP-cl-hay"/>
                                                 </constraints>
@@ -197,12 +197,77 @@
             </objects>
             <point key="canvasLocation" x="444.92753623188412" y="330.97826086956525"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="ATF-Ao-fMa">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="mLt-5m-aB3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FUT-WA-Fbw"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljF-hl-WTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="-41"/>
+        </scene>
+        <!--Tutorial Page-->
+        <scene sceneID="x27-TB-leA">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage" id="cya-5y-OVJ" customClass="TutorialPage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edm-J2-2L3"/>
+                        <viewControllerLayoutGuide type="bottom" id="owN-2x-RkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PageContentViewController" id="IxD-zG-4B0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S84-pA-gYs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNq-Pe-dzA">
+                                <rect key="frame" x="254" y="20" width="140" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="oIG-WJ-KYr"/>
+                                    <constraint firstAttribute="height" constant="100" id="vA1-hF-5kK"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Joyful Church App 시작하기">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="THEJung110"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="endTutorial:" destination="cya-5y-OVJ" eventType="touchUpInside" id="9NJ-vM-l14"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S84-pA-gYs" firstAttribute="width" secondItem="IxD-zG-4B0" secondAttribute="width" id="3Eq-z7-mU4"/>
+                            <constraint firstItem="S84-pA-gYs" firstAttribute="height" secondItem="IxD-zG-4B0" secondAttribute="height" id="Fmz-xr-N3q"/>
+                            <constraint firstItem="S84-pA-gYs" firstAttribute="centerY" secondItem="IxD-zG-4B0" secondAttribute="centerY" id="Gf6-4F-TlV"/>
+                            <constraint firstItem="S84-pA-gYs" firstAttribute="centerX" secondItem="IxD-zG-4B0" secondAttribute="centerX" id="LWc-mb-T5o"/>
+                            <constraint firstItem="lNq-Pe-dzA" firstAttribute="top" secondItem="edm-J2-2L3" secondAttribute="bottom" id="gBE-Fh-L8l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lNq-Pe-dzA" secondAttribute="trailing" id="x1I-fP-Lhb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="S84-pA-gYs" id="rbY-Pa-wZF"/>
+                        <outlet property="startApp" destination="lNq-Pe-dzA" id="vAR-z4-IWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZ0-Xp-Ql1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.6521739130435" y="645.6521739130435"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YKB-vg-ENp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7bf-5w-mVX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AYz-Vx-TlA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AYz-Vx-TlA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
