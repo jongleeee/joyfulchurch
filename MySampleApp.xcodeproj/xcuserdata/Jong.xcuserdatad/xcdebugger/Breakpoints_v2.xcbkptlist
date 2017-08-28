@@ -41,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/App/AppDelegate.m"
-            timestampString = "518943820.890035"
+            filePath = "HomePageViewController.m"
+            timestampString = "525513044.44609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-applicationDidBecomeActive:"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "-presentationCountForPageViewController:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

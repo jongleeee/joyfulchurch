@@ -11,8 +11,11 @@
 // Source code generated from template: aws-my-sample-app-ios-objc v0.15
 //
 #import <UIKit/UIKit.h>
+#import "User.h"
 
-@interface MainViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+    User *user;
+}
 
 @end
 

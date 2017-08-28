@@ -105,6 +105,8 @@
 
 - (void)updatePlayingInfoCenter {
     NSMutableDictionary *playingInfo = [[NSMutableDictionary alloc] init];
+    MPMediaItemArtwork *albumArt = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:@"Launch"]];
+    playingInfo[MPMediaItemPropertyArtwork] = albumArt;
     playingInfo[MPMediaItemPropertyAlbumTitle] = series;
     playingInfo[MPMediaItemPropertyArtist] = @"이상준 목사";
     playingInfo[MPMediaItemPropertyTitle] = title;

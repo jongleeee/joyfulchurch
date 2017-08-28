@@ -11,10 +11,14 @@
 #import "SermonTableViewController.h"
 #import "AnnouncementTableViewController.h"
 #import "LoginViewController.h"
+#import "TutorialPageViewController.h"
 
 
 
-@interface HomePageViewController ()
+@interface HomePageViewController () {
+    BOOL end;
+    BOOL needsRefresh;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UIView *announcementView;
@@ -27,6 +31,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *joyfulLabel;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSArray *pageImages;
+
 @end
 
 @implementation HomePageViewController
@@ -34,6 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    user = [User sharedManager];
 
     [self addLabelManager];
     [self addTopUIViewTapRecognizer];
@@ -41,6 +50,86 @@
     [self addAnnouncementUIViewTapRecognizer];
     [self addChurchInfoUIViewTapRecognizer];
     [self addLayerManagerBtwEachUIView];
+    
+    if ([user getSubscribedChannels] == NULL) {
+        [self populateTutorialPageViewControllers];
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endPageTutorial) name:@"endTutorial" object:nil];
+}
+
+- (void)populateTutorialPageViewControllers {
+    self.pageImages = @[@"HomeTutorial", @"SermonTutorial", @"AnnouncementTutorial"];
+    
+    // Create page view controller
+    self.pageViewController = [[UIPageViewController alloc]
+                               initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+                               navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                               options:nil];
+    self.pageViewController.dataSource = self;
+    [self.pageViewController.view setFrame:[[self view] bounds]];
+    
+    TutorialPageViewController *startingViewController = [self viewControllerAtIndex:0];
+    
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    [self addChildViewController:self.pageViewController];
+    [self.view addSubview:self.pageViewController.view];
+    [self.pageViewController didMoveToParentViewController:self];
+}
+
+- (void)endPageTutorial{
+    [self.pageViewController.view removeFromSuperview];
+    [self.pageViewController removeFromParentViewController];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    NSUInteger index = ((TutorialPageViewController*) viewController).pageIndex;
+    
+    if ((index == 0) || (index == NSNotFound)) {
+        return nil;
+    }
+    
+    index--;
+    return [self viewControllerAtIndex:index];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    NSUInteger index = ((TutorialPageViewController*) viewController).pageIndex;
+    
+    if (index == NSNotFound || index == [self.pageImages count]) {
+        return nil;
+    }
+    
+    index++;
+    return [self viewControllerAtIndex:index];
+}
+
+- (TutorialPageViewController *)viewControllerAtIndex:(NSUInteger)index
+{
+    if (([self.pageImages count] <= 0) || (index >= [self.pageImages count])) {
+        return nil;
+    }
+    
+    // Create a new view controller and pass suitable data.
+    TutorialPageViewController *TutorialPageViewController = [[UIStoryboard storyboardWithName:@"TutorialPageStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"TutorialPageViewController"];
+    TutorialPageViewController.imageFile = self.pageImages[index];
+    TutorialPageViewController.pageIndex = index;
+    
+    return TutorialPageViewController;
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return [self.pageImages count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
 }
 
 -(void)addLabelManager {
@@ -129,6 +218,7 @@
         self.navigationController.navigationBar.hidden = NO;
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
