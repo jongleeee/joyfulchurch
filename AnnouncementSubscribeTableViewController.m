@@ -26,7 +26,7 @@
     user = [User sharedManager];
     
     self.navigationItem.title = @"Subscribe";
-    categories = [[NSArray alloc] initWithObjects:@"General", @"Mission", @"카이로스", @"카리스마", @"설교", nil];
+    categories = [[NSArray alloc] initWithObjects:@"General", @"죠이플창", @"Mission", @"카이로스", @"카리스마", @"설교", nil];
     
     selected = [[NSMutableArray alloc] initWithArray:[user getSubscribedChannels]];
     

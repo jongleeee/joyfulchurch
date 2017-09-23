@@ -46,6 +46,7 @@
 - (void)setDefaultChannels {
     NSArray *defaultChannels = [[NSArray alloc] initWithObjects:@"General", @"설교", nil];
     [self updateSubscribedChannels:defaultChannels];
+    [pushNotification subscribeToTopics:defaultChannels];
 }
 
 - (void)initPermissions {

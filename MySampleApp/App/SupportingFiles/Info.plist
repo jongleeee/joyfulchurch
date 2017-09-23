@@ -2,25 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>audio</string>
-	</array>
-	<key>NSHumanReadableCopyright</key>
-	<string></string>
-	<key>CFBundleGetInfoString</key>
-	<string></string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>THEJUNG_bold_130.otf</string>
-		<string>THEJUNG_bold_140.otf</string>
-		<string>THEJUNG_regular_120.otf</string>
-		<string>THEJUNG_thin_110.otf</string>
-	</array>
 	<key>AWS</key>
 	<dict>
 		<key>Cognito</key>
@@ -75,6 +56,7 @@
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_general_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_karisma_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
+					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_joyfulboard_MOBILEHUB_687604833</string>
 				</array>
 				<key>SNSPlatformApplicationARN</key>
 				<string>arn:aws:sns:us-west-1:115981409113:app/APNS_SANDBOX/joyfulchurch_MOBILEHUB_687604833</string>
@@ -90,6 +72,7 @@
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_general_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_karisma_MOBILEHUB_687604833</string>
 					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_sermon_MOBILEHUB_687604833</string>
+					<string>arn:aws:sns:us-west-1:115981409113:joyfulchurch_joyfulboard_MOBILEHUB_687604833</string>
 				</array>
 				<key>SNSPlatformApplicationARN</key>
 				<string>arn:aws:sns:us-west-1:115981409113:app/APNS/joyfulchurch_MOBILEHUB_687604833</string>
@@ -109,9 +92,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>JoyfulChurch</string>
+	<string>Joyful Church</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -121,11 +106,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -152,8 +139,21 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To select a file to upload.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>THEJUNG_bold_130.otf</string>
+		<string>THEJUNG_bold_140.otf</string>
+		<string>THEJUNG_regular_120.otf</string>
+		<string>THEJUNG_thin_110.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
@@ -173,5 +173,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

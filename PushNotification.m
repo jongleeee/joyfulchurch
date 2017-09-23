@@ -80,6 +80,8 @@
             [notificationChannels addObject:@"Kairos"];
         } else if ([channel isEqualToString:@"설교"]){
             [notificationChannels addObject:@"Sermon"];
+        } else if ([channel isEqualToString:@"죠이플창"]) {
+            [notificationChannels addObject:@"JoyfulBoard"];
         } else {
             [notificationChannels addObject:channel];
         }
@@ -104,6 +106,8 @@
         topicARN = @"Karisma";
     } else if ([channel isEqualToString:@"설교"]) {
         topicARN = @"Sermon";
+    } else if ([channel isEqualToString:@"죠이플창"]) {
+        topicARN = @"JoyfulBoard";
     } else {
         topicARN = @"General";
     }

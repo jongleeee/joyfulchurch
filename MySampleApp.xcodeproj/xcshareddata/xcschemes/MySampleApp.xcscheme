@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E66DC04E0000000000000000"
-               BuildableName = "MySampleApp.app"
+               BuildableName = "Joyful Church.app"
                BlueprintName = "MySampleApp"
                ReferencedContainer = "container:MySampleApp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E66DC04E0000000000000000"
-            BuildableName = "MySampleApp.app"
+            BuildableName = "Joyful Church.app"
             BlueprintName = "MySampleApp"
             ReferencedContainer = "container:MySampleApp.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E66DC04E0000000000000000"
-            BuildableName = "MySampleApp.app"
+            BuildableName = "Joyful Church.app"
             BlueprintName = "MySampleApp"
             ReferencedContainer = "container:MySampleApp.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E66DC04E0000000000000000"
-            BuildableName = "MySampleApp.app"
+            BuildableName = "Joyful Church.app"
             BlueprintName = "MySampleApp"
             ReferencedContainer = "container:MySampleApp.xcodeproj">
          </BuildableReference>

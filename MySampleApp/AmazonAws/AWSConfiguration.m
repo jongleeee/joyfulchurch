@@ -20,7 +20,7 @@
 #if RELEASE
 NSString *const ServiceKey = @"Prod";
 #else
-NSString *const ServiceKey = @"Devo";
+NSString *const ServiceKey = @"Prod";
 #endif
 
 

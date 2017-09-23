@@ -37,7 +37,7 @@
     self.announcementCategoryPicker.dataSource = self;
     self.announcementCategoryPicker.delegate = self;
     
-    self.categories = [[NSArray alloc] initWithObjects:@"General", @"Mission", @"카리스마", @"카이로스", nil];
+    self.categories = [[NSArray alloc] initWithObjects:@"General", @"죠이플창", @"Mission", @"카리스마", @"카이로스", nil];
     self.selectedCategory = [self.categories objectAtIndex:0];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
