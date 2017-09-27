@@ -8,6 +8,7 @@
 
 #import "AnnouncementSubscribeTableViewController.h"
 #import "PushNotification.h"
+#import "Utils.h"
 
 @interface AnnouncementSubscribeTableViewController () {
     NSArray *categories;
@@ -26,7 +27,7 @@
     user = [User sharedManager];
     
     self.navigationItem.title = @"Subscribe";
-    categories = [[NSArray alloc] initWithObjects:@"General", @"죠이플창", @"Mission", @"카이로스", @"카리스마", @"설교", nil];
+    categories = [Utils getChannelLists];
     
     selected = [[NSMutableArray alloc] initWithArray:[user getSubscribedChannels]];
     

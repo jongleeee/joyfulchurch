@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -73,17 +73,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJF-B7-1f5">
-                                        <rect key="frame" x="902" y="-10" width="89" height="20"/>
+                                        <rect key="frame" x="896" y="-10" width="95" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="5vT-09-NVx"/>
-                                            <constraint firstAttribute="width" constant="89" id="kLZ-Ji-X3y"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-76-meM">
-                                        <rect key="frame" x="895" y="-10" width="89" height="20"/>
+                                        <rect key="frame" x="913" y="-10" width="75" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="l5l-3p-L3G"/>
-                                            <constraint firstAttribute="width" constant="89" id="ojr-Fk-Jc7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,9 +91,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="gJF-B7-1f5" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="top" constant="-10" id="0He-OU-EGG"/>
+                                    <constraint firstItem="HCc-76-meM" firstAttribute="trailing" secondItem="gJF-B7-1f5" secondAttribute="trailing" constant="-3" id="5SV-Fl-2cR"/>
                                     <constraint firstItem="HCc-76-meM" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="top" constant="-10" id="BOV-no-oT7"/>
                                     <constraint firstItem="3r3-k0-gWc" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="top" constant="3" id="DYG-sT-IVw"/>
-                                    <constraint firstAttribute="trailing" secondItem="HCc-76-meM" secondAttribute="trailing" id="F5F-q3-4sM"/>
                                     <constraint firstItem="6lu-Wm-89n" firstAttribute="top" secondItem="3r3-k0-gWc" secondAttribute="bottom" id="LmZ-cB-oHx"/>
                                     <constraint firstItem="rSc-fy-lKi" firstAttribute="leading" secondItem="6lu-Wm-89n" secondAttribute="trailing" constant="10" id="LnS-T7-YK7"/>
                                     <constraint firstItem="rSc-fy-lKi" firstAttribute="centerY" secondItem="6lu-Wm-89n" secondAttribute="centerY" id="Ni8-cq-P2d"/>
@@ -107,10 +105,11 @@
                                     <constraint firstItem="6lu-Wm-89n" firstAttribute="trailing" secondItem="3r3-k0-gWc" secondAttribute="trailing" id="hii-wV-mok"/>
                                     <constraint firstItem="6lu-Wm-89n" firstAttribute="leading" secondItem="3r3-k0-gWc" secondAttribute="leading" id="irg-hy-4gF"/>
                                     <constraint firstAttribute="height" constant="80" id="uNV-Fi-kTZ"/>
+                                    <constraint firstItem="gJF-B7-1f5" firstAttribute="width" secondItem="HCc-76-meM" secondAttribute="width" constant="20" id="xOK-Ui-ATr"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-32-fu6">
-                                <rect key="frame" x="94" y="140" width="870" height="1206"/>
+                                <rect key="frame" x="40" y="140" width="944" height="1206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
@@ -120,10 +119,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HK2-nQ-dr5" firstAttribute="top" secondItem="0n5-32-fu6" secondAttribute="bottom" constant="20" id="0J5-7A-2eH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0n5-32-fu6" secondAttribute="trailing" constant="40" id="5qd-gH-39p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0n5-32-fu6" secondAttribute="trailing" constant="20" id="5qd-gH-39p"/>
                             <constraint firstItem="0n5-32-fu6" firstAttribute="top" secondItem="baB-Td-2ya" secondAttribute="bottom" constant="20" id="82B-ej-e7f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="baB-Td-2ya" secondAttribute="trailing" id="H61-Q0-WAz"/>
-                            <constraint firstItem="0n5-32-fu6" firstAttribute="leading" secondItem="rSc-fy-lKi" secondAttribute="leading" id="XHN-Ng-jzU"/>
+                            <constraint firstItem="0n5-32-fu6" firstAttribute="leading" secondItem="ZCF-QQ-kvB" secondAttribute="leadingMargin" constant="20" id="Z7k-Z0-m8D"/>
                             <constraint firstItem="baB-Td-2ya" firstAttribute="leading" secondItem="ZCF-QQ-kvB" secondAttribute="leadingMargin" id="jWY-Ox-DgS"/>
                             <constraint firstItem="baB-Td-2ya" firstAttribute="top" secondItem="676-kX-UUi" secondAttribute="bottom" constant="20" id="lp7-tE-fwJ"/>
                         </constraints>

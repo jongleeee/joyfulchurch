@@ -42,12 +42,17 @@
     coordinate.latitude = 37.695993;
     coordinate.longitude = -121.972684;
     
-    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
-    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-    [mapItem setName:@"Joyful Church"];
-    NSDictionary *options = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
-    [mapItem openInMapsWithLaunchOptions:options];
-    
+    if ([[UIApplication sharedApplication] canOpenURL:
+         [NSURL URLWithString:@"comgooglemaps://"]]) {
+        [[UIApplication sharedApplication] openURL:
+         [NSURL URLWithString:@"comgooglemaps://?q=JoyfulChurch&center=37.695993,-121.9726845"]];
+    } else {
+        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
+        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+        [mapItem setName:@"Joyful Church"];
+        NSDictionary *options = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
+        [mapItem openInMapsWithLaunchOptions:options];
+    }
 }
 
 /*

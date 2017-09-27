@@ -37,7 +37,7 @@
     self.announcementCategoryPicker.dataSource = self;
     self.announcementCategoryPicker.delegate = self;
     
-    self.categories = [[NSArray alloc] initWithObjects:@"General", @"죠이플창", @"Mission", @"카리스마", @"카이로스", nil];
+    self.categories = [[NSArray alloc] initWithObjects:@"죠이플 창", @"교회 소식 (전체 공지)", @"카리스마 대학부", @"카이로스 청년부", @"남성 기도회", @"월요 여성 중보기도 모임", @"여성 커피브레이크", @"교육부", @"찬양팀", @"여름 선교", @"겨울 선교", @"목자 모임", @"사역부장 모임", nil];
     self.selectedCategory = [self.categories objectAtIndex:0];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]

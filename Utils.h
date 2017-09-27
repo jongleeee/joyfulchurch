@@ -9,5 +9,8 @@
 @interface Utils : NSObject {}
 
 + (NSArray *)orderByDate:(NSArray *)array;
++ (NSArray *)getChannelLists;
++ (UIColor *)getColorForChannel:(NSString *)name;
++ (NSString *)getTopicARNForChannel:(NSString *)channel;
 
 @end
