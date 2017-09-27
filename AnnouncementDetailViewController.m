@@ -38,7 +38,6 @@
     self.dateLabel.adjustsFontSizeToFitWidth = YES;
     self.monthLabel.adjustsFontSizeToFitWidth = YES;
     self.yearLabel.adjustsFontSizeToFitWidth = YES;
-    self.categoryLabel.adjustsFontSizeToFitWidth = YES;
     [self.titleLabel sizeToFit];
     [self.dateLabel sizeToFit];
     [self.contentLabel sizeToFit];
@@ -69,19 +68,7 @@
 }
 
 - (UIColor *)getColorForCategory:(NSString *) category {
-    if ([category isEqualToString:@"General"]) {
-        return [UIColor colorWithRed:33.0f/255.0f green:140.0f/255.0f blue:204.0f/255.0f alpha:1.0f];
-    } else if ([category isEqualToString:@"Mission"]) {
-        return [UIColor colorWithRed:164.0f/255.0f green:196.0f/255.0f blue:101.0f/255.0f alpha:1.0f];
-    } else if ([category isEqualToString:@"카이로스"]) {
-        return [UIColor colorWithRed:204.0f/255.0f green:110.0f/255.0f blue:132.0f/255.0f alpha:1.0f];
-    } else if ([category isEqualToString:@"카리스마"]) {
-        return [UIColor colorWithRed:220.0f/255.0f green:138.0f/255.0f blue:76.0f/255.0f alpha:1.0f];
-    } else if ([category isEqualToString:@"죠이플창"]) {
-        return [UIColor colorWithRed:255.0f/255.0f green:139.0f/255.0f blue:139.0f/255.0f alpha:1.0f];
-    } else {
-        return [UIColor colorWithRed:140.0f/255.0f green:80.0f/255.0f blue:194.0f/255.0f alpha:1.0f];
-    }
+    return [Utils getColorForChannel:category];
 }
 
 

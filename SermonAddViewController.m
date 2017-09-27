@@ -72,7 +72,6 @@
             if (error) {
                 [self displayAlertWithTitle:@"Error" andContext:@"Could not save at this time. Please try again later"];
             } else {
-                [self.notificationHandler sendNotificationToChannel:@"설교" withMessage:nil];
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"updateSermons" object:nil];
                 [self.navigationController popViewControllerAnimated:YES];
             }}];

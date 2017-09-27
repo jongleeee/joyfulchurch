@@ -44,7 +44,7 @@
 }
 
 - (void)setDefaultChannels {
-    NSArray *defaultChannels = [[NSArray alloc] initWithObjects:@"General", @"설교", nil];
+    NSArray *defaultChannels = [[NSArray alloc] initWithObjects:@"죠이플 창", @"교회 소식 (전체 공지)", nil];
     [self updateSubscribedChannels:defaultChannels];
     [pushNotification subscribeToTopics:defaultChannels];
 }

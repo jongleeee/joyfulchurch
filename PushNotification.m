@@ -70,21 +70,15 @@
     }
 }
 
+- (NSString *)getChannelName:(NSString *)name {
+        return [Utils getTopicARNForChannel:name];
+}
+
 - (NSArray *)convertToNotificationChannels:(NSArray *)channels {
     NSMutableArray *notificationChannels = [[NSMutableArray alloc] init];
     
     for (NSString *channel in channels) {
-        if ([channel isEqualToString:@"카리스마"]) {
-            [notificationChannels addObject:@"Karisma"];
-        } else if ([channel isEqualToString:@"카이로스"]) {
-            [notificationChannels addObject:@"Kairos"];
-        } else if ([channel isEqualToString:@"설교"]){
-            [notificationChannels addObject:@"Sermon"];
-        } else if ([channel isEqualToString:@"죠이플창"]) {
-            [notificationChannels addObject:@"JoyfulBoard"];
-        } else {
-            [notificationChannels addObject:channel];
-        }
+        [notificationChannels addObject:[self getChannelName:channel]];
     }
     
     return notificationChannels;
@@ -99,18 +93,7 @@
     NSMutableDictionary<NSString *, NSString *> *parameters = [[NSMutableDictionary alloc] init];
     NSMutableDictionary<NSString *, NSString *> *queryParameters = [[NSMutableDictionary alloc] init];
 
-    NSString *topicARN;
-    if ([channel isEqualToString:@"카이로스"]) {
-        topicARN = @"Kairos";
-    } else if ([channel isEqualToString:@"카리스마"]) {
-        topicARN = @"Karisma";
-    } else if ([channel isEqualToString:@"설교"]) {
-        topicARN = @"Sermon";
-    } else if ([channel isEqualToString:@"죠이플창"]) {
-        topicARN = @"JoyfulBoard";
-    } else {
-        topicARN = @"General";
-    }
+    NSString *topicARN = [self getChannelName:channel];
 
     [parameters setValue:topicARN forKey:@"channel"];
     [parameters setValue:[message objectForKey:@"title"] forKey:@"messageTitle"];

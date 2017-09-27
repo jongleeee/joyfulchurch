@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,7 +66,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBanner" translatesAutoresizingMaskIntoConstraints="NO" id="4j3-1h-DKt">
                         <rect key="frame" x="279" y="8" width="89" height="20"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VF-JW-ytd">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VF-JW-ytd">
                         <rect key="frame" x="326" y="0.0" width="42" height="21"/>
                         <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,10 +75,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="DsG-Ck-5XH" firstAttribute="trailing" secondItem="wKP-Jy-VFg" secondAttribute="trailing" id="0ac-fR-7Xa"/>
+                    <constraint firstItem="4j3-1h-DKt" firstAttribute="width" secondItem="5VF-JW-ytd" secondAttribute="width" constant="20" id="15L-V3-hW3"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4j3-1h-DKt" secondAttribute="trailing" id="22N-nf-3gD"/>
                     <constraint firstItem="5VF-JW-ytd" firstAttribute="top" secondItem="4j3-1h-DKt" secondAttribute="top" id="3Cd-FP-jwM"/>
                     <constraint firstItem="n0S-kD-wEu" firstAttribute="trailing" secondItem="wKP-Jy-VFg" secondAttribute="trailing" id="9JY-qH-NrU"/>
-                    <constraint firstItem="5VF-JW-ytd" firstAttribute="trailing" secondItem="4j3-1h-DKt" secondAttribute="trailing" constant="-7" id="FWk-DQ-0BP"/>
+                    <constraint firstItem="5VF-JW-ytd" firstAttribute="trailing" secondItem="4j3-1h-DKt" secondAttribute="trailing" constant="-3" id="FWk-DQ-0BP"/>
                     <constraint firstItem="wKP-Jy-VFg" firstAttribute="top" secondItem="n0S-kD-wEu" secondAttribute="bottom" id="J1v-cg-cMB"/>
                     <constraint firstItem="wKP-Jy-VFg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Jjt-Yj-tG3"/>
                     <constraint firstItem="n0S-kD-wEu" firstAttribute="leading" secondItem="wKP-Jy-VFg" secondAttribute="leading" id="Kb3-2z-uEO"/>

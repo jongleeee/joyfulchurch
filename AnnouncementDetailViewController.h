@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Announcement.h"
+#import "Utils.h"
 
 @interface AnnouncementDetailViewController : UIViewController
 @property (nonatomic, strong) Announcement *announcement;
