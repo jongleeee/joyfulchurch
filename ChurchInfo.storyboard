@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,33 +19,29 @@
                         <viewControllerLayoutGuide type="bottom" id="Tga-gy-Mll"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bhg-h9-aKv">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogoBlack" translatesAutoresizingMaskIntoConstraints="NO" id="fwg-VO-0Lq">
+                                <rect key="frame" x="97" y="72" width="180" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Z7E-Tl-WCb"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="rq2-Xb-0L4"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapLocationImg" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-xk-2jm">
-                                <rect key="frame" x="20" y="96" width="728" height="340"/>
+                                <rect key="frame" x="46" y="169" width="283" height="105.5"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ez-KcA">
-                                <rect key="frame" x="4" y="959" width="760" height="35"/>
-                                <color key="backgroundColor" red="0.35686274509803922" green="0.68235294117647061" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="길찾기">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="Mqx-h4-PXr"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-qs-w6j" userLabel="middleView">
-                                <rect key="frame" x="20" y="468" width="728" height="88"/>
+                                <rect key="frame" x="16" y="289.5" width="343" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="hx0-Jy-ahy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-FE-w3T" userLabel="innerView">
-                                <rect key="frame" x="259" y="473" width="250" height="79"/>
+                                <rect key="frame" x="62.5" y="312" width="250" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9875 Dublin Canyon Rd. Castro Valley CA 94552" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-nD-Gkg">
                                         <rect key="frame" x="65" y="0.0" width="185" height="33.5"/>
@@ -63,7 +59,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(510) - 582 - 1240" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-GD-X1E">
-                                        <rect key="frame" x="65" y="39.5" width="119" height="17"/>
+                                        <rect key="frame" x="65" y="39.5" width="120" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -111,22 +107,50 @@
                                     <constraint firstItem="QKW-aM-ESW" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" id="ug4-Nb-Mu5"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi9-md-rmV">
+                                <rect key="frame" x="20" y="407.5" width="340" height="189.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남 침례 교단 (Southern Baptist)에 속해 있습니다.
+
+미 남침례 교단은 복음적인 개신교단으로 천로 역정의 저자 '요한 번연', 설교자 '챨스 스펄전', 현대 선교의 아버지 '윌리암 케리', 전도자 '빌리 그레이엄', 인권 운동가 '마틴 루터 킹', 존경받는 대통령 '지미 카터' 등을 배출한 교단입니다. 
+
+죠이플 교회는 이상준 목사가 2011년 2월 첫주일에 가정에서 처음 개척 예배를 드리고, 2012년 4월 셋째주일에 창립 예배를 드려 오늘에 이르게 되었습니다.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ez-KcA">
+                                <rect key="frame" x="0.0" y="612" width="375" height="35"/>
+                                <color key="backgroundColor" red="0.35686274509803922" green="0.68235294117647061" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="길찾기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="Mqx-h4-PXr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="30" id="E0F-0E-c4Q"/>
+                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="20" id="E0F-0E-c4Q"/>
                             <constraint firstItem="eEW-xk-2jm" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="Hdu-zp-Cjx"/>
+                            <constraint firstAttribute="trailing" secondItem="Mi9-md-rmV" secondAttribute="trailing" constant="15" id="K5L-jC-GZr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4g8-qs-w6j" secondAttribute="trailing" id="Ldh-0n-Ram"/>
-                            <constraint firstItem="eEW-xk-2jm" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="32" id="TEM-Iz-phE"/>
                             <constraint firstItem="6B0-FE-w3T" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="VO2-8I-TrO"/>
-                            <constraint firstItem="4g8-qs-w6j" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="32" id="WBy-98-e6c"/>
+                            <constraint firstItem="4g8-qs-w6j" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="15" id="WBy-98-e6c"/>
                             <constraint firstItem="4g8-qs-w6j" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" id="Wvh-Kc-yaG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o8h-ez-KcA" secondAttribute="trailing" constant="-16" id="ad8-nc-aFg"/>
+                            <constraint firstItem="Mi9-md-rmV" firstAttribute="top" secondItem="4g8-qs-w6j" secondAttribute="bottom" constant="30" id="ap1-vt-tKf"/>
                             <constraint firstItem="6B0-FE-w3T" firstAttribute="centerY" secondItem="4g8-qs-w6j" secondAttribute="centerY" id="b2b-2n-N9L"/>
+                            <constraint firstItem="Mi9-md-rmV" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leading" constant="20" id="bgt-hc-WEX"/>
                             <constraint firstItem="6B0-FE-w3T" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="37" id="f4O-zR-S24"/>
+                            <constraint firstItem="fwg-VO-0Lq" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="8" id="hFD-Vo-Tfu"/>
                             <constraint firstItem="o8h-ez-KcA" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" constant="-16" id="iEc-1m-qTY"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="eEW-xk-2jm" secondAttribute="leading" id="oZP-gn-19L"/>
+                            <constraint firstItem="eEW-xk-2jm" firstAttribute="top" secondItem="fwg-VO-0Lq" secondAttribute="bottom" constant="15" id="lgl-Wn-Lln"/>
+                            <constraint firstItem="fwg-VO-0Lq" firstAttribute="centerX" secondItem="bhg-h9-aKv" secondAttribute="centerX" id="nkm-2B-yRs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eEW-xk-2jm" secondAttribute="leading" constant="-30" id="oZP-gn-19L"/>
                             <constraint firstItem="4g8-qs-w6j" firstAttribute="centerY" secondItem="bhg-h9-aKv" secondAttribute="centerY" id="xdz-vv-cwk"/>
+                            <constraint firstItem="o8h-ez-KcA" firstAttribute="top" secondItem="Mi9-md-rmV" secondAttribute="bottom" constant="15" id="zm3-GU-RS8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Joyful Church" id="ZmS-B6-aD6"/>
@@ -136,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH5-nB-qIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473.4375" y="734.1796875"/>
+            <point key="canvasLocation" x="472.80000000000001" y="733.5832083958021"/>
         </scene>
         <!--Info-->
         <scene sceneID="Cs4-Hj-3qd">
@@ -145,7 +169,7 @@
                     <tabBarItem key="tabBarItem" title="Info" id="hZ6-56-ELm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e5o-vZ-8Gj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -159,6 +183,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogoBlack" width="2368" height="1080"/>
         <image name="mapLocationImg" width="1550" height="760"/>
     </resources>
 </document>

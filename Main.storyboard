@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7bf-5w-mVX">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7bf-5w-mVX">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="THEJUNG_bold_130.otf">
             <string>THEJung130</string>
-        </array>
-        <array key="THEJUNG_bold_140.otf">
-            <string>THEJung140</string>
         </array>
         <array key="THEJUNG_thin_110.otf">
             <string>THEJung110</string>
@@ -31,152 +28,133 @@
                         <viewControllerLayoutGuide type="bottom" id="eU3-6h-yNa"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="P2Y-H4-vku">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="H9u-iY-UkB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="444"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Jit-qY-S1M">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-Hh-a3F">
+                                <rect key="frame" x="0.0" y="64" width="768" height="560"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="WTG-4W-CmS">
+                                        <rect key="frame" x="259" y="385" width="250" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="115" id="A0V-Oq-mv9"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="NxS-A8-rC3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환 영 합 니 다 !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-9O-dZ3">
+                                        <rect key="frame" x="294.5" y="340" width="179.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="THEJung110" family="THEJung110" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="THEJung110" family="THEJung110" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WTG-4W-CmS" firstAttribute="centerX" secondItem="8Qu-Hh-a3F" secondAttribute="centerX" id="bS6-BB-3JR"/>
+                                    <constraint firstItem="WTG-4W-CmS" firstAttribute="top" secondItem="Jzc-9O-dZ3" secondAttribute="bottom" constant="10" id="bSj-sj-ECQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="WTG-4W-CmS" secondAttribute="bottom" constant="60" id="cC8-DY-i0v"/>
+                                    <constraint firstItem="Jzc-9O-dZ3" firstAttribute="centerX" secondItem="WTG-4W-CmS" secondAttribute="centerX" id="lXL-6D-igp"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-nU-gCk">
-                                <rect key="frame" x="0.0" y="488" width="414" height="248"/>
+                                <rect key="frame" x="0.0" y="624" width="768" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KR8-Ja-x14">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                        <rect key="frame" x="12" y="15" width="744" height="113.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CrossIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uiE-hv-MPI">
-                                                <rect key="frame" x="13" y="21" width="27" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="h5J-9V-KEs"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설교 말씀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRY-iz-YoD">
-                                                <rect key="frame" x="64" y="31" width="68" height="20"/>
-                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설교 말씀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxw-rv-4OJ">
+                                                <rect key="frame" x="307" y="37" width="131" height="41"/>
+                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="18"/>
+                                                <color key="textColor" red="0.35686274509999999" green="0.68235294120000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="35"/>
                                                 </variation>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="uiE-hv-MPI" firstAttribute="centerY" secondItem="KR8-Ja-x14" secondAttribute="centerY" id="Li3-Ez-ngH"/>
-                                            <constraint firstItem="aRY-iz-YoD" firstAttribute="centerY" secondItem="uiE-hv-MPI" secondAttribute="centerY" id="kXa-Os-udR"/>
-                                            <constraint firstItem="aRY-iz-YoD" firstAttribute="leading" secondItem="uiE-hv-MPI" secondAttribute="trailing" constant="24" id="l0l-go-Yi2"/>
+                                            <constraint firstItem="zxw-rv-4OJ" firstAttribute="centerX" secondItem="KR8-Ja-x14" secondAttribute="centerX" id="cIq-eu-Gob"/>
+                                            <constraint firstItem="zxw-rv-4OJ" firstAttribute="centerY" secondItem="KR8-Ja-x14" secondAttribute="centerY" id="w15-oi-MZY"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0k-aM-VBI">
-                                        <rect key="frame" x="0.0" y="165" width="414" height="83"/>
+                                        <rect key="frame" x="12" y="271.5" width="744" height="113.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-kU-oOf">
-                                                <rect key="frame" x="65" y="31" width="68" height="20"/>
-                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="307" y="36.5" width="131" height="41"/>
+                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="18"/>
+                                                <color key="textColor" red="0.35686274509999999" green="0.68235294120000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="35"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Urv-tK-Zrd">
-                                                <rect key="frame" x="13" y="26" width="28" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Te2-Ui-g9b"/>
-                                                    <constraint firstAttribute="width" constant="28" id="xJD-Bf-6DU"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Urv-tK-Zrd" firstAttribute="centerY" secondItem="I0k-aM-VBI" secondAttribute="centerY" id="koZ-Jw-HlB"/>
-                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="leading" secondItem="Urv-tK-Zrd" secondAttribute="trailing" constant="24" id="pfx-lf-P9a"/>
-                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="centerY" secondItem="Urv-tK-Zrd" secondAttribute="centerY" id="udw-Bj-aFH"/>
-                                            <constraint firstItem="Urv-tK-Zrd" firstAttribute="leading" secondItem="I0k-aM-VBI" secondAttribute="leading" constant="13" id="zFO-By-DML"/>
+                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="centerY" secondItem="I0k-aM-VBI" secondAttribute="centerY" id="4Gp-cg-WMR"/>
+                                            <constraint firstItem="dtV-kU-oOf" firstAttribute="centerX" secondItem="I0k-aM-VBI" secondAttribute="centerX" id="maN-KT-SeG"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-SH-EG4">
-                                        <rect key="frame" x="0.0" y="83" width="414" height="82"/>
+                                        <rect key="frame" x="12" y="143.5" width="744" height="113"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회 소식" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jf-gI-v13">
-                                                <rect key="frame" x="65" y="31" width="68" height="20"/>
-                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="307" y="36.5" width="131" height="41"/>
+                                                <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="18"/>
+                                                <color key="textColor" red="0.35686274509999999" green="0.68235294120000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="35"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AnnIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Cw2-VP-XTd">
-                                                <rect key="frame" x="13" y="27" width="28" height="28"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="28" id="SrU-Hh-42B"/>
-                                                    <constraint firstAttribute="height" constant="28" id="arP-cl-hay"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Cw2-VP-XTd" firstAttribute="centerY" secondItem="3hj-SH-EG4" secondAttribute="centerY" id="ARS-5I-ieB"/>
-                                            <constraint firstItem="8jf-gI-v13" firstAttribute="leading" secondItem="Cw2-VP-XTd" secondAttribute="trailing" constant="24" id="leE-GF-Eg3"/>
-                                            <constraint firstItem="8jf-gI-v13" firstAttribute="centerY" secondItem="Cw2-VP-XTd" secondAttribute="centerY" id="mrL-Ru-gM4"/>
-                                            <constraint firstItem="Cw2-VP-XTd" firstAttribute="leading" secondItem="3hj-SH-EG4" secondAttribute="leading" constant="13" id="w9e-qw-9Jf"/>
+                                            <constraint firstItem="8jf-gI-v13" firstAttribute="centerX" secondItem="3hj-SH-EG4" secondAttribute="centerX" id="NVj-ES-juh"/>
+                                            <constraint firstItem="8jf-gI-v13" firstAttribute="centerY" secondItem="3hj-SH-EG4" secondAttribute="centerY" id="av3-Pp-hS2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.079933761229999997" blue="0.1437565609" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="KR8-Ja-x14" firstAttribute="top" secondItem="w0S-nU-gCk" secondAttribute="top" id="1Ez-OD-gue"/>
-                                    <constraint firstItem="3hj-SH-EG4" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" id="22g-07-89X"/>
-                                    <constraint firstAttribute="trailing" secondItem="3hj-SH-EG4" secondAttribute="trailing" id="EyC-9P-IW1"/>
-                                    <constraint firstItem="3hj-SH-EG4" firstAttribute="top" secondItem="KR8-Ja-x14" secondAttribute="bottom" id="HMP-Y2-jYR"/>
+                                    <constraint firstItem="KR8-Ja-x14" firstAttribute="top" secondItem="w0S-nU-gCk" secondAttribute="top" constant="15" id="1Ez-OD-gue"/>
+                                    <constraint firstItem="3hj-SH-EG4" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="12" id="22g-07-89X"/>
+                                    <constraint firstAttribute="trailing" secondItem="3hj-SH-EG4" secondAttribute="trailing" constant="12" id="EyC-9P-IW1"/>
+                                    <constraint firstItem="3hj-SH-EG4" firstAttribute="top" secondItem="KR8-Ja-x14" secondAttribute="bottom" constant="15" id="HMP-Y2-jYR"/>
                                     <constraint firstItem="I0k-aM-VBI" firstAttribute="height" secondItem="3hj-SH-EG4" secondAttribute="height" id="PVk-Vi-0dN"/>
-                                    <constraint firstItem="uiE-hv-MPI" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="13" id="QA9-je-amE"/>
-                                    <constraint firstAttribute="trailing" secondItem="KR8-Ja-x14" secondAttribute="trailing" id="T1H-TP-k8A"/>
-                                    <constraint firstAttribute="trailing" secondItem="I0k-aM-VBI" secondAttribute="trailing" id="XsA-5q-9Mx"/>
-                                    <constraint firstItem="KR8-Ja-x14" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" id="Y21-gd-TrX"/>
-                                    <constraint firstItem="I0k-aM-VBI" firstAttribute="top" secondItem="3hj-SH-EG4" secondAttribute="bottom" id="gts-GW-tlj"/>
-                                    <constraint firstAttribute="bottom" secondItem="I0k-aM-VBI" secondAttribute="bottom" id="kSB-CH-yTV"/>
-                                    <constraint firstItem="I0k-aM-VBI" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" id="ko9-km-pan"/>
+                                    <constraint firstAttribute="trailing" secondItem="KR8-Ja-x14" secondAttribute="trailing" constant="12" id="T1H-TP-k8A"/>
+                                    <constraint firstAttribute="trailing" secondItem="I0k-aM-VBI" secondAttribute="trailing" constant="12" id="XsA-5q-9Mx"/>
+                                    <constraint firstItem="KR8-Ja-x14" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="12" id="Y21-gd-TrX"/>
+                                    <constraint firstItem="I0k-aM-VBI" firstAttribute="top" secondItem="3hj-SH-EG4" secondAttribute="bottom" constant="15" id="gts-GW-tlj"/>
+                                    <constraint firstAttribute="bottom" secondItem="I0k-aM-VBI" secondAttribute="bottom" constant="15" id="kSB-CH-yTV"/>
+                                    <constraint firstItem="I0k-aM-VBI" firstAttribute="leading" secondItem="w0S-nU-gCk" secondAttribute="leading" constant="12" id="ko9-km-pan"/>
                                     <constraint firstItem="3hj-SH-EG4" firstAttribute="height" secondItem="KR8-Ja-x14" secondAttribute="height" id="sJt-GC-nYY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="죠이플 교회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPf-Fe-fhB">
-                                <rect key="frame" x="24" y="290" width="258" height="61"/>
-                                <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="70"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-9O-dZ3">
-                                <rect key="frame" x="27" y="270" width="95" height="24"/>
-                                <fontDescription key="fontDescription" name="THEJung110" family="THEJung110" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="THEJung110" family="THEJung110" pointSize="30"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8Qu-Hh-a3F" firstAttribute="height" secondItem="w0S-nU-gCk" secondAttribute="height" multiplier="1.4" id="4YU-fB-nCA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w0S-nU-gCk" secondAttribute="trailing" constant="-20" id="7kN-hF-0Jf"/>
-                            <constraint firstItem="H9u-iY-UkB" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="-20" id="FQI-6U-Xag"/>
-                            <constraint firstItem="wPf-Fe-fhB" firstAttribute="leading" secondItem="Jzc-9O-dZ3" secondAttribute="leading" constant="-3" id="GoR-Jj-8Du"/>
-                            <constraint firstItem="w0S-nU-gCk" firstAttribute="top" secondItem="H9u-iY-UkB" secondAttribute="bottom" id="LHc-yS-yoU"/>
+                            <constraint firstAttribute="trailing" secondItem="Jit-qY-S1M" secondAttribute="trailing" id="AaX-g6-rS4"/>
+                            <constraint firstItem="eU3-6h-yNa" firstAttribute="top" secondItem="Jit-qY-S1M" secondAttribute="bottom" id="HSz-Wp-413"/>
                             <constraint firstItem="eU3-6h-yNa" firstAttribute="top" secondItem="w0S-nU-gCk" secondAttribute="bottom" id="MHU-f0-Jyf"/>
-                            <constraint firstItem="wPf-Fe-fhB" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="4" id="WJN-o6-4Vz"/>
-                            <constraint firstItem="w0S-nU-gCk" firstAttribute="top" secondItem="wPf-Fe-fhB" secondAttribute="bottom" constant="137" id="WQ2-4j-bIp"/>
-                            <constraint firstItem="H9u-iY-UkB" firstAttribute="width" secondItem="w0S-nU-gCk" secondAttribute="height" multiplier="5:3" id="c7Z-Wc-fB8"/>
-                            <constraint firstItem="H9u-iY-UkB" firstAttribute="top" secondItem="fBC-dj-Ofp" secondAttribute="bottom" constant="-20" id="ebp-H2-qK5"/>
+                            <constraint firstItem="8Qu-Hh-a3F" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leading" id="QNk-BO-1QL"/>
+                            <constraint firstItem="w0S-nU-gCk" firstAttribute="top" secondItem="8Qu-Hh-a3F" secondAttribute="bottom" id="SKH-TI-3qh"/>
+                            <constraint firstAttribute="trailing" secondItem="8Qu-Hh-a3F" secondAttribute="trailing" id="Vg4-iS-0OB"/>
+                            <constraint firstItem="8Qu-Hh-a3F" firstAttribute="top" secondItem="fBC-dj-Ofp" secondAttribute="bottom" id="ZaP-se-whl"/>
+                            <constraint firstItem="Jit-qY-S1M" firstAttribute="top" secondItem="fBC-dj-Ofp" secondAttribute="bottom" id="acQ-PX-OP1"/>
                             <constraint firstItem="w0S-nU-gCk" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leadingMargin" constant="-20" id="okA-0J-pDv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H9u-iY-UkB" secondAttribute="trailing" constant="-20" id="sbW-ov-bs5"/>
-                            <constraint firstItem="wPf-Fe-fhB" firstAttribute="top" secondItem="Jzc-9O-dZ3" secondAttribute="bottom" constant="-4" id="yc7-qe-uyo"/>
+                            <constraint firstItem="Jit-qY-S1M" firstAttribute="leading" secondItem="P2Y-H4-vku" secondAttribute="leading" id="s8z-gH-JHk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="HfI-Ul-UJ3"/>
@@ -188,10 +166,9 @@
                         <outlet property="announcementView" destination="3hj-SH-EG4" id="NkP-ng-ihB"/>
                         <outlet property="infoLabel" destination="dtV-kU-oOf" id="6Ue-XX-RZ9"/>
                         <outlet property="infoView" destination="I0k-aM-VBI" id="jCG-ra-Z4i"/>
-                        <outlet property="joyfulLabel" destination="wPf-Fe-fhB" id="S3s-LH-5Ju"/>
-                        <outlet property="sermonLabel" destination="aRY-iz-YoD" id="Ipx-c1-CRb"/>
+                        <outlet property="mainView" destination="P2Y-H4-vku" id="cDB-bV-brj"/>
                         <outlet property="sermonView" destination="KR8-Ja-x14" id="cLF-Kw-duB"/>
-                        <outlet property="topView" destination="H9u-iY-UkB" id="hmB-3e-Czr"/>
+                        <outlet property="topView" destination="8Qu-Hh-a3F" id="3lR-FM-tPY"/>
                         <outlet property="welcomeLabel" destination="Jzc-9O-dZ3" id="g2m-u0-EWi"/>
                     </connections>
                 </viewController>
@@ -215,7 +192,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7bf-5w-mVX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AYz-Vx-TlA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -229,9 +206,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AnnIcon" width="78" height="69"/>
-        <image name="CrossIcon" width="27" height="40"/>
+        <image name="AppLogoWhite" width="3266" height="1490"/>
         <image name="HomeBackground" width="375" height="447"/>
-        <image name="InfoIcon" width="81" height="75"/>
     </resources>
 </document>
