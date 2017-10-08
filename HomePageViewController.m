@@ -20,10 +20,12 @@
     BOOL needsRefresh;
 }
 
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UIView *announcementView;
 @property (weak, nonatomic) IBOutlet UIView *sermonView;
-@property (weak, nonatomic) IBOutlet UIImageView *topView;
+@property (weak, nonatomic) IBOutlet UIView *topView;
 
 @property (weak, nonatomic) IBOutlet UILabel *sermonLabel;
 @property (weak, nonatomic) IBOutlet UILabel *announcementLabel;
@@ -44,7 +46,7 @@
     
     user = [User sharedManager];
 
-    [self addLabelManager];
+    [self setBackgroundImage];
     [self addTopUIViewTapRecognizer];
     [self addSermonUIViewTapRecognizer];
     [self addAnnouncementUIViewTapRecognizer];
@@ -52,6 +54,23 @@
     [self addLayerManagerBtwEachUIView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endPageTutorial) name:@"endTutorial" object:nil];
+}
+
+- (void)setBackgroundImage {
+    [self.mainView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"HomeBackground"]]];
+    //You need to specify the frame of the view
+    
+    UIImage *image = [UIImage imageNamed:@"HomeBackground"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    
+    //specify the frame of the imageView in the superview , here it will fill the superview
+    imageView.frame = self.view.bounds;
+    
+    // add the imageview to the superview
+    [self.view addSubview:imageView];
+    
+    //add the view to the main view
+    [self.view sendSubviewToBack:imageView];
 }
 
 - (void)populateTutorialPageViewControllers {
@@ -128,15 +147,6 @@
     return 0;
 }
 
--(void)addLabelManager {
-    self.sermonLabel.font = [UIFont fontWithName:@"System" size:20];
-    [self.sermonLabel sizeToFit];
-    self.infoLabel.font = [UIFont fontWithName:@"System" size:20];
-    [self.infoLabel sizeToFit];
-    self.announcementLabel.font = [UIFont fontWithName:@"System" size:20];
-    [self.announcementLabel sizeToFit];
-}
-
 -(void)addTopUIViewTapRecognizer {
     UITapGestureRecognizer *topTap =
     [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -169,17 +179,18 @@
 
 
 -(void)addLayerManagerBtwEachUIView {
-    _topView.layer.borderWidth = .6f;
-    _topView.layer.borderColor = [[UIColor colorWithRed:(80.0f/255.0f) green:(168.0f/255.0f) blue:(215.0f/255.0f) alpha:1.0f]CGColor];
     
+    _infoView.layer.cornerRadius = 10.0;
     _infoView.layer.borderWidth = .6f;
-    _infoView.layer.borderColor = [[UIColor colorWithRed:(80.0f/255.0f) green:(168.0f/255.0f) blue:(215.0f/255.0f) alpha:1.0f]CGColor];
+    _infoView.layer.borderColor = [[UIColor colorWithRed:(174.0f/255.0f) green:(227.0f/255.0f) blue:(129.0f/255.0f) alpha:1.0f]CGColor];
     
+    _announcementView.layer.cornerRadius = 10.0;
     _announcementView.layer.borderWidth = .6f;
-    _announcementView.layer.borderColor = [[UIColor colorWithRed:(80.0f/255.0f) green:(168.0f/255.0f) blue:(215.0f/255.0f) alpha:1.0f]CGColor];
+    _announcementView.layer.borderColor = [[UIColor colorWithRed:(174.0f/255.0f) green:(227.0f/255.0f) blue:(129.0f/255.0f) alpha:1.0f]CGColor];
     
+    _sermonView.layer.cornerRadius = 10.0;
     _sermonView.layer.borderWidth = .6f;
-    _sermonView.layer.borderColor = [[UIColor colorWithRed:(80.0f/255.0f) green:(168.0f/255.0f) blue:(215.0f/255.0f) alpha:1.0f]CGColor];
+    _sermonView.layer.borderColor = [[UIColor colorWithRed:(174.0f/255.0f) green:(227.0f/255.0f) blue:(129.0f/255.0f) alpha:1.0f]CGColor];
 }
 
 -(void)tapDetected:(UITapGestureRecognizer*)recognizer {

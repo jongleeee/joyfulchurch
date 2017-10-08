@@ -45,7 +45,7 @@
     if ([[UIApplication sharedApplication] canOpenURL:
          [NSURL URLWithString:@"comgooglemaps://"]]) {
         [[UIApplication sharedApplication] openURL:
-         [NSURL URLWithString:@"comgooglemaps://?q=JoyfulChurch&center=37.695993,-121.9726845"]];
+         [NSURL URLWithString:@"comgooglemapsurl://maps.google.com/maps?f=d&daddr=Joyful+Church&sll=37.695993,-121.9726845&sspn=0.2,0.1&nav=1"]];
     } else {
         MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
         MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
