@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="45" y="140" width="678" height="678"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-jU-E71">
-                                        <rect key="frame" x="307" y="376" width="66.5" height="30.5"/>
+                                        <rect key="frame" x="308.5" y="375.5" width="62" height="29.5"/>
                                         <fontDescription key="fontDescription" name="THEJung120" family="THEJung120" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icd-vw-6hK">
-                                        <rect key="frame" x="291.5" y="312" width="96.5" height="54"/>
+                                        <rect key="frame" x="293" y="313" width="92" height="52.5"/>
                                         <fontDescription key="fontDescription" name="THEJung140" family="THEJung140" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njY-f6-Kir" userLabel="Sermon Series">
-                                        <rect key="frame" x="291.5" y="267" width="96.5" height="40"/>
+                                        <rect key="frame" x="293" y="269.5" width="92" height="38.5"/>
                                         <fontDescription key="fontDescription" name="THEJung130" family="THEJung130" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -103,21 +103,13 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yl-6f-flH" userLabel="Current Time">
-                                <rect key="frame" x="25" y="873" width="40" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="PsP-FB-i5d"/>
-                                    <constraint firstAttribute="height" constant="15" id="odm-Yr-4qh"/>
-                                </constraints>
+                                <rect key="frame" x="25" y="873" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nG-1w-6bb" userLabel="Remaining Time">
-                                <rect key="frame" x="714" y="873" width="40" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="nqY-QG-G7L"/>
-                                    <constraint firstAttribute="height" constant="15" id="x9W-ub-ZOg"/>
-                                </constraints>
+                                <rect key="frame" x="743" y="873" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,7 +171,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1nG-1w-6bb" firstAttribute="trailing" secondItem="Qdn-rP-nId" secondAttribute="trailing" constant="11" id="1Zj-KQ-DoJ"/>
+                            <constraint firstItem="1nG-1w-6bb" firstAttribute="trailing" secondItem="Qdn-rP-nId" secondAttribute="trailing" id="1Zj-KQ-DoJ"/>
                             <constraint firstItem="R3n-Z1-GCk" firstAttribute="top" secondItem="Qdn-rP-nId" secondAttribute="bottom" constant="14" id="5u4-SB-UJD"/>
                             <constraint firstItem="4mj-n5-sR4" firstAttribute="centerX" secondItem="c2I-nc-XcL" secondAttribute="centerX" id="C1B-VB-C8n"/>
                             <constraint firstItem="4yl-6f-flH" firstAttribute="top" secondItem="Qdn-rP-nId" secondAttribute="bottom" constant="5" id="GZd-s7-zgu"/>

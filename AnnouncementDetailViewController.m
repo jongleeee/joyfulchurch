@@ -32,6 +32,7 @@
     self.yearLabel.text = [self.announcement getYear];
     self.categoryLabel.text = [self.announcement getCategory];
     self.contentLabel.text = [self.announcement getContent];
+    
     UIColor *color = [self getColorForCategory:[self.announcement getCategory]];
     
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -51,6 +52,10 @@
     self.categoryImage.image = img;
     self.categoryImage.image = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.categoryImage.tintColor = color;
+}
+
+- (void)viewDidLayoutSubviews {
+    [self.contentLabel setContentOffset:CGPointZero animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

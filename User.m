@@ -31,7 +31,7 @@
         [self initPushNotification];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registeredPushNotification:) name:@"registeredPushNotification" object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setDefaultChannels) name:@"endTutorial" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setDefaultChannels) name:@"subscribeDefaultChannels" object:nil];
     }
     return self;
 }
@@ -40,6 +40,8 @@
     NSDictionary *channelDictionary = [self getDataDictionaryAtPath:@"channels"];
     if (channelDictionary != NULL) {
         subscribedChannels = [[NSMutableArray alloc] initWithArray:[channelDictionary objectForKey:@"channels"]];
+    } else {
+        [self setDefaultChannels];
     }
 }
 

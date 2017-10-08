@@ -51,10 +51,6 @@
     [self addChurchInfoUIViewTapRecognizer];
     [self addLayerManagerBtwEachUIView];
     
-    if ([user getSubscribedChannels] == NULL) {
-        [self populateTutorialPageViewControllers];
-    }
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endPageTutorial) name:@"endTutorial" object:nil];
 }
 

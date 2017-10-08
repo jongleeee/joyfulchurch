@@ -50,6 +50,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
              if( !error )
              {
                  [[UIApplication sharedApplication] registerForRemoteNotifications];  // required to get the app to do anything at all about push notifications
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"subscribeDefaultChannels" object:nil];
                  NSLog( @"Push registration success." );
              }
              else

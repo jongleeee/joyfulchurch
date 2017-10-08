@@ -153,11 +153,13 @@
     NSNumber *theDouble = [NSNumber numberWithDouble:duration];
     int inputSeconds = [theDouble intValue];
     self.timeRemaining.text = [self displayTime:inputSeconds];
+    [self.timeRemaining sizeToFit];
 
     double curTime = CMTimeGetSeconds([audioPlayer getCurrentTime]);
     NSNumber *theDoubleCurr = [NSNumber numberWithDouble:curTime];
     int inputSecs = [theDoubleCurr intValue];
     self.currentTime.text = [self displayTime:inputSecs];
+    [self.currentTime sizeToFit];
     sliderVal = curTime;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player];
 }
