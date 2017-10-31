@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,10 +107,17 @@
                                     <constraint firstItem="QKW-aM-ESW" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" id="ug4-Nb-Mu5"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi9-md-rmV">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi9-md-rmV">
                                 <rect key="frame" x="20" y="407.5" width="340" height="189.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남 침례 교단 (Southern Baptist)에 속해 있습니다.
+                                <mutableString key="text">   1부           9:00 AM
+   2부         11:00  AM
+   3부          1:15   PM
+주일학교     11:00  AM
+YOUTH     11:00 AM
+  E.M.        10:00 AM
+
+Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남 침례 교단 (Southern Baptist)에 속해 있습니다.
 
 미 남침례 교단은 복음적인 개신교단으로 천로 역정의 저자 '요한 번연', 설교자 '챨스 스펄전', 현대 선교의 아버지 '윌리암 케리', 전도자 '빌리 그레이엄', 인권 운동가 '마틴 루터 킹', 존경받는 대통령 '지미 카터' 등을 배출한 교단입니다. 
 
