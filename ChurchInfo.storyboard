@@ -110,7 +110,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi9-md-rmV">
                                 <rect key="frame" x="20" y="407.5" width="340" height="189.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">   1부           9:00 AM
+                                <string key="text">   1부           9:00 AM
    2부         11:00  AM
    3부          1:15   PM
 주일학교     11:00  AM
@@ -121,7 +121,7 @@ Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남
 
 미 남침례 교단은 복음적인 개신교단으로 천로 역정의 저자 '요한 번연', 설교자 '챨스 스펄전', 현대 선교의 아버지 '윌리암 케리', 전도자 '빌리 그레이엄', 인권 운동가 '마틴 루터 킹', 존경받는 대통령 '지미 카터' 등을 배출한 교단입니다. 
 
-죠이플 교회는 이상준 목사가 2011년 2월 첫주일에 가정에서 처음 개척 예배를 드리고, 2012년 4월 셋째주일에 창립 예배를 드려 오늘에 이르게 되었습니다.</mutableString>
+죠이플 교회는 이상준 목사가 2011년 2월 첫주일에 가정에서 처음 개척 예배를 드리고, 2012년 4월 셋째주일에 창립 예배를 드려 오늘에 이르게 되었습니다.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -162,6 +162,7 @@ Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남
                     </view>
                     <navigationItem key="navigationItem" title="Joyful Church" id="ZmS-B6-aD6"/>
                     <connections>
+                        <outlet property="churchInformation" destination="Mi9-md-rmV" id="R40-QX-LW7"/>
                         <outlet property="mapNavigationImage" destination="eEW-xk-2jm" id="A8G-NJ-hyh"/>
                     </connections>
                 </viewController>

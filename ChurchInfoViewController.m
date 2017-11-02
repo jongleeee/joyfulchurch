@@ -11,6 +11,7 @@
 
 @interface ChurchInfoViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *mapNavigationImage;
+@property (weak, nonatomic) IBOutlet UITextView *churchInformation;
 
 
 @end
@@ -27,6 +28,10 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.hidden = NO;
+}
+
+- (void)viewDidLayoutSubviews {
+    [self.churchInformation setContentOffset:CGPointZero animated:NO];
 }
 
 - (void)addNavigateToMapImage {
