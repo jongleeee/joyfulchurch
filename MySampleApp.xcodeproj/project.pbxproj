@@ -175,7 +175,7 @@
 		1DD70E2920C0F8FC00000000 /* DemoFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoFeature.h; path = MySampleApp/Demo/DemoFeature.h; sourceTree = SOURCE_ROOT; };
 		1DD70E292153D30200000000 /* DemoFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoFeature.m; path = MySampleApp/Demo/DemoFeature.m; sourceTree = SOURCE_ROOT; };
 		1DD70E2924FBCD9C00000000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MySampleApp/App/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		1DD70E2927A93B0700000000 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MySampleApp/App/SupportingFiles/main.m; sourceTree = SOURCE_ROOT; };
+		1DD70E2927A93B0700000000 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = mysampleapp/mysampleapp/app/mysampleapp/app/supportingfiles/main.m; sourceTree = SOURCE_ROOT; };
 		1DD70E293BB76AE100000000 /* UserSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = MySampleApp/Demo/UserSettings/UserSettingsViewController.h; sourceTree = SOURCE_ROOT; };
 		1DD70E293C4A44E700000000 /* UserSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = MySampleApp/Demo/UserSettings/UserSettingsViewController.m; sourceTree = SOURCE_ROOT; };
 		1DD70E293D24053300000000 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = MySampleApp/App/SignIn/SignInViewController.h; sourceTree = SOURCE_ROOT; };
@@ -220,7 +220,7 @@
 		1DD70E29C0864B5C00000000 /* NoSQLTableFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NoSQLTableFactory.m; path = MySampleApp/Demo/NoSQL/NoSQLTableFactory.m; sourceTree = SOURCE_ROOT; };
 		1DD70E29C2A5A42C00000000 /* ContentDelivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ContentDelivery.storyboard; path = MySampleApp/Demo/ContentDelivery/ContentDelivery.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29C2C212AF00000000 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		1DD70E29CB877D4200000000 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; name = MySampleApp.app; path = "Joyful Church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD70E29CB877D4200000000 /* Joyful Church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "Joyful Church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD70E29D3A28B2C00000000 /* UserIdentityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserIdentityViewController.h; path = MySampleApp/Demo/UserIdentity/UserIdentityViewController.h; sourceTree = SOURCE_ROOT; };
 		1DD70E29D435653200000000 /* UserIdentityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UserIdentityViewController.m; path = MySampleApp/Demo/UserIdentity/UserIdentityViewController.m; sourceTree = SOURCE_ROOT; };
 		1DD70E29D52AC14F00000000 /* UserDataStorageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserDataStorageViewController.h; path = MySampleApp/Demo/UserDataStorage/UserDataStorageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -247,8 +247,6 @@
 		43F7C1021F10A103003F305B /* THEJUNG_regular_120.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_regular_120.otf; sourceTree = "<group>"; };
 		43F7C1031F10A103003F305B /* THEJUNG_thin_110.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEJUNG_thin_110.otf; sourceTree = "<group>"; };
 		43F7C1081F10CBB6003F305B /* SermonGreenGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SermonGreenGradient.png; sourceTree = "<group>"; };
-		518C10D8A916096489F3D398 /* Pods-MySampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E10FFEF04E23F5B21D6AA7C8 /* Pods-MySampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF1164ED1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_Y4XE7A7C34_Empty.h; sourceTree = "<group>"; };
 		FF1164EE1EEE2FBB00CF24AE /* AWSAPI_Y4XE7A7C34_Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_Y4XE7A7C34_Empty.m; sourceTree = "<group>"; };
 		FF1164F01EEE325800CF24AE /* AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_Y4XE7A7C34_ResetBadgeCountClient.h; sourceTree = "<group>"; };
@@ -387,15 +385,6 @@
 				101CCF761EECA64D00BED961 /* HomePageViewController.m */,
 			);
 			name = HomePage;
-			sourceTree = "<group>";
-		};
-		1BEC033397386F3782C547D8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				518C10D8A916096489F3D398 /* Pods-MySampleApp.debug.xcconfig */,
-				E10FFEF04E23F5B21D6AA7C8 /* Pods-MySampleApp.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		4312DAB91F21C83700A3A898 /* AudioPlayer */ = {
@@ -595,7 +584,7 @@
 		B401C979909C52AF00000000 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DD70E29CB877D4200000000 /* MySampleApp.app */,
+				1DD70E29CB877D4200000000 /* Joyful Church.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -617,7 +606,6 @@
 				B401C9799083801C00000000 /* Frameworks */,
 				B401C979909C52AF00000000 /* Products */,
 				B401C979A0E772CD00000000 /* Joyful_Church */,
-				1BEC033397386F3782C547D8 /* Pods */,
 			);
 			name = mainGroup;
 			sourceTree = "<group>";
@@ -953,7 +941,7 @@
 			);
 			name = MySampleApp;
 			productName = MySampleApp;
-			productReference = 1DD70E29CB877D4200000000 /* MySampleApp.app */;
+			productReference = 1DD70E29CB877D4200000000 /* Joyful Church.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1190,7 +1178,6 @@
 		};
 		49524373386D956C00000001 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E10FFEF04E23F5B21D6AA7C8 /* Pods-MySampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/Joyful_Church.entitlements;
@@ -1209,6 +1196,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyfulchurchmedia.joyfulchurch;
 				PRODUCT_NAME = "Joyful Church";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1265,7 +1253,6 @@
 		};
 		4952437346F3E10800000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518C10D8A916096489F3D398 /* Pods-MySampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/Joyful_Church.entitlements;
@@ -1284,6 +1271,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyfulchurchmedia.joyfulchurch;
 				PRODUCT_NAME = "Joyful Church";
 				TARGETED_DEVICE_FAMILY = "1,2";
