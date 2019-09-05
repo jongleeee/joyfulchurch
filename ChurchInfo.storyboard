@@ -22,152 +22,222 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogoBlack" translatesAutoresizingMaskIntoConstraints="NO" id="fwg-VO-0Lq">
-                                <rect key="frame" x="97.5" y="72" width="180" height="82"/>
+                                <rect key="frame" x="97.5" y="94" width="180" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="Z7E-Tl-WCb"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="rq2-Xb-0L4"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapLocationImg" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-xk-2jm">
-                                <rect key="frame" x="46" y="169" width="283" height="105.5"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-qs-w6j" userLabel="middleView">
-                                <rect key="frame" x="16" y="289.5" width="343" height="88"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="hx0-Jy-ahy"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-FE-w3T" userLabel="innerView">
-                                <rect key="frame" x="62.5" y="311.5" width="250" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주일 예배" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIZ-rU-Ubo">
+                                <rect key="frame" x="157.5" y="188" width="60" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaj-hN-xzL">
+                                <rect key="frame" x="89" y="211" width="197" height="83"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9875 Dublin Canyon Rd. Castro Valley CA 94552" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-nD-Gkg">
-                                        <rect key="frame" x="65" y="0.0" width="185" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-YC-ebP">
-                                        <rect key="frame" x="0.0" y="4" width="50" height="17"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpX-uK-HCn">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="83"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="tOz-5j-YXI"/>
+                                            <constraint firstAttribute="width" constant="109" id="Bub-PV-eHo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(510) - 582 - 1240" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-GD-X1E">
-                                        <rect key="frame" x="65" y="40" width="120" height="17"/>
+                                        <string key="text">주일 대예배
+주일학교 (초등부)
+Youth 에배
+EM 예배</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-aM-ESW">
-                                        <rect key="frame" x="0.0" y="64" width="42" height="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQC-oQ-7av">
+                                        <rect key="frame" x="109" y="0.0" width="88" height="83"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="KZi-7O-c8S"/>
+                                            <constraint firstAttribute="width" constant="88" id="zYu-3v-H47"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="joyfulpastorlee@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-JW-6cZ">
-                                        <rect key="frame" x="65" y="64" width="174.5" height="17"/>
+                                        <string key="text">10:30 AM
+10:30 AM
+10:30 AM
+10:30 AM</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교회전화:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-eU-3Z6">
-                                        <rect key="frame" x="-1" y="40" width="54" height="17"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="54" id="exY-9X-mEf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="an6-JW-6cZ" firstAttribute="centerY" secondItem="QKW-aM-ESW" secondAttribute="centerY" id="18T-iQ-QzR"/>
-                                    <constraint firstItem="ZQs-GD-X1E" firstAttribute="leading" secondItem="Yxx-nD-Gkg" secondAttribute="leading" id="D1c-0i-RSq"/>
-                                    <constraint firstItem="QKW-aM-ESW" firstAttribute="top" secondItem="gsz-eU-3Z6" secondAttribute="bottom" constant="7" id="ICQ-aW-gVF"/>
-                                    <constraint firstItem="Yxx-nD-Gkg" firstAttribute="top" secondItem="6B0-FE-w3T" secondAttribute="top" id="JIM-v7-wum"/>
-                                    <constraint firstItem="tqT-YC-ebP" firstAttribute="top" secondItem="6B0-FE-w3T" secondAttribute="top" constant="4" id="LCj-ia-hYJ"/>
-                                    <constraint firstItem="tqT-YC-ebP" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" id="PZs-dZ-eIo"/>
-                                    <constraint firstItem="gsz-eU-3Z6" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" constant="-1" id="Sxt-LT-syK"/>
-                                    <constraint firstAttribute="width" constant="250" id="VpO-o7-6LW"/>
-                                    <constraint firstItem="an6-JW-6cZ" firstAttribute="leading" secondItem="ZQs-GD-X1E" secondAttribute="leading" id="YzO-wg-4Al"/>
-                                    <constraint firstItem="Yxx-nD-Gkg" firstAttribute="leading" secondItem="tqT-YC-ebP" secondAttribute="trailing" constant="15" id="dPa-sr-gfn"/>
-                                    <constraint firstItem="ZQs-GD-X1E" firstAttribute="centerY" secondItem="gsz-eU-3Z6" secondAttribute="centerY" id="eqr-et-a1d"/>
-                                    <constraint firstItem="gsz-eU-3Z6" firstAttribute="top" secondItem="tqT-YC-ebP" secondAttribute="bottom" constant="19" id="h8t-Qb-TiY"/>
-                                    <constraint firstAttribute="trailing" secondItem="Yxx-nD-Gkg" secondAttribute="trailing" id="mLs-ag-276"/>
-                                    <constraint firstItem="QKW-aM-ESW" firstAttribute="leading" secondItem="6B0-FE-w3T" secondAttribute="leading" id="ug4-Nb-Mu5"/>
+                                    <constraint firstAttribute="trailing" secondItem="VQC-oQ-7av" secondAttribute="trailing" id="H2t-OC-deU"/>
+                                    <constraint firstItem="VQC-oQ-7av" firstAttribute="top" secondItem="eaj-hN-xzL" secondAttribute="top" id="QpD-QQ-mtF"/>
+                                    <constraint firstAttribute="width" constant="197" id="Vgy-jX-B4i"/>
+                                    <constraint firstAttribute="bottom" secondItem="VQC-oQ-7av" secondAttribute="bottom" id="c5u-o2-ELw"/>
+                                    <constraint firstItem="qpX-uK-HCn" firstAttribute="leading" secondItem="eaj-hN-xzL" secondAttribute="leading" id="cJ8-fa-134"/>
+                                    <constraint firstItem="VQC-oQ-7av" firstAttribute="leading" secondItem="qpX-uK-HCn" secondAttribute="trailing" id="cu3-Fs-0oo"/>
+                                    <constraint firstAttribute="height" constant="83" id="dCE-e1-dLR"/>
+                                    <constraint firstItem="qpX-uK-HCn" firstAttribute="top" secondItem="eaj-hN-xzL" secondAttribute="top" id="mjL-OB-8DU"/>
+                                    <constraint firstAttribute="bottom" secondItem="qpX-uK-HCn" secondAttribute="bottom" id="qoq-t9-7hZ"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi9-md-rmV">
-                                <rect key="frame" x="20" y="407.5" width="340" height="189.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-2u-LSA">
+                                <rect key="frame" x="16" y="294" width="343" height="63"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-Hu-3qL">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="63"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">6400 Main Branch Road
+San Ramon CA 94582
+(Gale Ranch Middle School)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-jf-iXv">
+                                        <rect key="frame" x="208" y="11.5" width="135" height="40"/>
+                                        <color key="backgroundColor" red="0.35686274509999999" green="0.68235294120000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FAI-wA-2ss"/>
+                                            <constraint firstAttribute="width" constant="135" id="yCh-he-pzN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="   주일 예배 길찾기   ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="gX7-fP-xyi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Fam-jf-iXv" secondAttribute="trailing" id="0xP-Dr-zAb"/>
+                                    <constraint firstItem="7t8-Hu-3qL" firstAttribute="leading" secondItem="JQD-2u-LSA" secondAttribute="leading" id="4U9-7O-7Ks"/>
+                                    <constraint firstItem="7t8-Hu-3qL" firstAttribute="top" secondItem="JQD-2u-LSA" secondAttribute="top" id="NmU-Pj-FmN"/>
+                                    <constraint firstItem="Fam-jf-iXv" firstAttribute="centerY" secondItem="7t8-Hu-3qL" secondAttribute="centerY" id="Rn7-fT-iRH"/>
+                                    <constraint firstAttribute="bottom" secondItem="7t8-Hu-3qL" secondAttribute="bottom" id="TRR-2e-Iki"/>
+                                    <constraint firstItem="Fam-jf-iXv" firstAttribute="leading" secondItem="7t8-Hu-3qL" secondAttribute="trailing" id="dj4-EW-0hg"/>
+                                    <constraint firstAttribute="height" constant="63" id="nzo-uH-6Ow"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주중 예배" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el2-M5-bYb">
+                                <rect key="frame" x="157.5" y="369" width="60" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-bV-oLJ">
+                                <rect key="frame" x="111" y="392" width="153" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-tz-AIi">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="81" id="5qD-3t-C9L"/>
+                                        </constraints>
+                                        <string key="text">새벽기도
+(화,수,목,금)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="5:30 AM" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-Af-hI0">
+                                        <rect key="frame" x="82" y="8.5" width="71" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="gDr-m3-AsZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uOn-tz-AIi" secondAttribute="bottom" id="Pd4-Zw-0tn"/>
+                                    <constraint firstItem="D2J-Af-hI0" firstAttribute="leading" secondItem="uOn-tz-AIi" secondAttribute="trailing" constant="1" id="an6-Ow-Hok"/>
+                                    <constraint firstAttribute="width" constant="153" id="bBY-zV-gHI"/>
+                                    <constraint firstAttribute="trailing" secondItem="D2J-Af-hI0" secondAttribute="trailing" id="fFr-jd-T0A"/>
+                                    <constraint firstItem="uOn-tz-AIi" firstAttribute="leading" secondItem="QoQ-bV-oLJ" secondAttribute="leading" id="gpP-or-oG5"/>
+                                    <constraint firstItem="D2J-Af-hI0" firstAttribute="centerY" secondItem="QoQ-bV-oLJ" secondAttribute="centerY" id="lJK-ZI-QQU"/>
+                                    <constraint firstAttribute="height" constant="50" id="sG6-VW-D41"/>
+                                    <constraint firstItem="uOn-tz-AIi" firstAttribute="top" secondItem="QoQ-bV-oLJ" secondAttribute="top" id="yDH-hO-plB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-1t-DTb">
+                                <rect key="frame" x="16" y="442" width="343" height="48"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoZ-wr-P7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">2260 Camino Ramon
+San Ramon CA 94583</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9R-WF-mqk">
+                                        <rect key="frame" x="208" y="4" width="135" height="40"/>
+                                        <color key="backgroundColor" red="0.35686274509999999" green="0.68235294120000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lqi-nL-CQ0"/>
+                                            <constraint firstAttribute="width" constant="135" id="mpe-cL-eU8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="주중 예배 길찾기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="sBR-hG-WJw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UoZ-wr-P7b" firstAttribute="leading" secondItem="kmz-1t-DTb" secondAttribute="leading" id="1cx-j7-vES"/>
+                                    <constraint firstAttribute="bottom" secondItem="UoZ-wr-P7b" secondAttribute="bottom" id="G8F-P3-D86"/>
+                                    <constraint firstAttribute="trailing" secondItem="J9R-WF-mqk" secondAttribute="trailing" id="Mii-Hh-4KI"/>
+                                    <constraint firstItem="UoZ-wr-P7b" firstAttribute="top" secondItem="kmz-1t-DTb" secondAttribute="top" id="gJe-pT-5yx"/>
+                                    <constraint firstAttribute="height" constant="48" id="kgq-Xw-51q"/>
+                                    <constraint firstItem="J9R-WF-mqk" firstAttribute="leading" secondItem="UoZ-wr-P7b" secondAttribute="trailing" id="nOK-am-uP0"/>
+                                    <constraint firstItem="J9R-WF-mqk" firstAttribute="centerY" secondItem="kmz-1t-DTb" secondAttribute="centerY" id="v0v-Hq-gwP"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz6-EE-ycq">
+                                <rect key="frame" x="16" y="502" width="343" height="145"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">   1부           9:00 AM
-   2부         11:00  AM
-   3부          1:15   PM
-주일학교     11:00  AM
-YOUTH     11:00 AM
-   E.M.        1:30  PM
-
-Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남 침례 교단 (Southern Baptist)에 속해 있습니다.
+                                <string key="text">Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남 침례 교단 (Southern Baptist)에 속해 있습니다.
 
 미 남침례 교단은 복음적인 개신교단으로 천로 역정의 저자 '요한 번연', 설교자 '챨스 스펄전', 현대 선교의 아버지 '윌리암 케리', 전도자 '빌리 그레이엄', 인권 운동가 '마틴 루터 킹', 존경받는 대통령 '지미 카터' 등을 배출한 교단입니다. 
 
-죠이플 교회는 이상준 목사가 2011년 2월 첫주일에 가정에서 처음 개척 예배를 드리고, 2012년 4월 셋째주일에 창립 예배를 드려 오늘에 이르게 되었습니다.</mutableString>
+죠이플 교회는 이상준 목사가 2011년 2월 첫주일에 가정에서 처음 개척 예배를 드리고, 2012년 4월 셋째주일에 창립 예배를 드려 오늘에 이르게 되었습니다.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ez-KcA">
-                                <rect key="frame" x="0.0" y="612" width="375" height="35"/>
-                                <color key="backgroundColor" red="0.35686274509803922" green="0.68235294117647061" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="길찾기">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="Mqx-h4-PXr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="o8h-ez-KcA" secondAttribute="bottom" constant="20" id="E0F-0E-c4Q"/>
-                            <constraint firstItem="eEW-xk-2jm" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="Hdu-zp-Cjx"/>
-                            <constraint firstAttribute="trailing" secondItem="Mi9-md-rmV" secondAttribute="trailing" constant="15" id="K5L-jC-GZr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4g8-qs-w6j" secondAttribute="trailing" id="Ldh-0n-Ram"/>
-                            <constraint firstItem="6B0-FE-w3T" firstAttribute="centerX" secondItem="4g8-qs-w6j" secondAttribute="centerX" id="VO2-8I-TrO"/>
-                            <constraint firstItem="4g8-qs-w6j" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="15" id="WBy-98-e6c"/>
-                            <constraint firstItem="4g8-qs-w6j" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" id="Wvh-Kc-yaG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="o8h-ez-KcA" secondAttribute="trailing" constant="-16" id="ad8-nc-aFg"/>
-                            <constraint firstItem="Mi9-md-rmV" firstAttribute="top" secondItem="4g8-qs-w6j" secondAttribute="bottom" constant="30" id="ap1-vt-tKf"/>
-                            <constraint firstItem="6B0-FE-w3T" firstAttribute="centerY" secondItem="4g8-qs-w6j" secondAttribute="centerY" id="b2b-2n-N9L"/>
-                            <constraint firstItem="Mi9-md-rmV" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leading" constant="20" id="bgt-hc-WEX"/>
-                            <constraint firstItem="6B0-FE-w3T" firstAttribute="top" secondItem="eEW-xk-2jm" secondAttribute="bottom" constant="37" id="f4O-zR-S24"/>
-                            <constraint firstItem="fwg-VO-0Lq" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="8" id="hFD-Vo-Tfu"/>
-                            <constraint firstItem="o8h-ez-KcA" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leadingMargin" constant="-16" id="iEc-1m-qTY"/>
-                            <constraint firstItem="eEW-xk-2jm" firstAttribute="top" secondItem="fwg-VO-0Lq" secondAttribute="bottom" constant="15" id="lgl-Wn-Lln"/>
+                            <constraint firstItem="eaj-hN-xzL" firstAttribute="top" secondItem="VIZ-rU-Ubo" secondAttribute="bottom" constant="3" id="0Kk-to-oEY"/>
+                            <constraint firstItem="JQD-2u-LSA" firstAttribute="centerX" secondItem="bhg-h9-aKv" secondAttribute="centerX" id="2YI-jQ-57I"/>
+                            <constraint firstItem="el2-M5-bYb" firstAttribute="top" secondItem="JQD-2u-LSA" secondAttribute="bottom" constant="12" id="Dzb-sf-Zzl"/>
+                            <constraint firstItem="VIZ-rU-Ubo" firstAttribute="top" secondItem="fwg-VO-0Lq" secondAttribute="bottom" constant="12" id="HOM-8B-3Hs"/>
+                            <constraint firstItem="QoQ-bV-oLJ" firstAttribute="centerX" secondItem="bhg-h9-aKv" secondAttribute="centerX" id="K7O-ro-HDc"/>
+                            <constraint firstItem="kmz-1t-DTb" firstAttribute="top" secondItem="QoQ-bV-oLJ" secondAttribute="bottom" id="LuP-h2-exT"/>
+                            <constraint firstItem="kmz-1t-DTb" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leading" constant="16" id="LuS-4h-OcB"/>
+                            <constraint firstItem="eaj-hN-xzL" firstAttribute="centerX" secondItem="VIZ-rU-Ubo" secondAttribute="centerX" id="R7o-sf-r0s"/>
+                            <constraint firstItem="el2-M5-bYb" firstAttribute="centerX" secondItem="bhg-h9-aKv" secondAttribute="centerX" id="WnA-23-bUl"/>
+                            <constraint firstAttribute="trailing" secondItem="pz6-EE-ycq" secondAttribute="trailing" constant="16" id="ZiN-uw-Hi9"/>
+                            <constraint firstItem="JQD-2u-LSA" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leading" constant="16" id="da5-bH-64C"/>
+                            <constraint firstItem="QoQ-bV-oLJ" firstAttribute="top" secondItem="el2-M5-bYb" secondAttribute="bottom" constant="3" id="dh1-AK-It6"/>
+                            <constraint firstAttribute="trailing" secondItem="kmz-1t-DTb" secondAttribute="trailing" constant="16" id="ggG-Ue-Z2Q"/>
+                            <constraint firstItem="fwg-VO-0Lq" firstAttribute="top" secondItem="94O-4L-BXJ" secondAttribute="bottom" constant="30" id="hFD-Vo-Tfu"/>
+                            <constraint firstItem="Tga-gy-Mll" firstAttribute="top" secondItem="pz6-EE-ycq" secondAttribute="bottom" constant="20" id="hWK-EZ-7Lq"/>
+                            <constraint firstAttribute="trailing" secondItem="JQD-2u-LSA" secondAttribute="trailing" constant="16" id="mGh-Pz-xyM"/>
+                            <constraint firstItem="pz6-EE-ycq" firstAttribute="leading" secondItem="bhg-h9-aKv" secondAttribute="leading" constant="16" id="mf0-o5-L37"/>
                             <constraint firstItem="fwg-VO-0Lq" firstAttribute="centerX" secondItem="bhg-h9-aKv" secondAttribute="centerX" id="nkm-2B-yRs"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="eEW-xk-2jm" secondAttribute="leading" constant="-30" id="oZP-gn-19L"/>
-                            <constraint firstItem="4g8-qs-w6j" firstAttribute="centerY" secondItem="bhg-h9-aKv" secondAttribute="centerY" id="xdz-vv-cwk"/>
-                            <constraint firstItem="o8h-ez-KcA" firstAttribute="top" secondItem="Mi9-md-rmV" secondAttribute="bottom" constant="15" id="zm3-GU-RS8"/>
+                            <constraint firstItem="pz6-EE-ycq" firstAttribute="top" secondItem="kmz-1t-DTb" secondAttribute="bottom" constant="12" id="pLH-KP-SGF"/>
+                            <constraint firstItem="JQD-2u-LSA" firstAttribute="top" secondItem="eaj-hN-xzL" secondAttribute="bottom" id="vKw-os-rNF"/>
+                            <constraint firstItem="VIZ-rU-Ubo" firstAttribute="centerX" secondItem="fwg-VO-0Lq" secondAttribute="centerX" id="wny-Fg-FIa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Joyful Church" id="ZmS-B6-aD6"/>
-                    <connections>
-                        <outlet property="churchInformation" destination="Mi9-md-rmV" id="R40-QX-LW7"/>
-                        <outlet property="mapNavigationImage" destination="eEW-xk-2jm" id="A8G-NJ-hyh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH5-nB-qIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.80000000000001" y="733.5832083958021"/>
+            <point key="canvasLocation" x="472.80000000000001" y="732.68365817091455"/>
         </scene>
         <!--Info-->
         <scene sceneID="Cs4-Hj-3qd">
@@ -191,6 +261,5 @@ Joyful Church는 개신교로는 세계적으로 가장 큰 교단인 미국 남
     </scenes>
     <resources>
         <image name="AppLogoBlack" width="568.32000732421875" height="259.20001220703125"/>
-        <image name="mapLocationImg" width="775" height="380"/>
     </resources>
 </document>
