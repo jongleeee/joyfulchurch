@@ -101,7 +101,7 @@ San Ramon CA 94582
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="gX7-fP-xyi"/>
+                                            <action selector="navigateToWeekendService:" destination="B0h-vu-svK" eventType="touchUpInside" id="eoa-VV-VHD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -181,7 +181,7 @@ San Ramon CA 94583</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="navigate:" destination="B0h-vu-svK" eventType="touchUpInside" id="sBR-hG-WJw"/>
+                                            <action selector="navigateToWeekdayService:" destination="B0h-vu-svK" eventType="touchUpInside" id="sxV-i2-PY7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -237,7 +237,7 @@ San Ramon CA 94583</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH5-nB-qIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.80000000000001" y="732.68365817091455"/>
+            <point key="canvasLocation" x="802" y="734"/>
         </scene>
         <!--Info-->
         <scene sceneID="Cs4-Hj-3qd">

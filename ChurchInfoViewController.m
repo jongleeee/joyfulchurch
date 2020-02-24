@@ -23,7 +23,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    [self addNavigateToMapImage];
+//    [self addNavigateToMapImage];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -34,27 +34,38 @@
     [self.churchInformation setContentOffset:CGPointZero animated:NO];
 }
 
-- (void)addNavigateToMapImage {
-    UITapGestureRecognizer *mapNavigationImageTap =
-    [[UITapGestureRecognizer alloc] initWithTarget:self
-                                            action:@selector(navigate:)];
-    [self.mapNavigationImage setUserInteractionEnabled:YES];
-    [self.mapNavigationImage addGestureRecognizer:mapNavigationImageTap];
+//- (void)addNavigateToMapImage {
+//    UITapGestureRecognizer *mapNavigationImageTap =
+//    [[UITapGestureRecognizer alloc] initWithTarget:self
+//                                            action:@selector(navigate:)];
+//    [self.mapNavigationImage setUserInteractionEnabled:YES];
+//    [self.mapNavigationImage addGestureRecognizer:mapNavigationImageTap];
+//}
+
+- (IBAction)navigateToWeekendService:(id)sender {
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 37.768545;
+    coordinate.longitude = -121.909712;
+    NSString *url = @"comgooglemapsurl://maps.google.com/maps?f=d&daddr=Joyful+Church+Weekend+Service&sll=37.768545,-121.909712&sspn=0.2,0.1&nav=1";
+    [self openMapWithName:@"Joyful Church Weekend Service" andUrl:url OrCoordinate:coordinate];
+}
+- (IBAction)navigateToWeekdayService:(id)sender {
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 37.7759229;
+    coordinate.longitude = -121.9693361;
+    NSString *url = @"comgooglemapsurl://maps.google.com/maps?f=d&daddr=Joyful+Church+Weekday+Service&sll=37.7759229,-121.9693361&sspn=0.2,0.1&nav=1";
+    [self openMapWithName:@"Joyful Church Weekday Service" andUrl:url OrCoordinate:coordinate];
 }
 
-- (IBAction)navigate:(id)sender {
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 37.695993;
-    coordinate.longitude = -121.972684;
-    
+- (void)openMapWithName:(NSString *)name andUrl:(NSString *)url OrCoordinate:(CLLocationCoordinate2D)coordinate {
     if ([[UIApplication sharedApplication] canOpenURL:
          [NSURL URLWithString:@"comgooglemaps://"]]) {
         [[UIApplication sharedApplication] openURL:
-         [NSURL URLWithString:@"comgooglemapsurl://maps.google.com/maps?f=d&daddr=Joyful+Church&sll=37.695993,-121.9726845&sspn=0.2,0.1&nav=1"]];
+         [NSURL URLWithString:url]];
     } else {
         MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
         MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-        [mapItem setName:@"Joyful Church"];
+        [mapItem setName:name];
         NSDictionary *options = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
         [mapItem openInMapsWithLaunchOptions:options];
     }
